@@ -8,5 +8,5 @@ app.get ('/',(req,res)=>{
 });
 
 app.get ('/home',(req,res)=>{
-    res.sendFile(path.join(__dirname,'/views/home.js'));
+    res.sendFile(path.resolve(__dirname,'./views/index.html'));
 });

@@ -68,8 +68,8 @@ Uno a personas de 18 a 30 años de edad que busquen una linea de vinos jovenes y
 
 ### Wireframe
 https://marvelapp.com/project/5650182
--Formulario de Registro: https://marvelapp.com/project/5650182/design/79157114
--Login: https://marvelapp.com/project/5650182/design/79210344
--Home: https://marvelapp.com/project/5650182/design/79233225
--Detalle del Producto:https://marvelapp.com/project/5650182/design/79209775
--Pagina de Carrito: https://marvelapp.com/project/5650182/design/79232977
+- Formulario de Registro: https://marvelapp.com/project/5650182/design/79157114
+- Login: https://marvelapp.com/project/5650182/design/79210344
+- Home: https://marvelapp.com/project/5650182/design/79233225
+- Detalle del Producto:https://marvelapp.com/project/5650182/design/79209775
+- Pagina de Carrito: https://marvelapp.com/project/5650182/design/79232977

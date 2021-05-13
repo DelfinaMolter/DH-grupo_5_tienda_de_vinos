@@ -14,7 +14,7 @@ Uno a personas de 18 a 30 años de edad que busquen una linea de vinos jovenes y
 
 > `Gonzalo Lorenzo Eijo` tiene 31 años, originario de Mar del Plata. Actualmente vive en La Plata. Se graduó con una licenciatura en Antropología en la Universidad Nacional de La Plata y es profesor de biología. Melómano, amante de la tecnología y el buen vino.
 
-> `Emanuel Mendiolaza` que vive en la Boca, nacido en Salta. Actualmente estudiante de Ingenieria en Sistema en la UBA. Fanático de River.
+> `Emanuel Mendiolaza`27 años, nacido en la provincia de Salta. Desde los 13 años que vive en CABA. Estudiante de la carrera de Lic. en Sistema de Informacion - UBA. Hincha fanatico de River Plate. En su tiempo libre disfruta de jugar al futbol o mirar series. Hace poco mas de un año trabaja como Analista Funcional en una empresa que se dedica a la produccion y comercializacion de vinos y bebidas spirituosas.
 
 > `Delfina Molter` tiene 30 años y reside en Belgrano CABA. Vivió todo su infancia en en barrio de Don Torcuato junto a sus padres y 3 perros. Estudió la primaria en una escuela alemana del Gran Buenos Aires y luego fue a la secundaria a un colegio Waldorf. Más tarde se recibió de Licenciada en Turismo y Hotelería en la UADE. Hace 6 años trabaja en una agencia de viajes reconocida en la argentina en el ámbito online como en el retal. En su tiempo libre disfruta mucho de los deportes y de la naturaleza.
 
@@ -66,3 +66,10 @@ Uno a personas de 18 a 30 años de edad que busquen una linea de vinos jovenes y
 - Opciones de contacto (con link) que por ejemplo te abre el whatsapp web .
 - Banners automaticos, que se puede arrastrar.
 
+### Wireframe
+https://marvelapp.com/project/5650182
+-Formulario de Registro: https://marvelapp.com/project/5650182/design/79157114
+-Login: https://marvelapp.com/project/5650182/design/79210344
+-Home: https://marvelapp.com/project/5650182/design/79233225
+-Detalle del Producto:https://marvelapp.com/project/5650182/design/79209775
+-Pagina de Carrito: https://marvelapp.com/project/5650182/design/79232977

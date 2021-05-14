@@ -73,3 +73,12 @@ https://marvelapp.com/project/5650182
 - Home: https://marvelapp.com/project/5650182/design/79233225
 - Detalle del Producto:https://marvelapp.com/project/5650182/design/79209775
 - Pagina de Carrito: https://marvelapp.com/project/5650182/design/79232977
+
+### Paleta de Colores
+https://coolors.co/240c31-5f5566-f5f5f5-fcd75f-020100
+- 240C31
+- 5F5566
+- F5F5F5
+- FCD75F
+
+

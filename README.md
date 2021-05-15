@@ -81,4 +81,6 @@ https://coolors.co/240c31-5f5566-f5f5f5-fcd75f-020100
 - F5F5F5
 - FCD75F
 
+### Tablero de Trello
+https://trello.com/invite/b/ZTIUZcTe/829a959784ca93536beb3188d7b3ca3e/dh-proyecto-integrador-grupo-5-tienda-de-vinos
 

@@ -82,20 +82,16 @@ https://coolors.co/240c31-5f5566-f5f5f5-fcd75f-020100
 - FCD75F
 
 ### Tipografias: KoHo
-
-Link:
-><link rel="preconnect" href="https://fonts.gstatic.com">
-><link href="https://fonts.googleapis.com/css2?>family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
-
-Import
-><style>
->@import url('https://fonts.googleapis.com/css2?>family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
-></style>
-
-
-CSS:
->font-family: 'KoHo', sans-serif;
->font-family: 'Poppins', sans-serif;
+> Link:
+> <link rel="preconnect" href="https://fonts.gstatic.com">
+> <link href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+> Import:
+> <style>
+> @import url('https://fonts.googleapis.com/css2? family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+> </style>
+> CSS:
+> font-family: 'KoHo', sans-serif;
+> font-family: 'Poppins', sans-serif;
 
 ### Tablero de Trello
 https://trello.com/invite/b/ZTIUZcTe/829a959784ca93536beb3188d7b3ca3e/dh-proyecto-integrador-grupo-5-tienda-de-vinos

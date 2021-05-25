@@ -12,7 +12,7 @@
   padding: 10px;
 }
 
-/* ========================NAVBARS */
+/* ========================navbars */
 .main-navbar {
   display: flex;
   justify-content: space-between;
@@ -63,6 +63,7 @@
 } para despues poner los media queries*/
 
 /* =================================================BODY============================================== */
+
 body {
   background-color: #f5f5f5;
 }

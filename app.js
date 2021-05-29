@@ -1,9 +1,12 @@
 const express = require ('express');
 const path = require ('path');
 const app = express(); 
-app.listen(3000, () => console.log('Servidor corriendo'));
 
-app.use(express.static(path.resolve(__dirname,'public')))
+app.set("port", process.env.PORT || 3000);
+
+app.listen(app.get("port"), () => console.log('Servidor esta corriendo en http://localhost:'+app.get("port")));
+
+app.use(express.static(path.resolve(__dirname,'./public')));
 
 app.get('/',(req,res)=>res.sendFile(path.join(__dirname, 'views', 'index.html')))
 app.get('/carrito_de_compra',(req,res)=>res.sendFile(path.join(__dirname, 'views', 'carrito_de_compra.html')));

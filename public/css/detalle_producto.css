@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 12px;
+  font-size: 15px;
   font-family: "KoHo", sans-serif;
 }
 
@@ -62,3 +62,77 @@
 /* .main-navbar {
   display: none;
 } para despues poner los media queries*/
+
+/* ===============================================MAIN=============================================== */
+.box-superior {
+  display: flex;
+  margin: 50px;
+}
+.figure-producto {
+  border: black 2px solid;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+.div-icono-y-descripcion {
+  display: flex;
+  align-items: center;
+}
+#icono-uva {
+  width: 50px;
+}
+.img-producto {
+  width: 80%;
+}
+/* ===================================columna derecha */
+.columna-derecha {
+  width: 60%;
+  margin-left: 50px;
+  border: tomato 5px solid;
+}
+
+.producto-div1 {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 20px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.producto-div1 .fas {
+  font-size: 2em;
+  color: crimson;
+}
+.sub-bloque-compra {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  align-items: center;
+}
+.div-comprar {
+  margin-right: 20px;
+}
+
+.div-redes-sociales {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+.div-redes-sociales .fab {
+  font-size: 1.5em;
+}
+/* ======================================PRODUCTOS Y OFERTAS */
+.div-productos-y-ofertas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-productos-y-ofertas {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#h3-ofertas {
+  text-align: center;
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Detalle de producto</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       rel="stylesheet"
@@ -51,35 +51,46 @@
   </header>
   
   <!-- ========================================MAIN======================================================= -->
- 
-<figure class="imagen-producto"><img class="img-pructo" src="#" alt=""></figure>
-<div class="bloque-de-producto">
+ <main>
+   <div class="box-superior">
+<figure class="figure-producto"><img class="img-producto" src="/img/Somos-Berracos.jpg" alt=""></figure>
+<div class="columna-derecha">
     <div class="producto-div1">
     <h1>Marca de vino</h1>
     <p>Bodega</p>
-    <i>icono de corazon</i>
+    <i class="fas fa-heart"></i>
   </div>  
-
-  <div class="producto-div2">
-    <i>icono de uva</i>
+  <div class="div-icono-y-descripcion">
+    <img id="icono-uva" src="/img/icono-uva.png" alt="icono uva">
     <p class="descripcion">descripcion</p>
   </div>
-  <i>icono de carrito</i>
-  <input type="radio " class="cantidad"> 
-  <label for="">Cantidad de Botellas</label>
-  <p>$9999</p>
-  <button>Comprar</button>
-  </div>
-<h3>Compartir</h4>
-  <div class="redes-sociales">
-    <a href=""><i>iconos redes sociales insta </i></a>
-    <a href=""><i>iconos redes sociales facebuk</i></a>
-    <a href=""><i>iconos redes sociales twitter</i></a>
+
+
+
+  <label for="cantidad-de-botellas">Cantidad de Botellas</label>
+  <div class="sub-bloque-compra">
+  <div class="sub-columna-1">
+  <i class="fas fa-shopping-cart"></i>
+  <input type="radio " class="cantidad" id="cantidad-de-botellas" placeholder="Cantidad"> 
+</div>
+<div class="div-comprar">
+  <p id="precio">$9999</p>
+  <button id="boton-comprar">Comprar</button>
+</div>
+</div>
+
+<div class="div-redes-sociales">
+<h5>COMPARTIR</h5>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
   </div>
 
-  <div class="div-productos-y-ofertas">
-    <h3>Productos y Ofertas</h3>
-    <section>
+</div>
+</div>
+
+<h3 id="h3-ofertas">Productos y Ofertas</h3>
+    <section class="section-productos-y-ofertas">
       <article>
         <figure><img src="#" alt="oferta ..."></figure>
         <h4>Titulo del producto en oferta</h4>
@@ -96,7 +107,7 @@
         <p>descricion del producto en oferta</p>
       </article>
     </section>
-  </div>
+</main>
   <!-- =============================================FOOTER============================================= -->
   <!-- <footer>
     <div class="footer-columna-1">

@@ -10,6 +10,7 @@
 .main-header {
   background-color: #fcd75f;
   padding: 10px;
+  margin-bottom: 30 px;
 }
 
 /* ========================navbars */
@@ -62,26 +63,48 @@
   display: none;
 } para despues poner los media queries*/
 
-/* =================================================BODY============================================== */
+/* =================================================MAIN============================================== */
 
 body {
   background-color: #f5f5f5;
 }
+figure {
+}
+.imagen-copitas {
+  height: 50px;
+  width: 50px;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-div {
+  background-color: #fff;
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 h1 {
-  font-size: 2em;
+  font-size: 2rem;
   text-align: center;
-  margin-bottom: -200px;
-  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+.texto-ingresa {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 fieldset {
   display: flex;
   flex-direction: column;
-  width: 300px;
-  align-items: center;
-  justify-content: center;
   border: 0;
-  height: 100vh;
+  background-color: #fff;
 }
 
 form {
@@ -102,4 +125,11 @@ button {
   height: 6vh;
   font-weight: 500;
   color: white;
+  margin-left: 6px;
+  margin-top: 10px;
+}
+
+.olvido-pass-enlace {
+  margin-top: 20px;
+  text-align: center;
 }

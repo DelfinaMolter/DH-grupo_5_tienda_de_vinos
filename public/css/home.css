@@ -1,0 +1,151 @@
+
+   *{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: "KoHo", sans-serif;
+   }
+  
+  /* =========================================HEADER ================================================*/
+  .main-header {
+    background-color: #240C31;
+    padding: 10px;
+    margin-bottom: 30 px;
+  }
+  
+  /* ========================navbars */
+  .main-navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .main-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-navbar a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 0;
+  }
+  
+  .left-navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .right-navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-navbar li a {
+    color: #f0efee;
+    margin: 7px;
+  }
+  
+  /* ---------------------boton hamburguesa */
+  /*.boton-hamburguesa {
+    padding: 8px 5px;
+    max-width: 35px;
+    background-color: #240c31;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    margin: auto;
+    border-radius: 8px;
+    display: block;
+    margin-top: 10px;*/
+
+    /* ------------------ MAIN ------------------ */
+
+
+/* --------------------- Desktop  --------------------- */
+
+@media (min-width: 769px) {
+    .main__header__section {
+        max-width: 80vw;
+        margin: auto;
+    }
+
+    .imagenArticulo:hover + .detalleArticulos {
+        display: block;
+        opacity: 1;
+        background-color: rgba(39, 99, 69, 0.2);
+        width: 25vw;
+    }
+
+    .imagenArticulo:hover {
+        box-shadow: 0 0 16px 0px rgba(20, 20, 20, .8);
+        width: 25vw;
+    }
+
+    .main__header__navbar {
+        max-width: 80vw;
+        margin: auto;
+    }
+    /*.cuotas {
+        max-width: 350px;
+        text-align: right;
+    } */
+
+    .footer__main__section {
+        background-color: #5F5566;
+        display: flex;
+        margin: 30px;
+    } 
+
+    /* cambio color iconos */
+    .fa-handshake:hover, .fa-gift:hover, .fa-credit-card:hover   {
+        color: #39b54a;
+
+    }
+    
+    .articulos *{
+        width: 20vw;
+    }
+
+    .detalleArticulos {
+        width: 20vw;
+    }
+    .fa-truck {
+        max-width: 3vw;
+    }
+ /* --------------- Grandes views  ------------------- */
+
+
+@media (min-width: 1200px) {
+    .navbar, .main-header-top-bar {
+        max-width: 1200px; 
+        align-items: center;
+    }
+
+    #logo {
+        width: 290px;
+    }
+
+    /*.cuotas {
+        max-width: none;
+        font-size: 18px;
+        font-weight: 400;
+        margin: 0%;
+    }*/
+
+    .main__header__navbar {
+        margin-top: 20px;
+    }
+
+    .main__header__navbar a {
+        font-size: 20px;
+    } 
+
+    
+}
+
+
+}
+
+
+
+

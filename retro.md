@@ -12,3 +12,4 @@ Utilizamos Trello para diagramar y visualizar lo compartido. La URL del Trello u
 |  |  | Dispuestos a escuchar propuestas de los compañeros||
 | |  | Flexibles a modificar propuestas||
 |  | | Buena voluntad en la gestión de tareas||
+

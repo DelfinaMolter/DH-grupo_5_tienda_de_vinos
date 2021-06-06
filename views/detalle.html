@@ -18,37 +18,40 @@
   </head>
   <body>
     <!-- ===========================================HEADER===================================================   -->
-<header class="main-header">
-  <!-- top bar --> 
-    
-       <!-- <img src='poner img del logo aca' class="logo">   -->
-  
-  
-  <!-- boton hamburguesa -->
-  <a href="#" class="boton-hamburguesa"><i class="fas fa-bars"></i></a>
-  
-   <!-- barras de navegacion -->
-   <nav class="main-navbar">
-      <ul class="left-navbar">
-          <li><a href='#'>Productos</a></li>
-          <li><a href='#'>Ofertas<a></li>
-          <li><a href='#'>Sobre Nosotros</a></li>
-          <li><a href='#'>Contactanos</a></li>
-      </ul>
-  
-      <ul class="right-navbar">
-          <li><a href='/register'><i class="far fa-user"></i> Crea tu cuenta</a></li>
-          <li><a href='/login'><i class="fas fa-sign-in-alt"></i> Ingresar</a></li>
-          <li><a href='#'><i class="far fa-bell"></i></a> </li>
-          <li><a href='#'><i class="fas fa-shopping-cart"></i></a> </li>
-          <li><a href='#'><i class="far fa-heart"></i></a> </li>
-       </ul>
-  </nav>
 
+    <header class="main-header">
+      <!-- top bar --> 
+          <!-- <img src='poner img del logo aca' class="logo">   -->
+      
+      
+      <!-- boton hamburguesa 
+      <a href="#" class="boton-hamburguesa"><i class="fas fa-bars"></i></a>
+      -->
+      <!-- Barra de Busqueda -->
+      <form id="barraBusqueda" action="" method="post" target="_blank">
+          <p>
+              <input type="search" placeholder="¿Qué estas buscando?" id="barra">
+          </p>
+      </form>
+      
+      <!-- barras de navegacion -->
+      <nav class="main-navbar">
+          <ul class="left-navbar">
+              <li><a href='#'>Productos</a></li>
+              <li><a href='#'>Ofertas<a></li>
+              <li><a href='#'>Sobre Nosotros</a></li>
+              <li><a href='#'>Contactanos</a></li>
+          </ul>
+          <ul class="right-navbar">
+              <li><a href='/register'><i class="far fa-user"></i> Crea tu cuenta</a></li>
+              <li><a href='/login'><i class="fas fa-sign-in-alt"></i> Ingresar</a></li>
+              <li><a href='#'><i class="far fa-bell"></i></a> </li>
+              <li><a href='#'><i class="fas fa-shopping-cart"></i></a> </li>
+              <li><a href='#'><i class="far fa-heart"></i></a> </li>
+          </ul>
+      </nav>
   
-  
-  
-  </header>
+      </header>
   
   <!-- ========================================MAIN======================================================= -->
  <main>
@@ -56,30 +59,56 @@
 <figure class="figure-producto"><img class="img-producto" src="/img/Somos-Berracos.jpg" alt=""></figure>
 <div class="columna-derecha">
     <div class="producto-div1">
-    <h1>Marca de vino</h1>
-    <p>Bodega</p>
-    <i class="fas fa-heart"></i>
+    <h1 class="vino-y-bodega">Marca de vino</h1>
+    <p class="vino-y-bodega">Bodega</p>
+    <a href="#"><i class="fas fa-heart"></i></a>
   </div>  
   <div class="div-icono-y-descripcion">
     <img id="icono-uva" src="/img/icono-uva.png" alt="icono uva">
-    <p class="descripcion">descripcion</p>
+    <p class="descripcion">Descripcion: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis omnis, dicta fuga quas iusto unde.</p>
   </div>
 
 
 
-  <label for="cantidad-de-botellas">Cantidad de Botellas</label>
-  <div class="sub-bloque-compra">
-  <div class="sub-columna-1">
-  <i class="fas fa-shopping-cart"></i>
-  <input type="radio " class="cantidad" id="cantidad-de-botellas" placeholder="Cantidad"> 
-</div>
-<div class="div-comprar">
-  <p id="precio">$9999</p>
-  <button id="boton-comprar">Comprar</button>
-</div>
-</div>
+  <!-- ============================sub-bloque-compra -->
+<section class="sub-bloque-compra">
+  <article class="precio">
+   <span class="span-precio"> 
+     <p id="precio">$9999</p> 
+     <p id="c/u"> c/u</p>
+  </span>
+    <span class="span-cuotas">
+      <p id="cuotas">3 cuotas de </p>
+      <p id="valor-cuotas"> $3333</p>
+    </span>
+  </article>
 
-<div class="div-redes-sociales">
+  <article class="cantidad">
+    
+  <form action="submit" method="POST" name="comprar" class="comprar">
+    <label for="cantidad-de-botellas"><i class="fas fa-shopping-cart"></i>Cantidad: </label>
+    <select type="select" name="comprar" class="cantidad" id="cantidad-de-botellas" placeholder="Cantidad"> 
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+  </select>
+
+    <button type="submit" name="comprar" id="boton-comprar">COMPRAR</button>
+  </form>
+  
+  
+</section>
+<!-- =============================RRSS -->
+<div class="div-rrss">
 <h5>COMPARTIR</h5>
     <a href="#"><i class="fab fa-facebook"></i></a>
     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -89,7 +118,8 @@
 </div>
 </div>
 
-<h3 id="h3-ofertas">Productos y Ofertas</h3>
+<!-- ====================================Productos y Ofertas -->
+<h3 id="h3-ofertas">PRODUCTOS Y OFERTAS</h3>
     <section class="section-productos-y-ofertas">
       <article>
         <figure><img id="oferta1" src="/img/oferta1.jpg" alt="oferta ..."></figure>
@@ -109,18 +139,33 @@
     </section>
 </main>
   <!-- =============================================FOOTER============================================= -->
-  <!-- <footer>
-    <div class="footer-columna-1">
-    <figure>img del logo</figure>
-    <div class="redes sociales">
-      <a href="#"><i>icono redes sociales</i></a>
-      <a href="#"><i>icono redes sociales</i></a>
-      <a href="#"><i>icono redes sociales</i></a>
-    </div>
-  </div>
-  <div class="footer-columna-2">
+  <footer>
+    <div class="medium-3 columns"></div>
+    <ul>
+        <li class="title">CATEGORIAS</li>
+        <li><a href="Aca va una URL">Inicio</a></li>
+        <li><a href="Aca va una URLr">Sobre Nosotros</a></li>
+        <li><a href="Aca va una URL">Productos</a></li>
+        <li><a href="Aca va una URL">Ofertas</a></li>
+</ul>
+</div>
+    <div class="medium-3 columns">
+        <ul>
+        <li class="title">AYUDA</li>
+        <li><a href="Aca va una URL">Búsqueda</a></li>
+        <li><a href="Aca va una URL">Contactanos</a></li>
+        <li><a href="Aca va una URL">Términos & Cs</a></li>
+        <li><a href="Aca va una URL">Privacidad</a></li>
+        <li><a href="Aca va una URL">Preguntas Frecuentes</a></li>
 
-  </div>
-  </footer> -->
+    </ul>
+</div>
+<form id="SuscripcionsNewsletter" action="" method="post" target="_blank">
+    <p>
+    <input type="search" placeholder="Ingresa tu email" id="barra">
+    </p>
+</form>
+
+</footer>
 </body>
 </html>

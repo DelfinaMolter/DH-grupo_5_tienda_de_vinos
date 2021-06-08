@@ -60,13 +60,16 @@
 
 /* ===============================================MAIN=============================================== */
 .box-superior {
-  display: flex;
   margin: 50px;
   padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
 }
 .figure-producto {
   /* border: black 2px solid; */
-  max-width: 50%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,34 +80,38 @@
   height: auto;
 }
 
-/* ===================================columna derecha */
 .columna-derecha {
-  width: 60%;
-  margin-left: 50px;
-  /* border: tomato 5px solid; */
+  /* ver si sirve este div y cambiarle el nombre */
+  width: 100%;
 }
 
-.producto-div1 {
+.titulos-y-fav {
+  width: 100%;
   display: flex;
-  justify-content: space-around;
-  margin: 0 20px;
+  justify-content: space-between;
   margin-bottom: 20px;
   align-items: center;
 }
 .vino-y-bodega {
   font-size: 1.5em;
 }
-.producto-div1 .fas {
+.titulos-y-fav .fas {
   font-size: 2em;
   color: crimson;
 }
 
 .div-icono-y-descripcion {
+  margin-top: 1em;
+  width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.descripcion {
+  max-width: 100%;
 }
 #icono-uva {
-  width: 50px;
+  width: 40px;
 }
 /* ====================Section compra */
 .sub-bloque-compra {
@@ -161,9 +168,10 @@
 }
 /* ===========================redes sociales */
 .div-rrss {
+  width: 100%;
   margin-top: 40px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .div-rrss .fab {
   font-size: 1.5em;
@@ -172,6 +180,7 @@
 /* ======================================PRODUCTOS Y OFERTAS */
 
 .div-productos-y-ofertas {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -181,7 +190,12 @@
   margin-top: 30px;
   padding-bottom: 50px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-productos-y-ofertas article {
+  margin-bottom: 3em;
 }
 
 #h3-ofertas {
@@ -189,7 +203,6 @@
   font-size: 2em;
   border-top: black 1px solid;
   border-bottom: black 1px solid;
-  margin: 0 200px;
   padding: 15px;
 }
 
@@ -240,6 +253,26 @@
   }
   .fa-truck {
     max-width: 3vw;
+  }
+
+  /* Main */
+  .box-superior {
+    align-items: center;
+  }
+  .titulos-y-fav {
+    justify-content: space-around;
+  }
+
+  #icono-uva {
+    width: 20px;
+  }
+
+  .section-productos-y-ofertas {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .div-rrss {
+    justify-content: space-around;
   }
 }
 /* --------------------- Desktop*/

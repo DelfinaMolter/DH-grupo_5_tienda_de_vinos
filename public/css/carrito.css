@@ -1,11 +1,160 @@
+/*
+Colores:
+#240C31 dark purole (violeta vino)
+#5e257c (violeta claro) BOTON HOVER
+#5F5566 old lavender (gris oscuro)
+#dad7dd (gris claro) FONDO DE REGISTRO
+#F5F5F5 cultured (blanco)
+#FCD75F orange yellow crayola (amarillo)
 
+Tipografía:
+font-family: 'KoHo', sans-serif;
 
-
-
-
-.imagenProductro{
-    width:50%;
+*/
+/*========= MAIN =============*/
+*{
+    box-sizing:border-box;
+    margin:0px;
+    padding:0px;
 }
-.descripcion__icon{
-    width:5%;
+body{
+    font-family: 'KoHo', sans-serif;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+main{
+    margin: 10px 20px;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+}
+.tabla__productos{
+    display: flex;
+    flex-direction: column;
+} 
+.tabla__productos__box{
+    margin:0px 0px 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    box-shadow: 0px 0px 6px rgb( 100 , 100 , 100 );
+}
+.tabla__productos__box__imagenProductro{
+    position: relative;
+    justify-content: center;
+    width:80vw;
+    margin:auto;
+    padding:25px;
+}
+.tabla__productos__box__bodega{
+    margin:10px;
+}
+.tabla__productos__box__uva{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+.tabla__productos__box__uva__icon{
+    width:5vw;
+    margin:0px 2px;;
+}
+.tabla__productos__box__cantidadB{
+    font-size: 16px;
+    margin: 7px;
+}
+.tabla__productos__box__cantidadP{
+    display: flex;
+    flex-direction:row;
+    margin: 10px;
+}
+.tabla__productos__box__cantidadP i{
+    display:flex;
+    border-radius: 50%;
+    background-color: #dad7dd;
+    color:#240C31;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 0px 20px;
+    transition: 400ms;
+}
+.tabla__productos__box__cantidadP p{
+    font-weight: bold;
+    margin:5px 0px 0px;
+}
+.tabla__productos__box__precio{
+    font-weight: bold;
+    font-size: 30px;
+    margin:10px 0px 25px;
+}
+.tabla__footer__envio{
+    display: flex;
+}
+.tabla__footer__envio{
+    display: flex;
+    justify-content:space-between;
+}
+.tabla__footer__envio__precio{
+    font-weight: bold;
+}
+.tabla__footer__total{
+    display: flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin:20px;
+    font-weight: bold;
+}
+.tabla__footer__total__texto{
+    font-size:20px;
+    padding:5px;
+}
+.tabla__footer__total__precio{
+    font-size: 35px;
+    padding:0px 10px;
+}
+
+button{
+    margin: 7px;
+    padding: 6px;
+    width:25vw;
+    border-radius: 7px;
+    background-color:#240C31;
+    color: #F5F5F5;   
+}
+/*-------- MOBILE --------*/
+@media (min-width: 361px){
+    button{
+        width:20vw;
+        max-width:90px;   
+    }
+}
+/*-------- TABLE --------*/
+@media (min-width: 768px){
+    main{
+        margin: 10px 40px;
+    }
+    .tabla__productos__box__cantidadP{
+        transition: 400ms;
+    }
+    .tabla__productos__box__cantidadP i:hover{
+        background-color: #5F5566;
+        color:#dad7dd;
+    }
+    .submit button{
+        transition: 400ms;    
+    }
+    button:hover{
+        background-color:#5e257c;
+    }
+}
+/*-------- DESKTOP --------*/
+@media (min-width: 1100px){
+    main{
+        margin: 10px 50px;
+    }
+
 }

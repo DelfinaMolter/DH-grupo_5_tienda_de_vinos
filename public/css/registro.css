@@ -1,6 +1,7 @@
 /*
 Colores:
 #240C31 dark purole (violeta vino)
+#5e257c (violeta claro) BOTON HOVER
 #5F5566 old lavender (gris oscuro)
 #dad7dd (gris claro) FONDO DE REGISTRO
 #F5F5F5 cultured (blanco)
@@ -104,10 +105,10 @@ fieldset{
         min-width: 130px;
     }
     .form__registro__botones button{
-        transition: 450ms;    
+        transition: 400ms;    
     }
     .form__registro__botones button:hover{
-        background-color:#4f1d69;
+        background-color:#5e257c;
     }
 }
 /*-------- DESKTOP --------*/

@@ -1,150 +1,309 @@
 
-   *{margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 12px;
-    font-family: "KoHo", sans-serif;
-   }
-  
-  /* =========================================HEADER ================================================*/
-  .main-header {
-    background-color: #240C31;
-    padding: 10px;
-    margin-bottom: 30 px;
-  }
-  
-  /* ========================navbars */
-  .main-navbar {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .main-navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .main-navbar a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 5px 0;
-  }
-  
-  .left-navbar {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .right-navbar {
-    display: flex;
-    justify-content: space-between;
-  }
-  .main-navbar li a {
-    color: #f0efee;
-    margin: 7px;
-  }
-  
-  /* ---------------------boton hamburguesa */
-  /*.boton-hamburguesa {
-    padding: 8px 5px;
-    max-width: 35px;
-    background-color: #240c31;
-    color: white;
-    text-align: center;
-    font-size: 15px;
-    margin: auto;
-    border-radius: 8px;
-    display: block;
-    margin-top: 10px;*/
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-size: 12px;
+font-family: "KoHo", sans-serif;
+}
 
-    /* ------------------ MAIN ------------------ */
+/* =========================================HEADER ================================================*/
+.main-header {
+background-color: #240C31;
+padding: 10px;
+margin-bottom: 30 px;
+}
+
+#logo {
+width: 100px; height: 100px;
+}
+
+#barraBusqueda {
+max-width: 50%;
+display: flex;
+margin-left: 8px;
+
+}
+
+figure{
+margin:auto;
+}
+.banner {
+width: 100%;
+margin:auto
+}
+
+
+/* ========================navbars */
+.main-navbar {
+display: flex;
+justify-content: space-between;
+}
+
+
+.main-navbar ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+.main-navbar a {
+text-decoration: none;
+display: inline-block;
+padding: 5px 0;
+}
+
+.left-navbar {
+display: flex;
+justify-content: space-between;
+}
+
+.right-navbar {
+display: flex;
+justify-content: space-between;
+}
+.main-navbar li a {
+color: #f0efee;
+margin: 7px;
+}
+
+
+
+/* ------------------ MAIN ------------------ */
+main {
+margin: auto;
+background-color: #ebebeb;
+padding-bottom: 10px;
+}
+
+.main__banner {
+width: 100vw;
+max-width: 100vw;
+}
+
+p {
+font-size: 12px;
+}
+
+h3 {
+font-size: 20px;
+color: #666;;
+text-align: center;
+font-weight: 300;
+}
+
+h3 a {
+font-size: 16px;
+font-weight: 200;
+color: blue;
+margin-left: 8px;
+}
+
+.articulos {
+margin: 10px;
+background-color: white;
+position: relative;
+transition: all 450ms
+}
+
+.detalleArticulos {
+border-top: solid 1px #292525;
+padding: 15px;
+}
+
+.descripciones {  
+font-size: 15px;
+display: none;
+}
+
+
+.imagenArticulo {
+width: 60vw;
+margin: auto;
+}
+
+/* --------------- FOOTER ------------------ */
+.container{
+max-width: 1170px;
+background-color: red;
+margin: auto;
+}
+.row {
+display: flex;
+flex-wrap: wrap;
+}
+
+ul{
+list-style: none;
+}
+
+.footer {
+background-color: #5F5566;
+padding: 70px 0;
+height: auto ;
+width: 100vw;
+font-family: "Open Sans";
+padding-top: 40px;
+/*margin-left: auto;
+margin-right: auto;*/
+color: #fff
+}
+
+.footer-col{
+width: 25%;
+padding: 0 15px;
+}
+
+.footer-col h4{
+font-size: 18px;
+color: #fff;
+text-transform: capitalize;
+margin-bottom: 35px;
+font-weight:500;
+position: relative;
+}
+
+.footer-col h4::before{
+content: '';
+position: absolute;
+left: 0;
+bottom: -10px;
+background-color: #FCD75F;
+height: 2px;
+box-sizing: border-box;
+width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+font-size: 16px;
+text-transform: capitalize;
+color: #ffffff;
+text-decoration: none;
+font-weight: 300;
+color: #bbbbbb;
+display: block;
+transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+color: #ffffff;
+padding-left: 8px;
+}
+
+.footer-col .social-links a{
+display: inline-block;
+height: 40px;
+width: 40px;
+background-color: rgba(255,255,255,0.2);
+margin:0 10px 10px 0;
+text-align: center;
+line-height: 40px;
+border-radius: 50%;
+color: #ffffff;
+transition: all 0.3s ease;
+}
+.footer-col .social-links a :hover{
+color: #24262b;
+background-color: #ffffff;
+}
+
+/*---RESPONSIVE---*/
+@media(max-width: 767px){
+.footer-col{
+width: 50%;
+margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+.footer-col{
+width: 100%;
+}
+}
 
 
 /* --------------------- Desktop  --------------------- */
 
 @media (min-width: 769px) {
-    .main__header__section {
-        max-width: 80vw;
-        margin: auto;
-    }
+.main__header__section {
+max-width: 80vw;
+margin: auto;
+}
 
-    .imagenArticulo:hover + .detalleArticulos {
-        display: block;
-        opacity: 1;
-        background-color: rgba(39, 99, 69, 0.2);
-        width: 25vw;
-    }
+.imagenArticulo:hover + .detalleArticulos {
+display: block;
+opacity: 1;
+background-color: rgba(39, 99, 69, 0.2);
+width: 25vw;
+}
 
-    .imagenArticulo:hover {
-        box-shadow: 0 0 16px 0px rgba(20, 20, 20, .8);
-        width: 25vw;
-    }
+.imagenArticulo:hover {
+box-shadow: 0 0 16px 0px rgba(20, 20, 20, .8);
+width: 25vw;
+}
 
-    .main__header__navbar {
-        max-width: 80vw;
-        margin: auto;
-    }
-    /*.cuotas {
-        max-width: 350px;
-        text-align: right;
-    } */
+.main__header__navbar {
+max-width: 80vw;
+margin: auto;
+}
+/*.cuotas {
+max-width: 350px;
+text-align: right;
+} */
 
-    .footer__main__section {
-        background-color: #5F5566;
-        display: flex;
-        margin: 30px;
-    } 
+/* cambio color iconos 
+.fa-handshake:hover, .fa-gift:hover, .fa-credit-card:hover   {
+color: #39b54a; */
 
-    /* cambio color iconos */
-    .fa-handshake:hover, .fa-gift:hover, .fa-credit-card:hover   {
-        color: #39b54a;
+}
 
-    }
-    
-    .articulos *{
-        width: 20vw;
-    }
+.articulos *{
+width: 20vw;
+}
 
-    .detalleArticulos {
-        width: 20vw;
-    }
-    .fa-truck {
-        max-width: 3vw;
-    }
- /* --------------- Grandes views  ------------------- */
+.detalleArticulos {
+width: 20vw;
+}
+.fa-truck {
+max-width: 3vw;
+}
+/* --------------- Grandes views  ------------------- */
 
 
 @media (min-width: 1200px) {
-    .navbar, .main-header-top-bar {
-        max-width: 1200px; 
-        align-items: center;
-    }
+.navbar, .main-header-top-bar {
+max-width: 1200px; 
+align-items: center;
+}
 
-    #logo {
-        width: 290px;
-    }
+#logo {
+    width: 290px;
+}
 
-    /*.cuotas {
-        max-width: none;
-        font-size: 18px;
-        font-weight: 400;
-        margin: 0%;
-    }*/
+/*.cuotas {
+max-width: none;
+font-size: 18px;
+font-weight: 400;
+margin: 0%;
+}*/
 
-    .main__header__navbar {
-        margin-top: 20px;
-    }
+.main__header__navbar {
+    margin-top: 20px;
+}
 
-    .main__header__navbar a {
-        font-size: 20px;
-    } 
+.main__header__navbar a {
+    font-size: 20px;
+} 
 
-    
+
 }
 
 
-}
+
+
+
+
 
 
 

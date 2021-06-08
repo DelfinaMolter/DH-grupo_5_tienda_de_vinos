@@ -11,7 +11,6 @@ Tipografía:
 font-family: 'KoHo', sans-serif;
 
 */
-/*========= MAIN =============*/
 *{
     box-sizing:border-box;
     margin:0px;
@@ -21,9 +20,79 @@ body{
     font-family: 'KoHo', sans-serif;
     font-size: 18px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items:center;
 }
+/* =========================================HEADER ================================================*/
+.main-header {
+    background-color: #240c31;
+    padding: 10px;
+    margin-bottom: 30 px;
+}
+.main-header-top-bar {
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+    flex-wrap: wrap;
+}
+#logo {
+    max-width: 10%;
+    max-height: auto;
+}
+/*-------------------------- search bar*/
+.barra-de-busqueda-form {
+    width: 50%;
+}
+.barra-de-busqueda-fieldset {
+    display: flex;
+    border: 0;
+}
+#search {
+    width: 75%;
+    margin: 0;
+    border: #222222 solid 2px;
+}
+.barra-de-busqueda-form input #search {
+    background: #adb5be;
+    border: none;
+    font-size: 12px;
+    color: #adb5be;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.icono-busqueda {
+    width: 25%;
+    margin-top: 2px;
+    margin-left: 5px;
+}
+.icono-busqueda i {
+    background-color: #240c31;
+    color: orange;
+    font-size: 15px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%;
+}/* ---------------------boton hamburguesa */
+.boton-hamburguesa {
+    padding: 8px 5px;
+    max-width: 35px;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    margin: auto;
+    border-radius: 8px;
+    display: block;
+    margin-top: 10px;
+}
+.main-navbar {
+    display: none;
+}
+
+/*========= MAIN =============*/
 main{
     margin: 10px 20px;
     display: flex;
@@ -133,13 +202,49 @@ button{
     }
 }
 /*-------- MOBILE XL--------*/
-@media (min-width: 480px){
+/*@media (min-width: 480px){
     .tabla__productos{
 
     } 
-}
+}*/
 /*-------- TABLE --------*/
 @media (min-width: 768px){
+/* ======================================HEADER */
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+}
+.main-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.main-navbar a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 0;
+}
+.left-navbar {
+    display: flex;
+    justify-content: space-between;
+}
+.right-navbar {
+    display: flex;
+    justify-content: space-between;
+}
+.main-navbar li a {
+    color: #f0efee;
+    margin: 7px;
+}
+.boton-hamburguesa {
+    display: none;
+}
+.main__header__section {
+    max-width: 80vw;
+    margin: auto;
+}
+
+/* =======================================MAIN */
     main{
         margin: 10px 40px;
     }

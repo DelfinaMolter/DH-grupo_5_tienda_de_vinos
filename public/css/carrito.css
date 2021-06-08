@@ -91,28 +91,28 @@ main{
     font-size: 30px;
     margin:10px 0px 25px;
 }
-.tabla__footer__envio{
+.footer__envio{
     display: flex;
 }
-.tabla__footer__envio{
+.footer__envio{
     display: flex;
     justify-content:space-between;
 }
-.tabla__footer__envio__precio{
+.footer__envio__precio{
     font-weight: bold;
 }
-.tabla__footer__total{
+.footer__total{
     display: flex;
     justify-content:space-between;
     align-items:flex-end;
     margin:20px;
     font-weight: bold;
 }
-.tabla__footer__total__texto{
+.footer__total__texto{
     font-size:20px;
     padding:5px;
 }
-.tabla__footer__total__precio{
+.footer__total__precio{
     font-size: 35px;
     padding:0px 10px;
 }
@@ -131,6 +131,12 @@ button{
         width:20vw;
         max-width:90px;   
     }
+}
+/*-------- MOBILE XL--------*/
+@media (min-width: 480px){
+    .tabla__productos{
+
+    } 
 }
 /*-------- TABLE --------*/
 @media (min-width: 768px){

@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "nodemon app.js -e css,html,js",
+    "test": "clear && nodemon app.js -e .css,.html,.js",
     "start": "node app.js"
   },
   "keywords": [],
@@ -12,5 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }

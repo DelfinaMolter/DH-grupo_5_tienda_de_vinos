@@ -1,11 +1,117 @@
 /*
 Colores:
-# 240C31 dark purole (violeta vino)
-# 5F5566 old lavender (gris oscuro)
-# F5F5F5 cultured (blanco)
-# FCD75F orange yellow crayola (amarillo)
+#240C31 dark purole (violeta vino)
+#5e257c (violeta claro) BOTON HOVER
+#5F5566 old lavender (gris oscuro)
+#dad7dd (gris claro) FONDO DE REGISTRO
+#F5F5F5 cultured (blanco)
+#FCD75F orange yellow crayola (amarillo)
 
 Tipografía:
 font-family: 'KoHo', sans-serif;
 
 */
+/*========= MAIN =============*/
+*{
+    box-sizing:border-box;
+    margin:0px;
+    padding:0px;
+}
+body{
+    font-family: 'KoHo', sans-serif;
+    font-size: 18px;
+    background: #dad7dd;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.logo{
+    width:25vw;
+}
+.registro{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.registro__nota{
+    text-align: center;
+    padding:3px;
+    margin:0px 14px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+fieldset{
+    border: none;
+}
+.form__registro__datos{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin: 10px 0px 5px;
+}
+.form__registro__datos input{
+    padding: 5px;
+    margin:7px 0px 9px;
+    border-radius: 7px;
+    border:none;
+    width: 65vw;
+}
+.form__registro__condiciones{
+    font-size:14px;
+    text-align: center;
+}
+.form__registro__botones{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 7px;
+}
+.form__registro__botones button{
+    margin: 7px;
+    padding: 2px 6px;
+    width:25vw;
+    border-radius: 7px;
+    background-color:#240C31;
+    color: #F5F5F5;   
+}
+/*-------- MOBILE --------*/
+@media (min-width: 361px){
+    .logo{
+        width:17vw;
+        min-width: 85px;
+    }
+    .form__registro__datos input{
+        width: 45vw;
+        min-width: 270px;
+        max-width: 310px;
+    }
+    .form__registro__botones{
+        display: flex;
+        flex-direction: row;
+    }
+    .form__registro__botones button{
+        width:20vw;
+        max-width:90px;   
+    }
+}
+/*-------- TABLE --------*/
+@media (min-width: 768px){
+    .logo{
+        width:10vw;
+        min-width: 130px;
+    }
+    .form__registro__botones button{
+        transition: 400ms;    
+    }
+    .form__registro__botones button:hover{
+        background-color:#5e257c;
+    }
+}
+/*-------- DESKTOP --------*/
+@media (min-width: 1100px){
+
+}

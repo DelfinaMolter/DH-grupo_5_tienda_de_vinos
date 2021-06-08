@@ -232,7 +232,7 @@
 /* ===========================================MEDIA QUERIES=========================================== */
 /* ------------------------------Tablet */
 @media (min-width: 769px) {
-  /* ========================navbars */
+  /* ======================================HEADER */
   .main-navbar {
     display: flex;
     justify-content: space-between;
@@ -272,48 +272,8 @@
     margin: auto;
   }
 
-  .imagenArticulo:hover + .detalleArticulos {
-    display: block;
-    opacity: 1;
-    background-color: rgba(39, 99, 69, 0.2);
-    width: 25vw;
-  }
+  /* =======================================MAIN */
 
-  .imagenArticulo:hover {
-    box-shadow: 0 0 16px 0px rgba(20, 20, 20, 0.8);
-    width: 25vw;
-  }
-
-  .main__header__navbar {
-    max-width: 80vw;
-    margin: auto;
-  }
-
-  .footer__main__section {
-    background-color: #5f5566;
-    display: flex;
-    margin: 30px;
-  }
-
-  /* cambio color iconos */
-  .fa-handshake:hover,
-  .fa-gift:hover,
-  .fa-credit-card:hover {
-    color: #39b54a;
-  }
-
-  .articulos {
-    width: 20vw;
-  }
-
-  .detalleArticulos {
-    width: 20vw;
-  }
-  .fa-truck {
-    max-width: 3vw;
-  }
-
-  /* Main */
   .box-superior {
     align-items: center;
   }

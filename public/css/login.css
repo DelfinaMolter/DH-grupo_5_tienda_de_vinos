@@ -17,7 +17,7 @@
   justify-content: space-between;
   align-items: center;
   min-width: 100%;
-  flex-wrap: wrap;
+
 }
 
 #logo {
@@ -37,7 +37,7 @@
 #search {
   width: 75%;
   margin: 0;
-  border: #222222 solid 2px;
+  border-radius: 5px;
 }
 .barra-de-busqueda-form input #search {
   background: #adb5be;

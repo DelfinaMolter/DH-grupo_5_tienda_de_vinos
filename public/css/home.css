@@ -170,10 +170,15 @@ h3 a {
   flex-direction: column;
 }
 
-.brand-carousel owl-carousel a {
-  display: inline-block;
+.brand-carousel {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
 }
-
+#marcas {
+  margin-top: 50px;
+}
 /*===================================FOOOTER====================================*/
 
 .container {

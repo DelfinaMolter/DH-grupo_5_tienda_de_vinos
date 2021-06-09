@@ -182,7 +182,7 @@ h3 a {
 }
 .row {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 ul {

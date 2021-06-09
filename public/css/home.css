@@ -40,6 +40,7 @@ left: 10px;
 width: 75%;
 margin: 0;
 border: #222222 solid 2px;
+border-radius: 5px;
 }
 .barra-de-busqueda-form input #search {
 background: #adb5be;
@@ -66,7 +67,7 @@ border-radius: 50%;
 padding: 8px 5px;
 max-width: 35px;
 background-color: #f0c949;
-color: white;
+color: #240C31;
 text-align: center;
 font-size: 15px;
 margin: auto;
@@ -170,10 +171,15 @@ display: flex;
 flex-direction: column;
 }
 
-.brand-carousel owl-carousel a {
-display: inline-block;
+.brand-carousel {
+margin-top: 30px;
+margin-bottom: 50px;
+display: flex;
+justify-content: space-between;
 }
-
+#marcas {
+margin-top: 50px;
+}
 /*===================================FOOOTER====================================*/
 
 .container {
@@ -182,7 +188,7 @@ margin: auto;
 }
 .row {
 display: flex;
-flex-wrap: wrap;
+justify-content: space-around;
 }
 
 ul {

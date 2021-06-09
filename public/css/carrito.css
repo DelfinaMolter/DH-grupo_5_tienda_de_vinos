@@ -20,16 +20,12 @@ font-family: 'KoHo', sans-serif;
 body{
     font-family: 'KoHo', sans-serif;
     font-size: 18px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
 }
 /* =========================================HEADER ================================================*/
 .main-header {
     background-color: #240c31;
     padding: 10px;
-    margin-bottom: 30 px;
+    margin-bottom: 30px;
 }
 .main-header-top-bar {
     display: flex;
@@ -38,21 +34,22 @@ body{
     min-width: 100%;
 }
 #logo {
-    max-width: 10%;
+    max-width: 20vw;
     max-height: auto;
 }
 /*-------------------------- search bar*/
 .barra-de-busqueda-form {
-    width: 50%;
+    width: 30%;
 }
 .barra-de-busqueda-fieldset {
     display: flex;
     border: 0;
+    position: relative;
+    left: 10px;
 }
 #search {
     width: 75%;
     margin: 0;
-    border: #222222 solid 2px;
     border-radius:5px;
 }
 .barra-de-busqueda-form input #search {
@@ -62,11 +59,6 @@ body{
     color: #adb5be;
     padding-left: 10px;
     border-radius: 5px;
-}
-.icono-busqueda {
-    width: 25%;
-    margin-top: 2px;
-    margin-left: 5px;
 }
 .icono-busqueda i {
     background-color: #240c31;
@@ -82,7 +74,7 @@ body{
     padding: 8px 5px;
     max-width: 35px;
     background-color: #f0c949;
-    color: white;
+    color: #240C31;
     text-align: center;
     font-size: 15px;
     margin: auto;

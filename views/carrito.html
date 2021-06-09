@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,7 +20,36 @@
   </head>
   <body>
     <!-------------------- ENCABZADO ------------------------->
-    <header></header>
+    <header class="main-header">
+      <!-- top bar  -->
+      <div class="main-header-top-bar">
+        <img id="logo" src="/img/logo-amarillo-violeta.png" alt="logo de Tienda de Vinos">
+        <form  class="barra-de-busqueda-form" action="" method="post" target="_blank">
+          <fieldset class="barra-de-busqueda-fieldset"> 
+            <input type="search" id="search" placeholder="Buscar vino y bodega">
+            <span class="icono-busqueda"><i class="fa fa-search"></i></span>
+          </fieldset>
+        </form> 
+      </div>
+      <!-- boton hamburguesa  -->
+      <a href="#" class="boton-hamburguesa"><i class="fas fa-bars"></i></a>
+      <!-- barras de navegacion -->
+      <nav class="main-navbar">
+        <ul class="left-navbar">
+            <li><a href='#'>Productos</a></li>
+            <li><a href='#'>Ofertas<a></li>
+            <li><a href='#'>Sobre Nosotros</a></li>
+            <li><a href='#'>Contactanos</a></li>
+        </ul>
+        <ul class="right-navbar">
+            <li><a href='/registro'><i class="far fa-user"></i> Crea tu cuenta</a></li>
+            <li><a href='/login'><i class="fas fa-sign-in-alt"></i> Ingresar</a></li>
+            <li><a href='#'><i class="far fa-bell"></i></a> </li>
+            <li><a href='#'><i class="fas fa-shopping-cart"></i></a> </li>
+            <li><a href='#'><i class="far fa-heart"></i></a> </li>
+        </ul>
+      </nav>
+    </header>
     <!-------------------- CUERPO ---------------------->
     <main>
       <h1>Carrito de Compra</h1>
@@ -62,15 +91,15 @@
         </article>
       </section>
       <!--- RESUMEN DE COMPRA -->
-      <section class="tabla__footer">
-        <article class="tabla__footer__envio">
-          <p class="tabla__footer__envio__texto">Envio a </p>
-          <p class="tabla__footer__envio__direccion"><a href="#">Dirección</a> por </p>
-          <p class="tabla__footer__envio__precio"> $150 </p>
+      <section class="footer">
+        <article class="footer__envio">
+          <p class="footer__envio__texto">Envio a </p>
+          <p class="footer__envio__direccion"><a href="#">Dirección</a> por </p>
+          <p class="footer__envio__precio"> $150 </p>
         </article>
-        <article class="tabla__footer__total">
-          <p class="tabla__footer__total__texto">TOTAL: </p>
-          <p class="tabla__footer__total__precio"> $3.650</p>
+        <article class="footer__total">
+          <p class="footer__total__texto">TOTAL: </p>
+          <p class="footer__total__precio"> $3.650</p>
         </article>
       </section>
       <button class="submit">Pagar</button>

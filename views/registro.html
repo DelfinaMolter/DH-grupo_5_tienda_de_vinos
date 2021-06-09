@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,35 +14,63 @@
   </head>
   <body>
 <!-------------------- ENCABZADO ------------------------->
-    <header>
-
+    <header class="main-header">
+      <!-- top bar  -->
+      <div class="main-header-top-bar">
+        <img id="logo" src="/img/logo-amarillo-violeta.png" alt="logo de Tienda de Vinos">
+        <form  class="barra-de-busqueda-form" action="" method="post" target="_blank">
+          <fieldset class="barra-de-busqueda-fieldset"> 
+            <input type="search" id="search" placeholder="Buscar vino y bodega">
+            <span class="icono-busqueda"><i class="fa fa-search"></i></span>
+          </fieldset>
+        </form> 
+      </div>
+      <!-- boton hamburguesa  -->
+      <a href="#" class="boton-hamburguesa"><i class="fas fa-bars"></i></a>
+      <!-- barras de navegacion -->
+      <nav class="main-navbar">
+        <ul class="left-navbar">
+            <li><a href='#'>Productos</a></li>
+            <li><a href='#'>Ofertas<a></li>
+            <li><a href='#'>Sobre Nosotros</a></li>
+            <li><a href='#'>Contactanos</a></li>
+        </ul>
+        <ul class="right-navbar">
+            <li><a href='/registro'><i class="far fa-user"></i> Crea tu cuenta</a></li>
+            <li><a href='/login'><i class="fas fa-sign-in-alt"></i> Ingresar</a></li>
+            <li><a href='#'><i class="far fa-bell"></i></a> </li>
+            <li><a href='#'><i class="fas fa-shopping-cart"></i></a> </li>
+            <li><a href='#'><i class="far fa-heart"></i></a> </li>
+        </ul>
+      </nav>
     </header>
 <!-------------------- FORMULARIO ---------------------->
-    <img src="/img/Logo-fondo-transparente.png" alt="logo" class="logo"> 
-    <section class="registro">
-      <h1 clase="registro__titulo">Datos de Registro</h1>
-      <p class="registro__nota">Si todavía no tenes una cuenta completa el formulario.</p>
-      <form action="/" method="POST" class="form">
-        <fieldset class="form__registro__datos">
-          <input type="text" name="name" class="form__registro__datos__nombre" placeholder="Nombre" required>
-          <input type="text" name="last_name" class="form__registro__datos__apellido" placeholder="Apellido" required>
-          <input type="tel" name="dni" maxlength="9" minlength="8" class="form__registro__datos__dni" placeholder="DNI - sin puntos, ni espacios" required>
-          <label id="fechaNac">Fecha de Nacimiento</label>
-          <input type="date" id="fechaNac" name="birthDate" class="form__registro__datos__fechaNac" max="2003-06-30" placeholder="Fecha de Nacimiento" required>
-          <input type="email" name="email" class="form__registro__datos__email" placeholder="E-mail" required>
-          <input type="username" name="usuario" class="form__registro__datos__usuario" placeholder="Usuario" required>
-          <input type="password" name="password" class="form__registro__datos__pass" placeholder="Contraseña" required>
-        </fieldset>
-        <fieldset class="form__registro__condiciones">
-          <input type="radio" name="condiciones" class="form__registro__condiciones__Check" required>
-          <label class="form__registro__condiciones__Text">Acepto los <a class="form__registro__condiciones__Text__Link" href="#">Términos y Condiciones</a>.</label>
-        </fieldset>
-        <fieldset class="form__registro__botones">
-          <button type="reset" class="form__registro__botones__borrar">Borrar</button>
-          <button type="submit" class="form__registro__botones__enviar">Enviar</button>
-        </fieldset>
-      </form>
-    </section>
+    <main> 
+      <section class="registro">
+        <h1 clase="registro__titulo">Datos de Registro</h1>
+        <p class="registro__nota">Si todavía no tenes una cuenta completa el formulario.</p>
+        <form action="/" method="POST" class="form">
+          <fieldset class="form__registro__datos">
+            <input type="text" name="name" class="form__registro__datos__nombre" placeholder="Nombre" required>
+            <input type="text" name="last_name" class="form__registro__datos__apellido" placeholder="Apellido" required>
+            <input type="tel" name="dni" maxlength="9" minlength="8" class="form__registro__datos__dni" placeholder="DNI - sin puntos, ni espacios" required>
+            <label id="fechaNac">Fecha de Nacimiento</label>
+            <input type="date" id="fechaNac" name="birthDate" class="form__registro__datos__fechaNac" max="2003-06-30" placeholder="Fecha de Nacimiento" required>
+            <input type="email" name="email" class="form__registro__datos__email" placeholder="E-mail" required>
+            <input type="username" name="usuario" class="form__registro__datos__usuario" placeholder="Usuario" required>
+            <input type="password" name="password" class="form__registro__datos__pass" placeholder="Contraseña" required>
+          </fieldset>
+          <fieldset class="form__registro__condiciones">
+            <input type="radio" name="condiciones" class="form__registro__condiciones__Check" required>
+            <label class="form__registro__condiciones__Text">Acepto los <a class="form__registro__condiciones__Text__Link" href="#">Términos y Condiciones</a>.</label>
+          </fieldset>
+          <fieldset class="form__registro__botones">
+            <button type="reset" class="form__registro__botones__borrar">Borrar</button>
+            <button type="submit" class="form__registro__botones__enviar">Enviar</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
 <!------------------- PIE DE PAGINA ----------->
     <footer>
 

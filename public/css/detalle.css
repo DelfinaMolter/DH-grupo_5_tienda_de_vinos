@@ -10,7 +10,7 @@
 .main-header {
   background-color: #240c31;
   padding: 10px;
-  margin-bottom: 30 px;
+  margin-bottom: 30px;
 }
 .main-header-top-bar {
   display: flex;
@@ -32,6 +32,7 @@
 .barra-de-busqueda-fieldset {
   display: flex;
   border: 0;
+  align-items: center;
   position: relative;
   left: 10px;
 }

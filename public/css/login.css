@@ -52,7 +52,7 @@
 
 .icono-busqueda i {
   background-color: #240c31;
-  color: orange;
+  color: #f0c949;
   font-size: 15px;
   width: 25px;
   height: 25px;
@@ -65,7 +65,7 @@
 .boton-hamburguesa {
   padding: 8px 5px;
   max-width: 35px;
-  background-color: orange;
+  background-color: #f0c949;
   color: white;
   text-align: center;
   font-size: 15px;

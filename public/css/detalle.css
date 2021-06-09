@@ -10,7 +10,7 @@
 .main-header {
   background-color: #240c31;
   padding: 10px;
-  margin-bottom: 30 px;
+  margin-bottom: 30px;
 }
 .main-header-top-bar {
   display: flex;
@@ -20,18 +20,21 @@
 }
 
 #logo {
-  max-width: 10vw;
+  max-width: 20vw;
   max-height: auto;
 }
 
 /*-------------------------- search bar*/
 
 .barra-de-busqueda-form {
-  width: 50%;
+  width: 30%;
 }
 .barra-de-busqueda-fieldset {
   display: flex;
   border: 0;
+  align-items: center;
+  position: relative;
+  left: 10px;
 }
 #search {
   width: 75%;
@@ -48,11 +51,6 @@
   border-radius: 5px;
 }
 
-.icono-busqueda {
-  width: 25%;
-  margin-top: 2px;
-  margin-left: 5px;
-}
 .icono-busqueda i {
   background-color: #240c31;
   color: orange;
@@ -227,7 +225,7 @@
 }
 
 /* ===========================================MEDIA QUERIES=========================================== */
-/* ------------------------------Tablet */
+/* ------------------------------Tablet ----------------------------------------------- */
 @media (min-width: 769px) {
   /* ======================================HEADER */
   .main-navbar {

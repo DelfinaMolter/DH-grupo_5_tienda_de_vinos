@@ -99,10 +99,51 @@
   }
 }
 
-/*------------------------------------------------ Desktop ------------------------------------------------*/
+/*-------------------------------------------Media Queries----------------------------------------------*/
+/* ======================================Tablet */
+@media (min-width: 769px) {
+  .main-navbar {
+    display: flex;
+    justify-content: space-between;
+  }
 
+  .main-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-navbar a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 0;
+  }
+
+  .left-navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .right-navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-navbar li a {
+    color: #f0efee;
+    margin: 7px;
+  }
+
+  .boton-hamburguesa {
+    display: none;
+  }
+  .main__header__section {
+    max-width: 80vw;
+    margin: auto;
+  }
+}
+
+/* ====================================Desktop */
 @media (min-width: 1000px) {
-  /* -------------------------------Header */
   .navbar .main-header-top-bar {
     max-width: 100%;
     align-items: center;

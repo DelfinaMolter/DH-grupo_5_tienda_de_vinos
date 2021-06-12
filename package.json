@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "scripts": {
-    "test": "clear && nodemon app.js -e .css,.html,.js",
-    "start": "node app.js"
+  "scripts": {                
+    "test": "clear && nodemon ./src/app.js -e html,css,js,ejs,mjs,json",
+    "start": "node ./src/app.js"
   },
   "keywords": [],
   "author": "",

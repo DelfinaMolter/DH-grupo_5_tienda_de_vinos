@@ -20,7 +20,7 @@ const userRouter = require('./routes/userRoutes');
 const productRouter = require('./routes/productRoutes');
 app.use(mainRouter);
 app.use(userRouter);
-app.use(productRouter)
+app.use(productRouter);
 
 
 

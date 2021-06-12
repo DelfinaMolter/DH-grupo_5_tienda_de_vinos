@@ -101,8 +101,8 @@ ul {
     margin: 30px;
   }
 }
-@media (max-width: 574px) {
+/* @media (max-width: 574px) {
   .footer-col {
     width: 100%;
   }
-}
+} */

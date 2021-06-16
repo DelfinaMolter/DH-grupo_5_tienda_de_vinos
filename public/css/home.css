@@ -156,7 +156,6 @@ h3 a {
   .main__section__lastvisit,
   .main__section__ofertas {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }

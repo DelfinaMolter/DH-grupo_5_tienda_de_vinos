@@ -100,8 +100,10 @@ h3 a {
 .brand-carousel {
   margin-top: 30px;
   margin-bottom: 50px;
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
+}
+.brand-corousel-article {
+  margin: 15px 0;
 }
 #marcas {
   margin-top: 50px;
@@ -171,6 +173,12 @@ h3 a {
   .fa-truck {
     max-width: 3vw;
   }
+
+  /* conoce nuestras marcas */
+  .brand-carousel {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 /* --------------------- DESKTOP  --------------------- */
@@ -215,5 +223,28 @@ h3 a {
   }
   .fa-truck {
     max-width: 3vw;
+  }
+
+  /* conoce nuestras marcas */
+  .brand-div-resposive {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #brand-article-1 {
+    position: relative;
+    right: 40px;
+  }
+  #brand-article-2 {
+    position: relative;
+    left: 40px;
+  }
+  #brand-article-3 {
+    position: relative;
+    right: 40px;
+  }
+  #brand-article-4 {
+    position: relative;
+    left: 40px;
   }
 }

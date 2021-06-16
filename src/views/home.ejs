@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,7 +41,7 @@ rel="stylesheet"
         <ul class="left-navbar">
         <li><a href='#'>Productos</a></li>
         <li><a href='#'>Ofertas<a></li>
-        <li><a href='#'>Sobre Nosotros</a></li>
+        <li><a href='#nosotros'>Sobre Nosotros</a></li>
         <li><a href='#'>Contactanos</a></li>
         </ul>
         <ul class="right-navbar">
@@ -103,7 +103,7 @@ rel="stylesheet"
 <section> 
         <h3>--SECCIÓN DE ESPERTOS--<a</h3>
 
-        <div class="main__section__ofertas">
+        <div id="nosotros" class="main__section__ofertas">
         
         <article id="art5" class="articulos">
                 <img class="imagenArticulo" src="img/dm-experto.png" alt="">
@@ -142,49 +142,9 @@ rel="stylesheet"
 </div>
 </section>
 
-
 </main>
 
-<footer class="footer">
-<div class="container">
-        <div class= "row">
-        <div class= "footer-col">
-                <h4 class="title"> CATEGORÍAS </h4>
-                <ul> 
-                <li><a class="item" href= "#">Inicio</a> </li > 
-                <li><a class="item" href= "#">Sobre Nosotros</a> </li >
-                <li><a class="item" href= "#">Productos</a> </li >   
-                <li><a class="item" href= "#">Ofertas </a> </li > 
-                </ul>
-        </div>
-        
-        <div class= "footer-col">
-                <h4 class="title"> AYUDA </h4>
-                <ul> 
-                <li><a class="item" href= "#">Búsqueda</a> </li >
-                <li><a class="item" href= "#">Contactanos</a> </li > 
-                <li><a class="item" href= "#">Terminos & C.</a> </li > 
-                <li><a class="item" href= "#">Privacidad</a> </li >  
-                <li><a class="item" href= "#">Preguntas Frecuentes</a> </li > 
-                </ul>
-        </div>
-
-        <div id="div-redes-sociales">
-                <h4 class="title"> SEGUINOS</h4>
-                <div class= "social-links">
-                
-                <a class="redes-sociales" href= "#"><i class="fab fa-facebook-f"></i></a> 
-                <a class="redes-sociales" href= "#"><i class="fab fa-instagram"></i></a> 
-                <a class="redes-sociales" href= "#"><i class="fab fa-twitter"></i></a> 
-                
-        </div>
-</div>
-</div>
-</div>
-<p class="footer__Copyright">Copyright © 2021 Todos los Derechos Reservados</p>
-
-</footer>
-
+<%-include ("includes/footer"); %> 
 
 </body>
 </html>

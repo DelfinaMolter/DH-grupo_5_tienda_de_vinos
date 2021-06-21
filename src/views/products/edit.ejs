@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<%-include ("../includes/head"); %>
+<title>NewForm</title>
+<link href="/css/edit.css" rel="stylesheet">
+</head>
+<body>
+<!-------------------- ENCABZADO ------------------------->
+<%-include ("../includes/header"); %>
+<!-------------------- FORMULARIO ---------------------->
+<main> 
+    <section class="Productos">
+    <h1 clase="registro__titulo">Productos</h1>
+    <p class="registro__nota"></p>
+    <fieldset class="form__registro__botones">
+        <button type="edit" class="form__registro__botones__editar">Editar</button>
+        <button type="add product" class="form__registro__botones__addproduct">Add Product</button>
+    </fieldset>
+    
+    <form action="/" method="POST" class="form">
+        <fieldset class="form__registro__datos">
+        <input type="text" name="name" class="form__registro__datos__nombre" placeholder="Nombre del Producto" required>
+        <input type="text" name="sku" class="form__registro__datos__sku" placeholder="SKU" required>
+        
+        <fieldset class="form__registro__datos"></fieldset>
+            <label for= "Imagen">Imagen</label>
+            <input type="file" name="image" id="image">
+        </fieldset>
+        <input type="category" name="category" class="form__registro__datos__category" placeholder="Categoría" required>
+        
+        <fieldset>
+        <label for="Bodega">Bodega</label>
+        <select name="Bodega">
+            <option value= 'Finca las Moras'>Finca las Moras </option>
+            <option value= 'Navarro Correas'>Navarro Correas </option>
+            <option value= 'Mascota Vineyards'>Mascota Vineyards </option>
+            <option value= 'Trapiche'>Trapiche </option>
+            <option value= 'El Esteco'>El Esteco </option>
+
+        </select>
+        </fieldset>
+        
+        <input type="precio" name="precio" class="form__registro__datos__precio" placeholder="Precio" required>
+        </fieldset>
+        
+        <fieldset class="form__registro__botones">
+        <button type="reset" class="form__registro__botones__borrar">Cancelar</button>
+        <button type="submit" class="form__registro__botones__Guardar">Guardar</button>
+        </fieldset>
+    </form>
+    </section>
+</main>
+<!------------------- PIE DE PAGINA ----------->
+<%-include ("../includes/footer"); %>
+</body>
+</html>
+

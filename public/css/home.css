@@ -1,9 +1,9 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 12px;
-  font-family: "KoHo", sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-size: 12px;
+font-family: "KoHo", sans-serif;
 }
 
 /* ====================================== MAIN ============================================ */
@@ -36,6 +36,10 @@ color: rgb(94, 94, 138);
 margin-left: 8px;
 }
 
+.titulos-secciones {
+margin: 50px 0;
+}
+
 .articulos {
 margin: 10px;
 background-color: white;
@@ -57,6 +61,7 @@ display: none;
 .imagenArticulo {
 width: 30vw;
 margin: auto;
+position: center;
 }
 .brand-carousel {
 margin-top: 30px;
@@ -72,7 +77,7 @@ margin-top: 50px;
 /* NECESITAMOS CENTRAR IMAGEN UNICAMENTE EN MOBILE */
 @media (max-width: 500px) {
 
-  .imagenArticulo {
+.imagenArticulo {
 position: center;
 left: 15vw;
 }
@@ -95,7 +100,17 @@ flex-direction: column;
 position: center;
 }
 
-
+.brand-carousel {
+margin-top: 30px;
+margin-bottom: 50px;
+text-align: center;
+}
+.brand-corousel-article {
+margin: 15px 0;
+}
+#marcas {
+margin-top: 50px;
+}
 
 /*-------------------------------------------MEDIA QUERIES--------------------------------------------*/
 
@@ -121,27 +136,7 @@ width: 45vw;
 box-shadow: 0 0 16px 0px rgba(20, 20, 20, 0.8);
 width: 45vw;
 }
-/*
-@keyframes aumentarLogo {
-0% {
-  transform: scale(1);
-}
-100% {
-  transform: scale(3.5);
-}
-}
 
-#barraBusqueda {
-width: 30vw;
-}
-
-#barra {
-width: 30vw;
-}
-
-.cuotas {
-width: 30vw;
-}*/
 
 .main__section__last, .main__section__ofertas {
 display: flex;
@@ -153,8 +148,11 @@ justify-content: center;
 width: 40vw;
 }
 
-.detalleArticulos {
-width: 40vw;
+
+/* conoce nuestras marcas */
+.brand-carousel {
+  display: flex;
+  justify-content: space-around;
 }
 }
 
@@ -172,10 +170,6 @@ box-shadow: 0 0 16px 0px rgba(20, 20, 20, .8);
 width: 25vw;
 }
 
-.cuotas {
-max-width: 350px;
-text-align: right;
-}
 
 /* PARA CAMBIAR DE COLOR EN LOS ICONOS*/
 .fa-handshake:hover,
@@ -206,33 +200,56 @@ max-width: 3vw;
 
 
 @media (min-width: 1200px) {
-  .navbar, .main-header-top-bar {
-  max-width: 1200px; 
+.navbar, .main-header-top-bar {
+max-width: 1200px; 
+align-items: center;
+}
+
+#logo {
+width: 290px;
+}
+
+.cuotas {
+max-width: none;
+font-size: 18px;
+font-weight: 400;
+margin: 0%;
+}
+
+.main__header__navbar {
+margin-top: 20px;
+}
+
+.main__header__navbar a {
+font-size: 20px;
+} 
+
+.fa-truck {
+max-width: 2vw;
+}
+
+
+}
+
+/* conoce nuestras marcas */
+.brand-div-resposive {
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  }
-  
-  #logo {
-  width: 290px;
-  }
-  
-  .cuotas {
-  max-width: none;
-  font-size: 18px;
-  font-weight: 400;
-  margin: 0%;
-  }
-  
-  .main__header__navbar {
-  margin-top: 20px;
-  }
-  
-  .main__header__navbar a {
-  font-size: 20px;
-  } 
-  
-  .fa-truck {
-  max-width: 2vw;
-  }
-  
-  
-  }
+}
+#brand-article-1 {
+  position: relative;
+  right: 40px;
+}
+#brand-article-2 {
+  position: relative;
+  left: 40px;
+}
+#brand-article-3 {
+  position: relative;
+  right: 40px;
+}
+#brand-article-4 {
+  position: relative;
+  left: 40px;
+}

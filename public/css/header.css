@@ -1,3 +1,11 @@
+header{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: "KoHo", sans-serif;
+}
+
 .main-header {
   background-color: #240c31;
   padding: 10px;

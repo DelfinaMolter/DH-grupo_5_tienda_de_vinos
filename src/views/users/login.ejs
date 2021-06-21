@@ -11,31 +11,32 @@
     
     <!-- ======================================MAIN*======================================================= -->
     <main> 
-      <figure><img class="imagen-copitas" src="img/copitas.png" alt="copitas brindando"></figure>
-      <div class="main-div">
-        <h1>INGRESAR</h1>
-        <p class="texto-ingresa">Ingresa tu email y contraseña</p>
+      
+      <div id="main-div">
+        <figure><img id="imagen-copitas" src="img/copitas.png" alt="copitas brindando"></figure>
+        <h1 id='titulo-ingresar'>INGRESAR</h1>
+        <p id="texto-ingresa">Ingresa tu email y contraseña</p>
         <form action="#" method="POST">
-          <fieldset class="login-fildset">
+          <fieldset id="login-fildset">
             <input
               type="text"
               name="Nombre de Usuari@"
-              id="Nombre de Usuari@"
+              class="input"
               required
               placeholder="Nombre de Usuari@"
             />
             <input
               type="password"
               name="Contraseña"
-              id="Contraseña"
+              class="input"
               required
               placeholder="Contraseña"
               minlength="6"
             />
-            <button type="submit">Ingresar</button>
+            <button id="button" type="submit">Ingresar</button>
           </fieldset>
         </form>
-        <a class="olvido-pass-enlace" href="$">¿Te olvidaste la contraseña?</a>
+        <a id="olvido-pass-enlace" href="$">¿Te olvidaste la contraseña?</a>
       </div>
     </main>
     <%-include ("../includes/footer"); %>

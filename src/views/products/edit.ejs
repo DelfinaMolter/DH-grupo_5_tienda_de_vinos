@@ -10,26 +10,22 @@
 <%-include ("../includes/header"); %>
 <!-------------------- FORMULARIO ---------------------->
 <main> 
-    <section class="Productos">
+    <section class="productos">
     <h1 clase="registro__titulo">Productos</h1>
-    <p class="registro__nota"></p>
-    <fieldset class="form__registro__botones">
-        <button type="edit" class="form__registro__botones__editar">Editar</button>
-        <button type="add product" class="form__registro__botones__addproduct"><a href= 'create'> Add Product</a></button>
-    </fieldset>
+    <p class="registro__nota">Completa los datos que necesites modificar</p>
     
     <form action="/" method="POST" class="form">
         <fieldset class="form__registro__datos">
-        <input type="text" name="name" class="form__registro__datos__nombre" placeholder="Nombre del Producto" required>
-        <input type="text" name="sku" class="form__registro__datos__sku" placeholder="SKU" required>    
+        <input type="text" name="name" class="form__registro__datos__input" placeholder="Nombre del Producto" required>
+        <input type="text" name="sku" class="form__registro__datos__input" placeholder="SKU" required>    
         
-        <fieldset class="form__registro__datos"></fieldset>
+        <fieldset class="form__registro__datos__with-label">
             <label for= "Imagen">Imagen</label>
-            <input type="file" name="image" id="image">
+            <input type="file" name="image" id="image" class="form__registro__datos__input">
         </fieldset>
-        <input type="category" name="category" class="form__registro__datos__category" placeholder="Categoría" required>
+        <input type="category" name="category" class="form__registro__datos__input" placeholder="Categoría" required>
         
-        <fieldset>
+        <fieldset class="form__registro__datos__with-label">
         <label for="Bodega">Bodega</label>
         <select name="Bodega">
             <option value= 'Finca las Moras'>Finca las Moras </option>
@@ -37,17 +33,19 @@
             <option value= 'Mascota Vineyards'>Mascota Vineyards </option>
             <option value= 'Trapiche'>Trapiche </option>
             <option value= 'El Esteco'>El Esteco </option>
-
         </select>
         </fieldset>
-        
-        <input type="precio" name="precio" class="form__registro__datos__precio" placeholder="Precio" required>
+
+        <fieldset class="form__registro__datos__with-label">
+        <label for="precio">Precio</label>
+        <input type="precio" name="precio" class="form__registro__datos__input" placeholder="Precio" required>
         </fieldset>
         
         <fieldset class="form__registro__botones">
         <button type="reset" class="form__registro__botones__borrar">Cancelar</button>
         <button type="submit" class="form__registro__botones__Guardar">Guardar</button>
         </fieldset>
+        
     </form>
     </section>
 </main>

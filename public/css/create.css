@@ -1,0 +1,75 @@
+*{
+    box-sizing:border-box;
+    margin:0px;
+    padding:0px;
+}
+/* pregunta: De qué manera podríamos alinear las cajitas de los select? 
+Con position estaría bien hecho? */
+
+/*--------------------------------------------------- MAIN ---------------------------------------------------*/
+body{
+    font-family: 'KoHo', sans-serif;
+    font-size: 18px;
+    background: #dad7dd;
+}
+
+.registro{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.registro__nota{
+    text-align: center;
+    padding:3px;
+    margin:0px 14px;
+}
+
+.form__registro__datos{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin: 10px 0px 5px;
+    border:none
+}
+
+.form__registro__datos__with-label{
+    display: flex;
+    align-items:center;
+    margin: 10px 0px 5px;
+    border:none
+}
+
+.form__registro__datos__input{
+    padding: 5px;
+    margin:7px 0px 9px;
+    border-radius: 7px;
+    border:none;
+    width: 45vw;
+    
+}
+
+.spacing{
+    margin: 15px 0;
+}
+
+.form__registro__botones{
+    display: flex;
+  
+    margin: 10px;
+    padding: 5px;
+    border-radius: 7px;
+    border: none;
+}
+.buttons{
+    margin: 7px;
+    padding: 2px 6px;
+    width:25vw;
+    border-radius: 7px;
+    background-color:#240C31;
+    color: #F5F5F5;   
+}
+
+label {
+    margin-right: 15px;
+}

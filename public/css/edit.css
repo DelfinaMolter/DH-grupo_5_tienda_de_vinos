@@ -3,20 +3,21 @@
     margin:0px;
     padding:0px;
 }
+/* pregunta: De qué manera podríamos alinear las cajitas de los select? 
+Con position estaría bien hecho? */
 
+/*--------------------------------------------------- MAIN ---------------------------------------------------*/
 body{
     font-family: 'KoHo', sans-serif;
     font-size: 18px;
     background: #dad7dd;
 }
 
-.productos{
+.registro{
     display: flex;
     flex-direction: column;
     align-items:center;
 }
-
-
 
 .registro__nota{
     text-align: center;
@@ -31,7 +32,6 @@ body{
     margin: 10px 0px 5px;
     border:none
 }
-
 
 .form__registro__datos__with-label{
     display: flex;
@@ -55,7 +55,6 @@ body{
 
 .form__registro__botones{
     display: flex;
-  
     margin: 10px;
     padding: 5px;
     border-radius: 7px;

@@ -10,42 +10,65 @@
 <%-include ("../includes/header"); %>
 <!-------------------- FORMULARIO ---------------------->
 <main> 
-    <section class="productos">
-    <h1 clase="registro__titulo">Productos</h1>
-    <p class="registro__nota">Completa los datos que necesites modificar</p>
-    
+    <section class="registro">
+    <h1 clase="registro__titulo">Editá tu Producto</h1>
+    <!-- <p class="registro__nota"></p> -->
     <form action="/" method="POST" class="form">
         <fieldset class="form__registro__datos">
-        <input type="text" name="name" class="form__registro__datos__input" placeholder="Nombre del Producto" required>
-        <input type="text" name="sku" class="form__registro__datos__input" placeholder="SKU" required>    
+        <input type="text" name="name" class="form__registro__datos__input spacing" placeholder="Nombre del producto" required>
+        <input type="text" name="description" class="form__registro__datos__input spacing" placeholder="Descripción" required>
         
         <fieldset class="form__registro__datos__with-label">
             <label for= "Imagen">Imagen</label>
-            <input type="file" name="image" id="image" class="form__registro__datos__input">
+            <input type="file" name="image" id="image" class="spacing">
         </fieldset>
-        <input type="category" name="category" class="form__registro__datos__input" placeholder="Categoría" required>
+        <input type="category" name="category" class="form__registro__datos__input spacing" placeholder="Categoría" required>
         
         <fieldset class="form__registro__datos__with-label">
         <label for="Bodega">Bodega</label>
-        <select name="Bodega">
+        <select name="Bodega" class="spacing">
+            <option hidden selected>Selecciona una opción</option>
             <option value= 'Finca las Moras'>Finca las Moras </option>
             <option value= 'Navarro Correas'>Navarro Correas </option>
             <option value= 'Mascota Vineyards'>Mascota Vineyards </option>
             <option value= 'Trapiche'>Trapiche </option>
             <option value= 'El Esteco'>El Esteco </option>
+
         </select>
         </fieldset>
 
         <fieldset class="form__registro__datos__with-label">
-        <label for="precio">Precio</label>
-        <input type="precio" name="precio" class="form__registro__datos__input" placeholder="Precio" required>
+            <label for="Colors">Tipo</label>
+            <select name="Bodega" class="spacing">
+                <option hidden selected>Selecciona una opción</option>
+                <option value= 'Tintos'>Tinto </option>
+                <option value= 'Blancos'>Blanco </option>
+                <option value= 'Espumantes'>Espumante </option>
+            </select>
         </fieldset>
+
+        <fieldset class="form__registro__datos__with-label">
+            <label for="Varietal">Varietal</label>
+            <select name="Varietal" class="spacing">
+                <option hidden selected>Selecciona una opción</option>
+                <option value= 'Cabernet Souvignon'>Cabernet Souvignon </option>
+                <option value= 'Blend'>Blend </option>
+                <option value= 'Malbec'>Malbec </option>
+                <option value= 'Syrah'>Syrah </option>
+                <option value= 'Chardonay'>Chardonay </option>
+                <option value= 'Torrontes'>Torrontes </option>
+            </select>
+        </fieldset>
+
+        <fieldset class="form__registro__datos__with-label">
+        <label for="precio">Precio</label>
+        <input type="precio" name="precio" class="form__registro__datos__precio" placeholder="Precio en $" required>
+        </fieldset >
         
         <fieldset class="form__registro__botones">
-        <button type="reset" class="form__registro__botones__borrar">Cancelar</button>
-        <button type="submit" class="form__registro__botones__Guardar">Guardar</button>
+        <button type="submit" class="buttons spacing">Enviar</button>
+        <button type="reset" class="buttons spacing" >Cancelar</button>
         </fieldset>
-        
     </form>
     </section>
 </main>

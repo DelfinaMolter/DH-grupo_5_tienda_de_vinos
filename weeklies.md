@@ -15,3 +15,9 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Revisamos lo que hizo cada unx
 - Volvimos a asignar tareas
 - Fijamos nueva reunion
+
+**22/06/21**
+- Revision de los avances de cada uno.
+- Resolvimos algunas problemáticas en conjunto.
+- Revisamos las consignas de entrega del sprint 3 para asegurarnos de que este todo listo.
+- Nos anotamos algunos puntos de mejora de estética.

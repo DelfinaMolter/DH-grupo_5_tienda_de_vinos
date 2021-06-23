@@ -14,7 +14,7 @@ header{
 .main-header-top-bar {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   min-width: 100%;
 }
 #logo {

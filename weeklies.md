@@ -21,3 +21,10 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Resolvimos algunas problemáticas en conjunto.
 - Revisamos las consignas de entrega del sprint 3 para asegurarnos de que este todo listo.
 - Nos anotamos algunos puntos de mejora de estética.
+
+**25/06/21**
+- Revisamos los avances.
+- Definimos algunos aspectos generales.
+- Dividimos algunas tareas macros.
+- Asignamos las tareas a realizar para el proximo encuentro.
+- Coordinamos la próxima reunión.

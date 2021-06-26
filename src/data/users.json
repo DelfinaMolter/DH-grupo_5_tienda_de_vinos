@@ -1,0 +1,15 @@
+"users":[
+    {
+        "id":"2.1",
+        "firstName":"Delfina",
+        "lastName": "Molter" ,
+        "email": "delfi.molter@gmail.com",
+        "password": "fifo",
+        "typeUser": "admin",
+        "img": ,
+        "dni":"35972449", 
+        "nameUser":"DelfiMolter", 
+        "dateBirth":"25/04/91",
+        "dateAccount": "26/06/21" ,
+    }
+]

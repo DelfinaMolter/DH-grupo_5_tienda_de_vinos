@@ -1,4 +1,4 @@
-"users":[
+[
     {
         "id":"2.1",
         "firstName":"Delfina",
@@ -6,10 +6,36 @@
         "email": "delfi.molter@gmail.com",
         "password": "fifo",
         "typeUser": "admin",
-        "img": ,
+        "img": "img/foto-perfil-delfi.jpeg",
         "dni":"35972449", 
         "nameUser":"DelfiMolter", 
         "dateBirth":"25/04/91",
-        "dateAccount": "26/06/21" ,
+        "dateAccount": "26/06/21"
+    },
+    {
+        "id":"2.2",
+        "firstName":"Gonzalo",
+        "lastName": "Lorenzo Eijo" ,
+        "email": "Gonzalolsk@gmail.com",
+        "password": "rey",
+        "typeUser": "admin",
+        "img": "img/foto-perfil-delfi.jpeg",
+        "dni":"no sé", 
+        "nameUser":"GonLorenzo", 
+        "dateBirth":"no sé",
+        "dateAccount": "26/06/21"
+    },
+    {
+        "id":"2.3",
+        "firstName":"Emanuel",
+        "lastName": "Mendiolaza" ,
+        "email": "emanuelmendiolaza@gmail.com",
+        "password": "foca",
+        "typeUser": "admin",
+        "img": "img/foto-perfil-delfi.jpeg",
+        "dni":"no sé", 
+        "nameUser":"EmaMendio", 
+        "dateBirth":"no sé",
+        "dateAccount": "26/06/21"
     }
 ]

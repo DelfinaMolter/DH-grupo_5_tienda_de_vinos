@@ -11,6 +11,7 @@ header{
   padding: 10px;
 }
 
+
 .main-header-top-bar {
   display: flex;
   align-items: center;
@@ -18,9 +19,13 @@ header{
   min-width: 100%;
 }
 #logo {
-  max-width: 50%;
-  max-height: auto;
+  width: 100%;
 }
+#a-logo{
+  max-width: 50%;
+  max-width: 200px;
+}
+
 /*-------------------------- search bar*/
 .barra-de-busqueda-form {
  max-width: 50%;
@@ -71,8 +76,9 @@ header{
 }
 
 /*-------------------------------------------Media Queries----------------------------------------------*/
-/* ======================================Tablet */
-@media (min-width: 769px) {
+
+@media (min-width: 700px) {
+
   .main-navbar {
     display: flex;
     justify-content: space-between;
@@ -114,22 +120,3 @@ header{
   }
 }
 
-/* ====================================Desktop */
-@media (min-width: 1000px) {
-  .navbar .main-header-top-bar {
-    max-width: 100%;
-    align-items: center;
-  }
-
-  #logo {
-    width: 290px;
-  }
-
-  .main__header__navbar {
-    margin-top: 20px;
-  }
-
-  .main__header__navbar a {
-    font-size: 20px;
-  }
-}

@@ -1,0 +1,30 @@
+[
+        {
+        "id":1,
+        "name":"SAUVIGNON BLANC"
+        },
+        {
+        "id":2, 
+        "name":"MALBEC"
+        },
+        {
+        "id":3, 
+        "name":"MALBEC - CABERNET SAUVIGNON"
+        },
+        {
+        "id":4, 
+        "name":"CHARDONNAY"
+        },
+        {
+        "id":5, 
+        "name":"CABERNET SAUVIGNON"
+        },
+        {
+        "id":6, 
+        "name":"BRUT NATURE"
+        },
+        {
+        "id":7, 
+        "name":"EXTRA BRUT"
+        }
+]

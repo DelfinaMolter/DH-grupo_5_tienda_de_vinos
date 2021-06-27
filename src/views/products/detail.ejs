@@ -3,7 +3,7 @@
   <head>
     <%-include ("../includes/head"); %>
     <title>Detalle de producto</title>
-    <link rel="stylesheet" href="/css/detalle.css" />
+    <link rel="stylesheet" href="/css/detail.css">
   </head>
   <body>
     <!-- ===========================================HEADER===================================================   -->
@@ -45,10 +45,11 @@
       <p id="valor-cuotas"> $3333</p>
     </span>
   </div>
+</article>
 
   <article class="cantidad">
     
-  <form action="submit" method="POST" name="comprar" class="comprar">
+  <form action="submit" method="POST" name="comprar" class="form-comprar">
     <label for="cantidad-de-botellas"><i class="fas fa-shopping-cart"></i>Cantidad: </label>
     <select type="select" name="comprar" class="cantidad" id="cantidad-de-botellas" placeholder="Cantidad"> 
     <option value="1">1</option>
@@ -64,12 +65,19 @@
     <option value="11">11</option>
     <option value="12">12</option>
   </select>
+</article>
 
-    <button type="submit" name="comprar" id="boton-comprar">COMPRAR</button>
+<article class="art-buttons">
+    <button type="submit" name="comprar" class="button">COMPRAR</button>
+  </form>
+
+  <a href="#" class="button admin-button" id="edit">EDITAR(admin)</a>
+	<form action="#" method="POST">
+	<button type="submit" class="button admin-button" id="delete">ELIMINAR(admin)</button>
   </form>
   
-  
 </article>
+
 <!-- =============================RRSS -->
 <article class="rrss">
 <h5>COMPARTIR</h5>

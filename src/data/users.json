@@ -19,7 +19,7 @@
         "email": "gonzalolsk@gmail.com",
         "password": "cabure",
         "typeUser": "admin",
-        "img": "",
+        "img": "img/gl-experto.png",
         "dni":"34803767", 
         "nameUser":"gonzalolsk", 
         "dateBirth":"27/03/90",
@@ -36,6 +36,19 @@
         "dni":"no sé", 
         "nameUser":"EmaMendio", 
         "dateBirth":"no sé",
+        "dateAccount": "26/06/21"
+    },
+    {
+        "id":"1.1",
+        "firstName":"Usuario",
+        "lastName": "Normal" ,
+        "email": "usuarionormal@gmail.com",
+        "password": "mepo",
+        "typeUser": "user",
+        "img": "img/logo.jpeg",
+        "dni":"36871669", 
+        "nameUser":"UserNormal", 
+        "dateBirth":"03/08/1987",
         "dateAccount": "26/06/21"
     }
 ]

@@ -28,3 +28,8 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Dividimos algunas tareas macros.
 - Asignamos las tareas a realizar para el proximo encuentro.
 - Coordinamos la próxima reunión.
+
+**29/06/21**
+- Revisamos lo hecho hasta el momento.
+- Asignamos las tareas a realizar para el proximo encuentro.
+- Coordinamos la próxima reunión.

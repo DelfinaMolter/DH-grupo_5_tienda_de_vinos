@@ -6,7 +6,7 @@
         "email": "delfi.molter@gmail.com",
         "password": "fifo",
         "typeUser": "admin",
-        "img": "img/foto-perfil-delfi.jpeg",
+        "img": "img/users/foto-perfil-delfi.jpeg",
         "dni":"35972449", 
         "nameUser":"DelfiMolter", 
         "dateBirth":"25/04/91",
@@ -32,7 +32,7 @@
         "email": "emanuelmendiolaza@gmail.com",
         "password": "foca",
         "typeUser": "admin",
-        "img": "img/foto-perfil-delfi.jpeg",
+        "img": "",
         "dni":"no sé", 
         "nameUser":"EmaMendio", 
         "dateBirth":"no sé",
@@ -40,15 +40,15 @@
     },
     {
         "id":"1.1",
-        "firstName":"Usuario",
-        "lastName": "Normal" ,
-        "email": "usuarionormal@gmail.com",
+        "firstName":"Norma",
+        "lastName": "Martinez" ,
+        "email": "normamartinez@gmail.com",
         "password": "mepo",
         "typeUser": "user",
-        "img": "img/logo.jpeg",
+        "img": "img/users/foto_perfil_norma.jpg",
         "dni":"36871669", 
         "nameUser":"UserNormal", 
-        "dateBirth":"03/08/1987",
+        "dateBirth":"03/08/1970",
         "dateAccount": "26/06/21"
     }
 ]

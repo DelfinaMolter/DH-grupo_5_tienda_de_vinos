@@ -13,12 +13,14 @@ body{
   background: #dad7dd;
 }
 #imagen-copitas {
-  height: 50px;
-  width: 50px;
+  width: 75px;
+  height: auto;
 }
-
+#figure-copitas{
+  text-align: center;
+}
 #main-div {
-  margin: 25px 0;
+  margin: 15px 0;
   display: flex;
   flex-direction: column;
   align-items:center;
@@ -27,6 +29,7 @@ body{
   font-size: 2rem;
   text-align: center;
   margin-bottom: 10px;
+  margin-top: 0;
 }
 
 #texto-ingresa {

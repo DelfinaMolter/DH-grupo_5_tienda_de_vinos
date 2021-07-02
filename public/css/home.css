@@ -82,6 +82,10 @@ position: relative;
 margin-top: 30px;
 }
 
+.brand-article{
+margin: 20px 0;
+}
+
 /* NECESITAMOS CENTRAR IMAGEN UNICAMENTE EN MOBILE */
 @media (min-width: 700px) {
 
@@ -188,8 +192,6 @@ width: 20vw;
 width: 20vw;
 }
 
-
-
 /* conoce nuestras marcas */
 .brand-div-resposive {
 display: flex;
@@ -197,20 +199,4 @@ justify-content: space-around;
 align-items: center;
 }
 
-#brand-article-1 {
-position: relative;
-right: 40px;
-}
-#brand-article-2 {
-position: relative;
-left: 40px;
-}
-#brand-article-3 {
-position: relative;
-right: 40px;
-}
-#brand-article-4 {
-position: relative;
-left: 40px;
-}
 } 

@@ -1,134 +1,201 @@
 [
     {
-        "id":1,
-        "nameProduct":"FOND DE CAVE RESERVA",
-        "winery":[1],
-        "styleWine":[1],
-        "grapes":[1],
-        "bottles":1,
-        "description":"Vino del Valle de Uco. De color amarillo pálido con reflejos verdosos, este vino entrega aromas intensos de ruda, hierbas frescas, frutas tropicales y notas de pomelo rosado. En boca se presenta con mucho volumen, resaltando la frescura y la persistencia.",
-        "img":"",
-        "price":620,
-        "stock":50
+        "id": 1,
+        "nameProduct": "FOND DE CAVE RESERVA",
+        "winery": [
+            1
+        ],
+        "styleWine": [
+            1
+        ],
+        "grapes": [
+            1
+        ],
+        "bottles": 1,
+        "description": "Vino del Valle de Uco. De color amarillo pálido con reflejos verdosos, este vino entrega aromas intensos de ruda, hierbas frescas, frutas tropicales y notas de pomelo rosado. En boca se presenta con mucho volumen, resaltando la frescura y la persistencia.",
+        "img": "",
+        "price": 620,
+        "stock": 50
     },
     {
-        "id":2,
-        "nameProduct":"SELECCIÓN DEL ENÓLOGO",
-        "winery":[2],
-        "styleWine":[2],
-        "grapes":[2],
-        "bottles":1,
-        "description":"Vino del Valle de Uco. Rojo violáceo intenso, gran variedad de aromas y sabores intensos a frutas y flores como cerezas rojas, frambuesas y rosas. Notas especiadas a canela, nuez moscada, regaliz, grafito, cedro y caja de cigarros. De mucho cuerpo y taninos sedosos con un final prolongado fresco y especiado.18 meses de crianza.",
-        "img":"",
-        "price":1483,
-        "stock":20
+        "id": 2,
+        "nameProduct": "SELECCIÓN DEL ENÓLOGO",
+        "winery": [
+            2
+        ],
+        "styleWine": [
+            2
+        ],
+        "grapes": [
+            2
+        ],
+        "bottles": 1,
+        "description": "Vino del Valle de Uco. Rojo violáceo intenso, gran variedad de aromas y sabores intensos a frutas y flores como cerezas rojas, frambuesas y rosas. Notas especiadas a canela, nuez moscada, regaliz, grafito, cedro y caja de cigarros. De mucho cuerpo y taninos sedosos con un final prolongado fresco y especiado.18 meses de crianza.",
+        "img": "",
+        "price": 1483,
+        "stock": 20
     },
     {
-        "id":3,
-        "nameProduct":"DADA INCREDIBLENDS",
-        "winery":[3],
-        "styleWine":[2],
-        "grapes":[3],
-        "bottles":1,
-        "description":"Elegante blend de buen cuerpo, con taninos maduros y redondos. Se perciben sabores a mermelada de frutas negras y rojas maduras. Se destacan en nariz las notas a pimentón dulce y pimienta negra.",
-        "img":"",
-        "price":481,
-        "stock":70
+        "id": 3,
+        "nameProduct": "DADA INCREDIBLENDS",
+        "winery": [
+            3
+        ],
+        "styleWine": [
+            2
+        ],
+        "grapes": [
+            3
+        ],
+        "bottles": 1,
+        "description": "Elegante blend de buen cuerpo, con taninos maduros y redondos. Se perciben sabores a mermelada de frutas negras y rojas maduras. Se destacan en nariz las notas a pimentón dulce y pimienta negra.",
+        "img": "",
+        "price": 481,
+        "stock": 70
     },
     {
-        "id":4,
-        "nameProduct":"MEDALLA 1500ML",
-        "winery":[1],
-        "styleWine":[2],
-        "grapes":[2],
-        "bottles":1,
-        "description":"Vino del valle de Maipu. De un intenso color púrpura con tonalidades violáceas, este Malbec expresa aromas concentrados de frutos rojos, ciruelas, cerezas y pasas de uvas. Se destacan notas de vainilla, coco y pan tostado gracias a su crianza en roble. En boca se lo encuentra carnoso, de buen volumen y percibiéndose untuoso. Se destacan sus sabores a frutas maduras, con notas especiadas, con un agradable y persistente final. 18 meses de crianza.",
-        "img":"",
-        "price":2084,
-        "stock":10
+        "id": 4,
+        "nameProduct": "MEDALLA 1500ML",
+        "winery": [
+            1
+        ],
+        "styleWine": [
+            2
+        ],
+        "grapes": [
+            2
+        ],
+        "bottles": 1,
+        "description": "Vino del valle de Maipu. De un intenso color púrpura con tonalidades violáceas, este Malbec expresa aromas concentrados de frutos rojos, ciruelas, cerezas y pasas de uvas. Se destacan notas de vainilla, coco y pan tostado gracias a su crianza en roble. En boca se lo encuentra carnoso, de buen volumen y percibiéndose untuoso. Se destacan sus sabores a frutas maduras, con notas especiadas, con un agradable y persistente final. 18 meses de crianza.",
+        "img": "",
+        "price": 2084,
+        "stock": 10
     },
     {
-        "id":5,
-        "nameProduct":"FOND DE CAVE",
-        "winery":[1],
-        "styleWine":[2],
-        "grapes":[5],
-        "bottles":1,
-        "description":"Este sabroso y perfumado vino tiene un gran balance entre profundidad y potencia. Entrega aromas a cedro, chocolate y vainilla. En boca es elegante, con sabor a casis y pimiento rojo. 6 meses de crianza.",
-        "img":"",
-        "price":424,
-        "stock":80
+        "id": 5,
+        "nameProduct": "FOND DE CAVE",
+        "winery": [
+            1
+        ],
+        "styleWine": [
+            2
+        ],
+        "grapes": [
+            5
+        ],
+        "bottles": 1,
+        "description": "Este sabroso y perfumado vino tiene un gran balance entre profundidad y potencia. Entrega aromas a cedro, chocolate y vainilla. En boca es elegante, con sabor a casis y pimiento rojo. 6 meses de crianza.",
+        "img": "",
+        "price": 424,
+        "stock": 80
     },
     {
-        "id":6,
-        "nameProduct":"PURO",
-        "winery":[1],
-        "styleWine":[2],
-        "grapes":[2],
-        "bottles":1,
-        "description":"Vino de la region de Maipu. De un color rojo profundo con tintes violáceos, este vino entrega intensos aromas a frutos rojos como cerezas y ciruelas. En boca es redondo con un leve carácter mineral, demostrando una gran concentración frutal con un elegante final. 10 mese de crianza.",
-        "img":"",
-        "price":558,
-        "stock":50
+        "id": 6,
+        "nameProduct": "PURO",
+        "winery": [
+            1
+        ],
+        "styleWine": [
+            2
+        ],
+        "grapes": [
+            2
+        ],
+        "bottles": 1,
+        "description": "Vino de la region de Maipu. De un color rojo profundo con tintes violáceos, este vino entrega intensos aromas a frutos rojos como cerezas y ciruelas. En boca es redondo con un leve carácter mineral, demostrando una gran concentración frutal con un elegante final. 10 mese de crianza.",
+        "img": "",
+        "price": 558,
+        "stock": 50
     },
     {
-        "id":7,
-        "nameProduct":"DON DAVID",
-        "winery":[4],
-        "styleWine":[1],
-        "grapes":[4],
-        "bottles":1,
-        "description":"Vino de la region de Salta. Vista: Suave dorado, muy brillante con marcados tonos verdosos. Marcadas lágrimas en la copa. Aroma: Delicado aroma varietal, con notas a manzanas, ananá, frutos tropicales, miel y notas sutiles de vainilla. Sabor: Equilibrada acidez, paladar suave entregado por la fermentación maloláctica. Frutado, pera, ananá, nueces y leves percepciones lácticas.",
-        "img":"",
-        "price":424,
-        "stock":30
+        "id": 7,
+        "nameProduct": "DON DAVID",
+        "winery": [
+            4
+        ],
+        "styleWine": [
+            1
+        ],
+        "grapes": [
+            4
+        ],
+        "bottles": 1,
+        "description": "Vino de la region de Salta. Vista: Suave dorado, muy brillante con marcados tonos verdosos. Marcadas lágrimas en la copa. Aroma: Delicado aroma varietal, con notas a manzanas, ananá, frutos tropicales, miel y notas sutiles de vainilla. Sabor: Equilibrada acidez, paladar suave entregado por la fermentación maloláctica. Frutado, pera, ananá, nueces y leves percepciones lácticas.",
+        "img": "",
+        "price": 424,
+        "stock": 30
     },
     {
-        "id":8,
-        "nameProduct":"FOND DE CAVE",
-        "winery":[1],
-        "styleWine":[3],
-        "grapes":"",
-        "bottles":1,
-        "description":"80% Pinot Noir - 20% Chardonnay. Este espumante expresa un color amarillo con algunas tonalidades verdes y rojizas. De espuma abundante, posee burbujas finas y persistentes. Los aromas de pan tostado y levadura se entremezclan con la frutalidad del Chardonnay y del Pinot Noir, en una sublime armonía. En boca es untuoso, cremoso, refrescante y muy delicado.",
-        "img":[6],
-        "price":753,
-        "stock":10
+        "id": 8,
+        "nameProduct": "FOND DE CAVE",
+        "winery": [
+            1
+        ],
+        "styleWine": [
+            3
+        ],
+        "grapes": "",
+        "bottles": 1,
+        "description": "80% Pinot Noir - 20% Chardonnay. Este espumante expresa un color amarillo con algunas tonalidades verdes y rojizas. De espuma abundante, posee burbujas finas y persistentes. Los aromas de pan tostado y levadura se entremezclan con la frutalidad del Chardonnay y del Pinot Noir, en una sublime armonía. En boca es untuoso, cremoso, refrescante y muy delicado.",
+        "img": [
+            6
+        ],
+        "price": 753,
+        "stock": 10
     },
     {
-        "id":9,
-        "nameProduct":"SPARKLING",
-        "winery":[2],
-        "styleWine":[3],
-        "grapes":[7],
-        "bottles":1,
-        "description":"Vino de la región de Mendoza. De color amarillo pálido verdoso. Frutado y floral, sabores a durazno y damasco, persistentes burbujas y final fresco. ",
-        "img":"",
-        "price":545,
-        "stock":20
+        "id": 9,
+        "nameProduct": "SPARKLING",
+        "winery": [
+            2
+        ],
+        "styleWine": [
+            3
+        ],
+        "grapes": [
+            7
+        ],
+        "bottles": 1,
+        "description": "Vino de la región de Mendoza. De color amarillo pálido verdoso. Frutado y floral, sabores a durazno y damasco, persistentes burbujas y final fresco. ",
+        "img": "",
+        "price": 545,
+        "stock": 20
     },
     {
-        "id":10,
-        "nameProduct":"COSTA & PAMPA",
-        "winery":[5],
-        "styleWine":[1],
-        "grapes":[1],
-        "bottles":1,
-        "description":"Vino de la región de Chapadmalal. De un fino color amarillo con dejos verdosos, posee notas a hierbas frescas, intenso aroma a ruda y suaves notas cítricas. Presenta textura caudalosa en boca, fresco y con marcada presencia mineral",
-        "img":"",
-        "price":1146,
-        "stock":30
+        "id": 10,
+        "nameProduct": "COSTA & PAMPA",
+        "winery": [
+            5
+        ],
+        "styleWine": [
+            1
+        ],
+        "grapes": [
+            1
+        ],
+        "bottles": 1,
+        "description": "Vino de la región de Chapadmalal. De un fino color amarillo con dejos verdosos, posee notas a hierbas frescas, intenso aroma a ruda y suaves notas cítricas. Presenta textura caudalosa en boca, fresco y con marcada presencia mineral",
+        "img": "",
+        "price": 1146,
+        "stock": 30
     },
     {
-        "id":11,
-        "nameProduct":"FINCAS NOTABLES",
-        "winery":[4],
-        "styleWine":[2],
-        "grapes":[5],
-        "bottles":1,
-        "description":"Vino de la región de Cafayate. Color: Rojo con reflejos rubíes, profundo y fondo negro. Limpio y brillante. Lágrimas muy coloreadas. Aroma: Concentrado. Especiado, se destacan los pimientos morrones. Roble, chocolate negro, dulce de cassis. Limpio y persistente. Característico Cabernet Sauvignon Cafayateño. Sabor: Taninos de gran envergadura, maduros y sensaciones de tiza. Armónico con percepción de frutas negras y chocolate. Roble acompañando al vino. Rico. Persistencia larga y elegante. 15 meses de crianza.",
-        "img":"",
-        "price":1681,
-        "stock":10
+        "id": 11,
+        "nameProduct": "FINCAS NOTABLES",
+        "winery": [
+            4
+        ],
+        "styleWine": [
+            2
+        ],
+        "grapes": [
+            5
+        ],
+        "bottles": 1,
+        "description": "Vino de la región de Cafayate. Color: Rojo con reflejos rubíes, profundo y fondo negro. Limpio y brillante. Lágrimas muy coloreadas. Aroma: Concentrado. Especiado, se destacan los pimientos morrones. Roble, chocolate negro, dulce de cassis. Limpio y persistente. Característico Cabernet Sauvignon Cafayateño. Sabor: Taninos de gran envergadura, maduros y sensaciones de tiza. Armónico con percepción de frutas negras y chocolate. Roble acompañando al vino. Rico. Persistencia larga y elegante. 15 meses de crianza.",
+        "img": "",
+        "price": 1681,
+        "stock": 10
     }
+    
 ]

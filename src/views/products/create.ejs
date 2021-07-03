@@ -13,7 +13,7 @@
     <section class="registro">
     <h1 clase="registro__titulo">Regristro de Productos</h1>
     <p class="registro__nota">Ingrese los datos del producto que quiere subir</p>
-    <form action="/" method="POST" class="form">
+    <form action="/productos/crear" method="POST" class="form">
         <fieldset class="form__registro__datos">
         <input type="text" name="name" class="form__registro__datos__input spacing" placeholder="Nombre del producto" required>
         <input type="text" name="description" class="form__registro__datos__input spacing" placeholder="Descripción" required>
@@ -22,47 +22,52 @@
             <label for= "Imagen">Imagen</label>
             <input type="file" name="image" id="image" class="spacing">
         </fieldset>
-        <input type="category" name="category" class="form__registro__datos__input spacing" placeholder="Categoría" required>
+        <!-- <input type="category" name="category" class="form__registro__datos__input spacing" placeholder="Categoría" required> -->
         
         <fieldset class="form__registro__datos__with-label">
-        <label for="Bodega">Bodega</label>
-        <select name="Bodega" class="spacing">
-            <option hidden selected>Selecciona una opción</option>
-            <option value= 'Finca las Moras'>Finca las Moras </option>
-            <option value= 'Navarro Correas'>Navarro Correas </option>
-            <option value= 'Mascota Vineyards'>Mascota Vineyards </option>
-            <option value= 'Trapiche'>Trapiche </option>
-            <option value= 'El Esteco'>El Esteco </option>
-
+        <label for="winery">Bodega</label>
+        <select name="winery" class="spacing">
+        <option value="" selected disabled>Elige una bodega</option>
+        <% winery.forEach(element => { %> 
+        <option value="<%= element.id %> "><%= element.name %> </option>
+            <% }) %> 
         </select>
         </fieldset>
 
         <fieldset class="form__registro__datos__with-label">
-            <label for="Colors">Tipo</label>
-            <select name="Bodega" class="spacing">
+            <label for="styleWine">Tipo</label>
+            <select name="styleWine" class="spacing">
                 <option hidden selected>Selecciona una opción</option>
-                <option value= 'Tintos'>Tinto </option>
-                <option value= 'Blancos'>Blanco </option>
-                <option value= 'Espumantes'>Espumante </option>
+                <% styleWine.forEach(element => { %> 
+                <option value="<%= element.id %> "><%= element.name %> </option>
+                <% }) %> 
             </select>
         </fieldset>
 
         <fieldset class="form__registro__datos__with-label">
-            <label for="Varietal">Varietal</label>
-            <select name="Varietal" class="spacing">
+            <label for="grapes">Varietal</label>
+            <select name="grapes" class="spacing">
                 <option hidden selected>Selecciona una opción</option>
-                <option value= 'Cabernet Souvignon'>Cabernet Souvignon </option>
-                <option value= 'Blend'>Blend </option>
-                <option value= 'Malbec'>Malbec </option>
-                <option value= 'Syrah'>Syrah </option>
-                <option value= 'Chardonay'>Chardonay </option>
-                <option value= 'Torrontes'>Torrontes </option>
+                <% grapes.forEach(element => { %> 
+                    <option value="<%= element.id %> "><%= element.name %> </option>
+                    <% }) %> 
+            </select>
+        </fieldset>
+
+        
+        <fieldset class="form__registro__datos__with-label">
+            <label for="bottles">Cantidad de Botellas</label>
+            <select name="bottles" class="spacing">
+                <option hidden selected>Selecciona una opción</option>
+            <% for( let i = 1; i <= 120; i++ ) { %>
+                <option value="<%=i%>"><%=i%> </option>
+            <% } %>
             </select>
         </fieldset>
 
         <fieldset class="form__registro__datos__with-label">
-        <label for="precio">Precio</label>
-        <input type="precio" name="precio" class="form__registro__datos__precio" placeholder="Precio en $" required>
+        <label for="price">Precio</label>
+        <input type="price" name="precio" class="form__registro__datos__precio" placeholder="Precio en $" required>
         </fieldset >
         
         <fieldset class="form__registro__botones">

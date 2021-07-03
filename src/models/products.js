@@ -3,6 +3,7 @@ const fs = require('fs');
 const grapesModel = require('./grapes');
 const styleWineModel= require('./styleWine');
 const wineryModel = require('./winery');
+const { parse } = require('path');
 
 const model = {
     directory: path.resolve(__dirname, '../data', 'products.json'),
@@ -39,13 +40,13 @@ const model = {
         let allProducts = this.all();
         let newProduct = {
             id: allProducts.length > 0 ? allProducts[allProducts.length - 1].id + 1 : 1,
-            nameProduct: data.nameProduct,
-            winery: data.winery.map(element => parseInt(element)),
-            styleWine: data.styleWine.map(element => parseInt(element)),
-            grapes: data.grapes.map(element => parseInt(element)),
+            name: data.name,
+            winery: parseInt(data.winery),
+            styleWine: parseInt(data.styleWine),
+            grapes:parseInt(data.grapes),
             bottles: parseInt(data.bottles),
             description: data.description,
-            img: file.filename,
+            //img: file.filename,
             price: data.price,
             stock: data.stock
         };
@@ -57,6 +58,6 @@ const model = {
 
 }
 
-//console.log(model.new({nameProduct:'probando', grapes:[2], winery:[1], styleWine:[3]},{filename:'nombredelarchivito.jpeg'}));
+//console.log(model.new({name:'probando', grapes:[2], winery:[1], styleWine:[3]},{filename:'nombredelarchivito.jpeg'}));
 
 module.exports = model;

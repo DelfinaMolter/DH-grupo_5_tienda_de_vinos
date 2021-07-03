@@ -11,6 +11,9 @@ app.listen(app.get("port"), () => console.log('Servidor esta corriendo en http:/
 app.set('view engine', 'ejs')
 app.set("views",path.resolve(__dirname,"./views"));
 
+//Data Configuration
+app.use(express.urlencoded({ extended: false })); 
+
 //Archivos Estáticos
 app.use(express.static(path.resolve(__dirname,'../public')));
 

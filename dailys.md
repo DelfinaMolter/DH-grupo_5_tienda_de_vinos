@@ -33,3 +33,11 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Revisamos lo hecho hasta el momento.
 - Asignamos las tareas a realizar para el proximo encuentro.
 - Coordinamos la próxima reunión.
+
+**05/07/21**
+- Mostramos lo que hicimos y cómo lo pensamos, más que nada en relación a los métodos html.
+- Mejoramos algunas funcionalidades en grupo.
+- Resolvimos dudas en grupo.
+- Pensamos que falta para terminar con todos los requisitos del sprint 4.
+- Dividimos tareas para realizarlo.
+- Programamos próxima review.

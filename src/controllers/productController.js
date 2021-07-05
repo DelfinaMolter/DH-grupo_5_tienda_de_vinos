@@ -4,11 +4,11 @@ const styleWineModel= require('../models/styleWine');
 const wineryModel = require('../models/winery');
 
 const controller = {
-    products: (req,res) => {
-        res.render('./products/products')},
+    products: (req,res) => {    
+        res.render('./products/products',{list:productModels.allWithExtra() })},
 
     detalle: (req,res) => {
-        res.render('./products/detail')}, //cambiar por método one del modelo
+        res.render('./products/detail', {product: productModels.one(req.params.id) })}, 
 
     create: (req,res) => {
         res.render('./products/create', {

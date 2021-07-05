@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "nameProduct": "FOND DE CAVE RESERVA",
+        "name": "FOND DE CAVE RESERVA",
         "winery": 1,
         "styleWine": 1,
         "grapes": 1,
@@ -13,7 +13,7 @@
     },
     {
         "id": 2,
-        "nameProduct": "SELECCIÓN DEL ENÓLOGO",
+        "name": "SELECCIÓN DEL ENÓLOGO",
         "winery": 2,
         "styleWine": 2,
         "grapes": 2,
@@ -25,7 +25,7 @@
     },
     {
         "id": 3,
-        "nameProduct": "DADA INCREDIBLENDS",
+        "name": "DADA INCREDIBLENDS",
         "winery": 3,
         "styleWine": 2,
         "grapes": 3,
@@ -37,7 +37,7 @@
     },
     {
         "id": 4,
-        "nameProduct": "MEDALLA 1500ML",
+        "name": "MEDALLA 1500ML",
         "winery": 1,
         "styleWine": 2,
         "grapes": 2,
@@ -49,7 +49,7 @@
     },
     {
         "id": 5,
-        "nameProduct": "FOND DE CAVE",
+        "name": "FOND DE CAVE",
         "winery": 1,
         "styleWine": 2,
         "grapes": 5,
@@ -61,7 +61,7 @@
     },
     {
         "id": 6,
-        "nameProduct": "PURO",
+        "name": "PURO",
         "winery": 1,
         "styleWine": 2,
         "grapes": 2,
@@ -73,7 +73,7 @@
     },
     {
         "id": 7,
-        "nameProduct": "DON DAVID",
+        "name": "DON DAVID",
         "winery": 4,
         "styleWine": 1,
         "grapes": 4,
@@ -85,7 +85,7 @@
     },
     {
         "id": 8,
-        "nameProduct": "FOND DE CAVE",
+        "name": "FOND DE CAVE",
         "winery": 1,
         "styleWine": 3,
         "grapes": "",
@@ -97,7 +97,7 @@
     },
     {
         "id": 9,
-        "nameProduct": "SPARKLING",
+        "name": "SPARKLING",
         "winery": 2,
         "styleWine": 3,
         "grapes": 7,
@@ -109,7 +109,7 @@
     },
     {
         "id": 10,
-        "nameProduct": "COSTA & PAMPA",
+        "name": "COSTA & PAMPA",
         "winery": 5,
         "styleWine": 1,
         "grapes": 1,
@@ -121,7 +121,7 @@
     },
     {
         "id": 11,
-        "nameProduct": "FINCAS NOTABLES",
+        "name": "FINCAS NOTABLES",
         "winery": 4,
         "styleWine": 2,
         "grapes": 5,

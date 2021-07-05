@@ -57,7 +57,7 @@ const model = {
 
 
 }
-
+console.log(model.one(2));
 //console.log(model.new({name:'probando', grapes:[2], winery:[1], styleWine:[3]},{filename:'nombredelarchivito.jpeg'}));
 
 module.exports = model;

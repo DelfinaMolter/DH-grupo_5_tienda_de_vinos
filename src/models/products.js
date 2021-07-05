@@ -3,7 +3,7 @@ const fs = require('fs');
 const grapesModel = require('./grapes');
 const styleWineModel= require('./styleWine');
 const wineryModel = require('./winery');
-const { parse } = require('path');
+//const { parse } = require('path');
 
 const model = {
     directory: path.resolve(__dirname, '../data', 'products.json'),

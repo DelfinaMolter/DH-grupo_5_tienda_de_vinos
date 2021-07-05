@@ -185,17 +185,12 @@
         "winery": [
             4
         ],
-        "styleWine": [
-            2
-        ],
-        "grapes": [
-            5
-        ],
+        "styleWine": 2,
+        "grapes":5,
         "bottles": 1,
         "description": "Vino de la región de Cafayate. Color: Rojo con reflejos rubíes, profundo y fondo negro. Limpio y brillante. Lágrimas muy coloreadas. Aroma: Concentrado. Especiado, se destacan los pimientos morrones. Roble, chocolate negro, dulce de cassis. Limpio y persistente. Característico Cabernet Sauvignon Cafayateño. Sabor: Taninos de gran envergadura, maduros y sensaciones de tiza. Armónico con percepción de frutas negras y chocolate. Roble acompañando al vino. Rico. Persistencia larga y elegante. 15 meses de crianza.",
         "img": "",
         "price": 1681,
         "stock": 10
     }
-    
 ]

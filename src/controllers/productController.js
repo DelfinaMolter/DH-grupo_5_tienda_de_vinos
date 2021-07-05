@@ -4,6 +4,8 @@ const styleWineModel= require('../models/styleWine');
 const wineryModel = require('../models/winery');
 
 const controller = {
+    products: (req,res) => {
+        res.render('./products/products')},
 
     detalle: (req,res) => {
         res.render('./products/detail')}, //cambiar por método one del modelo

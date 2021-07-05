@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const productController = require('../controllers/productController');
 
+router.get('/', productController.products);
 router.get('/detalle', productController.detalle);
 router.get('/crear', productController.create);
 router.get('/editar', productController.edit);

@@ -1,6 +1,7 @@
 //Módulos
 const express = require ('express');
 const path = require ('path');
+const method = require ('method-override');
 const app = express(); 
 
 //Server Start
@@ -11,8 +12,10 @@ app.listen(app.get("port"), () => console.log('Servidor esta corriendo en http:/
 app.set('view engine', 'ejs')
 app.set("views",path.resolve(__dirname,"./views"));
 
+
 //Data Configuration
 app.use(express.urlencoded({ extended: false })); 
+app.use (method ("method")) // ?_method=PUT
 
 //Archivos Estáticos
 app.use(express.static(path.resolve(__dirname,'../public')));

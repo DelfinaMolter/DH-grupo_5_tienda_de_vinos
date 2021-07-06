@@ -53,7 +53,23 @@ const model = {
         allProducts.push(newProduct);
         fs.writeFileSync(this.directory, JSON.stringify(allProducts, null, 4));
         return true;
-    }
+    },
+   /*edit: function (data,file,id) {
+        const directory = path.resolve(__dirname,"../data","products.json")
+        let productos = this.all();
+        productos.map(producto => {
+            if(producto.id == id ){
+                producto.name = data.name,
+                producto.brand = parseInt(data.brand),
+                producto.colors = data.colors.map(color => parseInt(color)),
+                producto.image = file.filename
+                return producto
+            }
+            return producto
+        })
+        fs.writeFileSync(directory,JSON.stringify(productos,null,2));
+        return true;
+    }*/
 
 
 }

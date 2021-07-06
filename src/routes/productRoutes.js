@@ -9,5 +9,7 @@ router.get('/editar', productController.edit);
 
 router.post('/crear', productController.save)
 
+//router.put("/update/:id",[upload.single("image")],product.update)
+
 
 module.exports = router

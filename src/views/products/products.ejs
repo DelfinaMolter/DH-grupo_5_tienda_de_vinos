@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%-include ("../includes/head"); %>
+    <title>Productos</title>
+    <link rel="stylesheet" href="/css/home.css" />
+</head>
+<body>
+    <%-include ("../includes/header"); %>
+    <!-- =============PRODUCTOS==========-->
+    <main>
+        <h3 id="ofertas" class="titulos-secciones">PRODUCTOS  </h3>
+
+        <div  class="main__section__lastvisit">
+
+        
+        <section>
+            <% list.forEach(element => { %> 
+
+        <article id="art1" class="articulos">
+            <a href="./productos/detalle:<%=element.id%>"> <img class="imagenArticulo" src="img/products/<%=element.img%> " alt="product image"> </a>
+            <div class="detalleArticulos">   
+            <p class="precio"><%=element.price%> /p>
+            <p class="descuentos">30% OFF</p>
+            <h4 class="name"><%=element.name%></h4>
+        </article>    
+
+        </section>
+
+    <% }) %>     
+        </div>
+
+    </main>
+    <%-include ("../includes/footer"); %>
+</body>
+</html>

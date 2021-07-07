@@ -32,10 +32,10 @@
         "email": "emanuelmendiolaza@gmail.com",
         "password": "foca",
         "typeUser": "admin",
-        "img": "",
-        "dni":"no sé", 
+        "img": "img/",
+        "dni":"36127471", 
         "nameUser":"EmaMendio", 
-        "dateBirth":"no sé",
+        "dateBirth":"16/09/93",
         "dateAccount": "26/06/21"
     },
     {

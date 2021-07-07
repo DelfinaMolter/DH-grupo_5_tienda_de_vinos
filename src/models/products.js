@@ -45,7 +45,7 @@ const model = {
             grapes:parseInt(data.grapes),
             bottles: parseInt(data.bottles),
             description: data.description,
-            //img: file.filename,
+            img: file.filename !=undefined ? file.filename : 'producto-sin-imagen.jpg',
             price: data.price,
             stock: data.stock
         };
@@ -59,7 +59,7 @@ const model = {
         let deleted = this.one(id);
         // eliminamos la imagen de la carpeta img
         if(deleted.img != 'producto-sin-imagen.jpg'){
-        fs.unlinkSync(path.resolve(__dirname, '../../public/img/products', deleted.img));
+        fs.unlinkSync(path.resolve(__dirname, '../../public/img/products/wines', deleted.img));
         }
         // filtarmos el producto que deaseamos eliminar
         allProducts = allProducts.filter(element => element.id != deleted.id);

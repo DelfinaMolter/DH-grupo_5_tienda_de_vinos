@@ -24,7 +24,7 @@
 <% for(product of list) { 
         if (product.inSale == true){ %> 
 <article id="art1" class="articulos">
-<a href="./productos/detalle/<%= product.id %> "> <img class="imagenArticulo" src="img/products/<%= product.img %> " alt=""> </a>
+<a href="./productos/detalle/<%= product.id %> "> <img class="imagenArticulo" src="img/products/wines/<%= product.img %> " alt=""> </a>
         <div class="detalleArticulos">   
         <p class="precio">$<%= product.price %> </p>
         <p class="descuentos">30% OFF</p>

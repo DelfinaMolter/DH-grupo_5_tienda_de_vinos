@@ -3,7 +3,6 @@ const fs = require('fs');
 const grapesModel = require('./grapes');
 const styleWineModel= require('./styleWine');
 const wineryModel = require('./winery');
-//const { parse } = require('path');
 
 const model = {
     directory: path.resolve(__dirname, '../data', 'products.json'),
@@ -53,11 +52,28 @@ const model = {
         allProducts.push(newProduct);
         fs.writeFileSync(this.directory, JSON.stringify(allProducts, null, 4));
         return true;
+    },
+
+    delete: function(id){
+        let allProducts = this.all();
+        let deleted = this.one(id);
+        // eliminamos la imagen de la carpeta img
+        if(deleted.img != 'producto-sin-imagen.jpg'){
+        fs.unlinkSync(path.resolve(__dirname, '../../public/img/products', deleted.img));
+        }
+        // filtarmos el producto que deaseamos eliminar
+        allProducts = allProducts.filter(element => element.id != deleted.id);
+        fs.writeFileSync(this.directory, JSON.stringify(allProducts, null, 4));
+        return true;
     }
 
 
 }
-console.log(model.one(2));
+
+
+
 //console.log(model.new({name:'probando', grapes:[2], winery:[1], styleWine:[3]},{filename:'nombredelarchivito.jpeg'}));
+//console.log(model.delete(13));
+
 
 module.exports = model;

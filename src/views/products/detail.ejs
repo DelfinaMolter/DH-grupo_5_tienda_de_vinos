@@ -68,7 +68,8 @@
   </form>
 
   <a href="/productos/editar" class="button admin-button" id="edit">EDITAR(admin)</a>
-	<form action="#" method="POST">
+
+	<form action="/productos/delete/<%= product.id %>?_method=DELETE" method="POST">
 	<button type="submit" class="button admin-button" id="delete">ELIMINAR(admin)</button>
   </form>
   

@@ -9,6 +9,7 @@ router.get('/editar', productController.edit);
 
 
 router.post('/crear', productController.save)
+router.delete('/delete/:id', productController.delete)
 
 
 module.exports = router

@@ -19,7 +19,13 @@ const controller = {
         return result = true ? res.redirect('/') : res.send ("Error al cargar el producto");
     },
 
-    edit: (req,res) => {
-        res.render('./products/edit')}
+    edit: (req, res) => {
+        res.render('./products/edit')
+    },
+
+    delete:(req, res) => {
+        let result = productModels.delete(req.params.id);
+        return result == true ? res.redirect('/') : res.send('Error al eliminar el producto')
+    }
 }
 module.exports = controller;

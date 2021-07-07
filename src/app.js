@@ -2,6 +2,7 @@
 const express = require ('express');
 const path = require ('path');
 const app = express(); 
+const method = require('method-override');
 
 //Server Start
 app.set("port", process.env.PORT || 3000);
@@ -12,7 +13,8 @@ app.set('view engine', 'ejs')
 app.set("views",path.resolve(__dirname,"./views"));
 
 //Data Configuration
-app.use(express.urlencoded({ extended: false })); 
+app.use(express.urlencoded({ extended: false })); //para el body
+app.use(method('_method')); //para metodos put y delete
 
 //Archivos Estáticos
 app.use(express.static(path.resolve(__dirname,'../public')));

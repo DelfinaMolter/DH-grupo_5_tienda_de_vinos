@@ -21,36 +21,20 @@
 
         <div  class="main__section__lastvisit">
 
+<% for(product of list) { 
+        if (product.inSale == true){ %> 
 <article id="art1" class="articulos">
-<a href="./productos/detalle"> <img class="imagenArticulo" src="img/products/product_vinos1.jpg" alt=""> </a>
+<a href="./productos/detalle/<%= product.id %> "> <img class="imagenArticulo" src="img/products/<%= product.img %> " alt=""> </a>
         <div class="detalleArticulos">   
-        <p class="precio">$600</p>
+        <p class="precio">$<%= product.price %> </p>
         <p class="descuentos">30% OFF</p>
-        <h4 class="descripciones">Alma Mora <p>Select Reserve Blend</p></h4>
+        <h4 class="descripciones"><%= product.name %></h4>  
+        <p><%=product.winery.name%>/p>
                 
         </div>
 </article>
-<article id="art2" class="articulos">
-        <a href="./productos/detalle"><img class="imagenArticulo" src="img/products/product_vinos2.jpg" alt=""></a>
-        <div class="detalleArticulos">       
-        <p class="precio">$350</p>
-        <p class="descuentos">30% OFF</p>
-        <h4 class="descripciones">Finca Las Moras <p>Cabernet Souvingnon </p></h4> </div>
-</article>
-<article id="art3" class="articulos">
-<a href="./productos/detalle"> <img class="imagenArticulo" src="img/products/product_vinos3.jpg" alt=""></a>
-        <div class="detalleArticulos"> 
-        <p class="precio">$420</p>
-        <p class="descuentos">30% OFF</p>
-        <h4 class="descripciones">Finca Las Moras <p> PAZ Sirah</p></h4> </div>
-</article>
-<article id="art4" class="articulos">
-<a href="./productos/detalle"> <img class="imagenArticulo" src="img/products/product_vinos2.jpg" alt=""></a>
-        <div class="detalleArticulos">  
-        <p class="precio">$420</p>
-        <p class="descuentos">30% OFF</p>
-        <h4 class="descripciones">Finca Las Moras <p>PAZ Souvignon Blanc</p></h4> </div>
-</article>
+<% }} %> 
+
 
         </div>
 </section>

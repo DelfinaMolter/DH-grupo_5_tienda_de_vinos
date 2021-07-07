@@ -226,4 +226,9 @@
     justify-content: space-between;
     padding-right: 200px;
   }
+
+  #winery-tittle{
+    position:relative;
+    left: 100px;
+  }
 }

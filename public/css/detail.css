@@ -33,6 +33,7 @@
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
+  margin-top: 30px;
   align-items: center;
 }
 .vino-y-bodega {
@@ -48,9 +49,11 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+
 }
 .descripcion {
   max-width: 100%;
+  margin: 0 10px;
 }
 #icono-uva {
   width: 40px;
@@ -86,6 +89,9 @@
   margin-bottom: -7px;
 }
 
+.columna-der{
+  margin: 0 20px;
+}
 /* =========================article cantidad */
 .cantidad {
   margin-top: 10px;
@@ -165,7 +171,7 @@
 /* ===========================================MEDIA QUERIES=========================================== */
 
 /* ------------------------------tablet ----------------------------------------------- */
-@media (min-width: 480px) {
+@media (min-width: 510px) {
 
   .art-buttons{
     flex-direction: row;
@@ -205,7 +211,7 @@
   }
   .columna-der {
     position: relative;
-    top: 75px;
+    top: 30px;
   }
   /* imagen producto */
   .figure-producto {
@@ -230,5 +236,20 @@
   #winery-tittle{
     position:relative;
     left: 100px;
+  }
+
+  #main-block{
+    display: flex;
+    align-items: center;
+  }
+
+  .detalle-producto{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .titulos-y-fav {
+    width: 80%;
+    margin-bottom: 0;
   }
 }

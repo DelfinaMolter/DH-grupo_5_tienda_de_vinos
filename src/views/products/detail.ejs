@@ -13,13 +13,14 @@
   <!-- ========================================MAIN======================================================= -->
 <main>
 <div class="detalle-producto">
-  <section class="box-superior">
+ 
     <article class="titulos-y-fav">
       <h1 class="vino-y-bodega"> <%= product.name %>  </h1>
       <p class="vino-y-bodega"><%=product.winery.name%> </p>
       <a href="#"><i class="fas fa-heart"></i></a>
     </article>  
-    
+    <div id="main-block">
+    <section class="box-superior">
     <article class="columna-izq"> 
     <% if(product.img){ %> 
     <figure class="figure-producto"><img class="img-producto" src="/img/products/wines/<%= product.img %> " alt=""></figure>
@@ -84,6 +85,7 @@
 </article>
 
 </section>
+</div>
 </div>
 <!-- ====================================Productos y Ofertas -->
 <h3 id="h3-ofertas">PRODUCTOS Y OFERTAS</h3>

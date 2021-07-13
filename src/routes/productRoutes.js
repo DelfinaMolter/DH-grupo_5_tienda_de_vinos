@@ -13,8 +13,7 @@ router.get('/editar', productController.edit);
 
 router.post('/crear', uploadFile.single('product-img'), productController.save)
 router.delete('/delete/:id', productController.delete)
-
-//router.put("/update/:id",[upload.single("image")],product.update)
+router.put("/edit/:id", productController.update)
 
 
 module.exports = router

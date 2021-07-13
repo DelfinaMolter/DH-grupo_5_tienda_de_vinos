@@ -29,7 +29,7 @@
         <select name="winery" class="spacing">
         <option value="" selected disabled>Elige una bodega</option>
         <% winery.forEach(element => { %> 
-        <option value="<%= element.id %> "><%= element.name %> </option>
+        <option value="<%= element.id %>"><%= element.name %> </option>
             <% }) %> 
         </select>
         </fieldset>
@@ -39,7 +39,7 @@
             <select name="styleWine" class="spacing">
                 <option hidden selected>Selecciona una opción</option>
                 <% styleWine.forEach(element => { %> 
-                <option value="<%= element.id %> "><%= element.name %> </option>
+                <option value="<%= element.id %>"><%= element.name %> </option>
                 <% }) %> 
             </select>
         </fieldset>
@@ -49,7 +49,7 @@
             <select name="grapes" class="spacing">
                 <option hidden selected>Selecciona una opción</option>
                 <% grapes.forEach(element => { %> 
-                    <option value="<%= element.id %> "><%= element.name %> </option>
+                    <option value="<%= element.id %>"><%= element.name %> </option>
                     <% }) %> 
             </select>
         </fieldset>

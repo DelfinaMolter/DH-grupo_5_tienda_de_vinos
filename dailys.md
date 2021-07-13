@@ -49,3 +49,9 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Colocamos en trello las tareas faltantes.
 - Agendamos nueva reunión.
 - Realizamos la Retro.
+
+**13/07/21**
+- Leimos las consigans del sprint 5
+- Dividimos las tareas y las colocamos en el trello.
+- Asigmanos las primeras tareas para la proxima reunión.
+- Agendamos una nueva reunión.

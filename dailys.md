@@ -41,3 +41,11 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Pensamos que falta para terminar con todos los requisitos del sprint 4.
 - Dividimos tareas para realizarlo.
 - Programamos próxima review.
+
+**07/07/21**
+- Mostramos lo realizado desde la ultima reunión.
+- Chequeamos el buen funcionamiento de lo hecho hasta el momento.
+- Revisamos todo para la entrega del sprint 4. 
+- Colocamos en trello las tareas faltantes.
+- Agendamos nueva reunión.
+- Realizamos la Retro.

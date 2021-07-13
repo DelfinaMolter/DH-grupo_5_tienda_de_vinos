@@ -45,7 +45,7 @@ const model = {
             grapes:parseInt(data.grapes),
             bottles: parseInt(data.bottles),
             description: data.description,
-            //img: file.filename,
+            img: file.filename !=undefined ? file.filename : 'producto-sin-imagen.jpg',
             price: data.price,
             stock: data.stock
         };
@@ -53,13 +53,29 @@ const model = {
         fs.writeFileSync(this.directory, JSON.stringify(allProducts, null, 4));
         return true;
     },
+    edit: function (data,file,id) {
+        const directory = path.resolve(__dirname,"../data","products.json")
+        let productos = this.all();
+        productos.map(producto => {
+            if(producto.id == id ){
+                producto.name = data.name,
+                producto.brand = parseInt(data.brand),
+                producto.colors = data.colors.map(color => parseInt(color)),
+                producto.image = file.filename
+                return producto
+            }
+            return producto
+        })
+        fs.writeFileSync(directory,JSON.stringify(productos,null,2));
+        return true;
+    }, 
 
     delete: function(id){
         let allProducts = this.all();
         let deleted = this.one(id);
         // eliminamos la imagen de la carpeta img
         if(deleted.img != 'producto-sin-imagen.jpg'){
-        fs.unlinkSync(path.resolve(__dirname, '../../public/img/products', deleted.img));
+        fs.unlinkSync(path.resolve(__dirname, '../../public/img/products/wines', deleted.img));
         }
         // filtarmos el producto que deaseamos eliminar
         allProducts = allProducts.filter(element => element.id != deleted.id);

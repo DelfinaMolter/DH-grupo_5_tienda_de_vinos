@@ -20,9 +20,12 @@ const controller = {
     },
 
     edit: (req, res) => {
-        res.render('./products/edit')
+        res.render('./product/edit')},
+    update: (req,res) =>{
+        let result = product.edit(req.body,req.file,req.params.id)
+        return result == true ? res.redirect("/") : res.send("Error al cargar la informacion") 
     },
-
+    
     delete:(req, res) => {
         let result = productModels.delete(req.params.id);
         return result == true ? res.redirect('/') : res.send('Error al eliminar el producto')

@@ -55,3 +55,9 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Dividimos las tareas y las colocamos en el trello.
 - Asigmanos las primeras tareas para la proxima reunión.
 - Agendamos una nueva reunión.
+
+**16/07/21**
+- chequeamos las tareas realizadas.
+- Compartimos conocimientos nuevos. Aprendimos como armar nuevas branch y trabajar en paralelo, para luego mergear.
+- Asignamos nuevas tareas.
+- Coordinamos proxima reunión.

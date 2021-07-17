@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: 'Be Vietnam', sans-serif;
+    font-size: 16px;
+}
+
+/*-------PROFILES--------*/
+.section-prodile{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    min-height: 80vh;
+}
+
+.section-prodile img{
+    margin:20px;
+    border-radius:100px;
+    height:200px;
+    weight:200px;
+}
+
+.profile-data{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.profile-data h2{
+    font-size:25px;
+    font-weight:700;
+    margin:30px;
+}
+.profile-data h3{
+    font-size:25px;
+    font-weight:700;
+    margin:20px;
+}
+.profile-data p{
+    font-size:16px;
+    margin:15px;
+    font-style:normal;
+    color:#363636;
+}
+.profile-data p span{
+    font-size:16px;
+    margin-right:10px;
+    font-weight:700;
+    color:#8c8c8c;
+}
+.section-prodile button{
+    margin: 30px 0px 80px;
+    padding: 6px;
+    width:20vw;
+    max-width:140px;
+    border-radius: 7px;
+    background-color:#240C31;
+    color: #F5F5F5;   
+}
+
+/*-------USUARIOS--------*/
+
+.users-title{
+    padding:30px;
+}
+.users{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+.users .section-prodile{
+    background-color:#ffffff;
+    border: none;
+    box-shadow: 0px 0px 6px rgb(100, 100, 100);
+    width:300px;
+    height:650px;
+    margin:30px 10px;
+}
+@media (min-width:760px){
+    .users{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:center;
+    }
+}

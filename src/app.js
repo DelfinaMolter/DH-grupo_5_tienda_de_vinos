@@ -13,13 +13,18 @@ app.listen(app.get("port"), () => console.log('Servidor esta corriendo en http:/
 app.set('view engine', 'ejs')
 app.set("views",path.resolve(__dirname,"./views"));
 
-
+//----Middlewares-----
 //Data Configuration
 app.use(express.urlencoded({ extended: false })); //para el body
 app.use(method('_method')); //para metodos put y delete
 
 //Archivos Estáticos
 app.use(express.static(path.resolve(__dirname,'../public')));
+
+
+
+
+
 
 //Rutas
 const mainRouter = require('./routes/mainRoutes');

@@ -1,13 +1,17 @@
 const express = require('express');
 const router = express.Router();
 const uploadFile = require('../middlewares/multerMiddlewares');
-const user = require('../controllers/userController')
+const userController = require('../controllers/userController')
 
-router.get('/', user.users)
-router.get('/login', user.login)
-router.get('/registro', user.register)
-router.get('/perfil', user.profile)
+//Middlewares
+const validations = require('../middlewares/validationRegisterMiddlewares')
 
-router.post('/registro',  [uploadFile.single('avatar'), ACAVANLASVALIDACIONES], user.processRegister);
+router.get('/', userController.users)
+router.get('/login', userController.login)
+router.get('/registro', userController.register)
+router.get('/perfil', userController.profile)
+
+
+router.post('/registro', validations, userController.processRegister);
 
 module.exports = router

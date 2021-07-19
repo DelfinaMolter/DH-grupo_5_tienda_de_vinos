@@ -1,5 +1,5 @@
 const { validationResult } = require('express-validator');
-const User = require('../models/User') //todavia no esta creadooouu!
+const User = require('../models/User');
 const bcryptjs = require('bcryptjs');
 
 
@@ -7,21 +7,27 @@ const bcryptjs = require('bcryptjs');
 const controller = {
     login: (req,res) => {res.render('users/login')},
 
-    register: (req,res)=>{res.render('users/registro')},
+    users: (req, res) => {res.render('users/users')},
+
+    profile: (req, res) => {res.render('users/profile')},
+
+    register: (req,res)=> {res.render('users/registro')},
+
+    
 
     processRegister: (req, res) => {
         const resultValidations = validationResult(req);
 //Acá si hay errores los enviamos a la vista
-        if (resultValidations.error.length > 0 ) {
-            return res.render('usuarios/registro', {
+        if (resultValidations.errors.length > 0 ) {
+            return res.render('users/registro', {
                 errors: resultValidations.mapped(),
                 oldData: req.body
             })
         }
-//Esto es por mi el email ya está registrado:
-        let userInDB = User.findByField(email, req.body,email); // Hacer este modeloooou!!!
+// Esto es por si el email ya está registrado:
+        let userInDB = User.findByField('email', req.body.email); 
         if(userInDB){
-            return res.render('usuarios/registro',{
+            return res.render('users/registro',{
                 errors:{
                     email: {
                         msg:'Este email ya esta registrado'
@@ -33,11 +39,13 @@ const controller = {
         let userToCreate = {
             ...req.body,
             password: bcryptjs.hashSync(req.body.password, 10),
-            avatar:req.file.filename
+            // avatar:req.file.filename
         }
         let userCreated = User.create(userToCreate);
-        return res.redirect('usuarios/login')
-    },
-    edit: (req,res)=>{res.render('products/edit')}
+        return res.redirect('/')
+    }
 }
+
+
+
 module.exports = controller;

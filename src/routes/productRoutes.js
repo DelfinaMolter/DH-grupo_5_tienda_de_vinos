@@ -8,7 +8,7 @@ const uploadFile = require('../middlewares/multerMiddlewares')
 router.get('/', productController.products);
 router.get('/detalle/:id', productController.detalle);
 router.get('/crear', productController.create);
-router.get('/editar', productController.edit);
+router.get('/editar/:id', productController.edit);
 
 
 router.post('/crear', uploadFile.single('product-img'), productController.save)

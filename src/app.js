@@ -1,5 +1,7 @@
 //Módulos
 const express = require ('express');
+const session = require ('express-session');
+const cookie = require ('cookie-parser');
 const path = require ('path');
 const method = require ('method-override');
 const app = express(); 
@@ -12,6 +14,14 @@ app.listen(app.get("port"), () => console.log('Servidor esta corriendo en http:/
 // View Engine
 app.set('view engine', 'ejs')
 app.set("views",path.resolve(__dirname,"./views"));
+
+// Middleware APP
+app.use(express.static("../public"));
+app.use(cookie()); // req.cookie
+app.use(session({saveUninitialized:false, secret: "digital"})) // req.session
+
+// Custom Middleware
+app.use(require("./middlewares/userSession"))
 
 
 //Data Configuration

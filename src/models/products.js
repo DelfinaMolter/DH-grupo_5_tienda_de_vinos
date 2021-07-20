@@ -58,10 +58,11 @@ const model = {
         let productos = this.all();
         productos.map(producto => {
             if(producto.id == id ){
-                producto.name = data.name,
-                producto.brand = parseInt(data.brand),
-                producto.colors = data.colors.map(color => parseInt(color)),
-                producto.image = file.filename
+                producto.grapes = data.grapes,
+                producto.styleWine = parseInt(data.styleWine),
+                producto.users = data.users,
+                producto.img = file.filename,
+                producto.winery = data.winery
                 return producto
             }
             return producto

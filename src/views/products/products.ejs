@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <%-include ("../includes/head"); %>
+    <%-include ("../includes/head");%>
     <link rel="shortcut icon" href="../../img/logos/logo-sin-texto.png" type="image/x-icon">
     <title>Productos</title>
     <link rel="stylesheet" href="/css/home.css" />
 </head>
 <body>
-    <%-include ("../includes/header"); %>
+    <%-include ("../includes/header");%>
     <!-- =============PRODUCTOS==========-->
     <main>
         <h3 id="ofertas" class="titulos-secciones">PRODUCTOS!  </h3>
@@ -16,7 +16,7 @@
 
         
         <section>
-            <% list.forEach(element => { %> 
+            <%list.forEach(element => {%> 
 
         <article id="art1" class="articulos">
             <a href="./productos/detalle/<%=element.id%>"> <img class="imagenArticulo" src="img/products/wines/<%=element.img%> " alt="product image"> </a>
@@ -27,10 +27,10 @@
         </article>    
         </section>
 
-    <% }) %>     
+    <%})%>     
         </div>
     </div>
     </main>
-    <%-include ("../includes/footer"); %>
+    <%-include ("../includes/footer");%>
 </body>
 </html>

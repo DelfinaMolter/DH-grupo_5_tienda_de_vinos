@@ -61,3 +61,9 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Compartimos conocimientos nuevos. Aprendimos como armar nuevas branch y trabajar en paralelo, para luego mergear.
 - Asignamos nuevas tareas.
 - Coordinamos proxima reunión.
+
+**20/07/21**
+- chequeamos que hicimos hasta ahora.
+- Compartimos conocimientos nuevos.
+- Asignamos nuevas tareas.
+- Coordinamos proxima reunión.

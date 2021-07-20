@@ -20,7 +20,9 @@ const controller = {
     },
 
     edit: (req, res) => {
-        res.render('./product/edit')},
+        res.render('./products/edit', {winery:wineryModel.all(),styleWine: styleWineModel.all(),grapes:grapesModel.all()})
+    },
+
     update: (req,res) =>{
         let result = product.edit(req.body,req.file,req.params.id)
         return result == true ? res.redirect("/") : res.send("Error al cargar la informacion") 

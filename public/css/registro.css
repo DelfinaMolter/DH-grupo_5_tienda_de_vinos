@@ -77,6 +77,13 @@ fieldset{
     background-color:#240C31;
     color: #F5F5F5;   
 }
+
+.form__registro__datos .is-invalid {
+    border: red solid 2px
+}
+.text-danger{
+    color:red
+}
 /*-------- MOBILE --------*/
 @media (min-width: 361px){
     .logo{
@@ -97,7 +104,7 @@ fieldset{
         max-width:90px;   
     }
 }
-/*-------- TABLE --------*/
+/*-------- TABLET --------*/
 @media (min-width: 768px){
 /* =======================================MAIN */
     .logo{

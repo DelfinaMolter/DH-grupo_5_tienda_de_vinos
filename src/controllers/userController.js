@@ -6,3 +6,10 @@ const controller = {
     profile: (req,res)=>{res.render('users/profile')}
 }
 module.exports = controller;
+
+let userController = {
+    login: function(req,res){
+    return res.render('login')
+}
+
+}

@@ -39,7 +39,7 @@ const controller = {
         let userToCreate = {
             ...req.body,
             password: bcryptjs.hashSync(req.body.password, 10),
-            // avatar:req.file.filename
+            img: req.file.filename
         }
         let userCreated = User.create(userToCreate);
         return res.redirect('/')

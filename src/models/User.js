@@ -40,7 +40,5 @@ create: function(userData){
 }
 }
 
-//console.log(User.create({firstName:'pueba', lastName:'pruebatambien'}))
 
-//console.log(User.findByField("firstName", "Gonzalo"));
 module.exports = User;

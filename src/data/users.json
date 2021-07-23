@@ -33,12 +33,23 @@
         "lastName": "Mendiolaza",
         "userName": "EmaMendio",
         "email": "emanuelmendiolaza@gmail.com",
-        "password": "foca",
+        "password": "foca123",
         "typeUser": "admin",
         "img": "img/expertos/em-experto.png",
         "dni": "36127471",
         "nameUser": "EmaMendio",
         "birthDate": "16/09/93",
         "dateAccount": "26/06/21"
+    },
+    {
+        "id": 4,
+        "first_name": "Emanuel",
+        "last_name": "Mendiolaza",
+        "dni": "36127471",
+        "birthDate": "1994-12-12",
+        "email": "emanuelmen@gmail.com",
+        "user": "Emamendi",
+        "password": "$2a$10$5nYS15mY5hnBRDdlD1NMu.iQk7iETzNFkQw1N7879l0Zb6QL2xi9q",
+        "condiciones": "on"
     }
 ]

@@ -1,7 +1,18 @@
+//1. Guardar al usuario en la DB
+
+//2. Buscar al usuario que se quiere loguear por su email
+
+//3. Buscar a un usuario por su ID
+
+//4. Editar la informacion de un usuario
+
+//5. Eliminar a un usuario de la DB
+
+
 const fs = require('fs');
 
 
-const User = {
+const User = { 
 fileName: './src/data/users.json',
 
 getData: function(){
@@ -10,6 +21,11 @@ getData: function(){
 
 findAll: function(){
     return this.getData()
+},
+findByPK: function (id) {
+    let allUsers = this.findAll();
+    let userFound = allUsers.find(oneUser => oneUser.id === id);
+    return userFound;
 },
 
 findByField: function(field, text){
@@ -37,7 +53,13 @@ create: function(userData){
     allUsers.push(newUser);
     fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, 4));
     return newUser;
-}
+},
+/*delete: function (id) {
+    let allUsers = this.findAll();
+    let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);
+    fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, 4));
+    return newUser;
+}*/
 }
 
 //console.log(User.create({firstName:'pueba', lastName:'pruebatambien'}))

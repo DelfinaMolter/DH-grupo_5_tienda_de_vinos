@@ -15,10 +15,11 @@ app.listen(app.get("port"), () => console.log('Servidor esta corriendo en http:/
 app.set('view engine', 'ejs')
 app.set("views",path.resolve(__dirname,"./views"));
 
-//----Middlewares-----
-app.use(express.static("../public"));
+//----Middlewares App-----
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 app.use(cookie()); // req.cookie
-app.use(session({saveUninitialized:false, secret: "digital"})) // req.session
+app.use(session({resave: false, saveUninitialized:false, secret: "digital"})) // req.session
 
 // Custom Middleware
 app.use(require("./middlewares/userSession"))
@@ -33,9 +34,6 @@ app.use(express.static(path.resolve(__dirname,'../public')));
 
 
 
-
-
-
 //Rutas
 const mainRouter = require('./routes/mainRoutes');
 const userRouter = require('./routes/userRoutes');
@@ -43,6 +41,7 @@ const productRouter = require('./routes/productRoutes');
 app.use('/', mainRouter);
 app.use('/usuarios', userRouter);
 app.use('/productos', productRouter);
+app.use('/user', require('./routes/userRoutes'));
 
 
 

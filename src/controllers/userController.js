@@ -1,6 +1,7 @@
 const { validationResult } = require('express-validator');
 const User = require('../models/User');
 const bcryptjs = require('bcryptjs');
+const userLoginValidations = require('../middlewares/userLoginValidations');
 
 
 
@@ -42,15 +43,38 @@ const controller = {
             // avatar:req.file.filename
         }
         let userCreated = User.create(userToCreate);
-        return res.redirect('/')
-    }
-}
+        return res.redirect('/users/login')
+    },
+    login: (req,res) => {
+        return res.render('users/login');
+    },
+    loginProcess: (req,res) => {
+        let userToLogin = User.findByField('email', req.body.email);
+        if (userToLogin){
+            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            if (isOkThePassword) {
+                return res.redirect('users/profile')
+            }
+            return res.render('users/login', {
+                errors: {
+                    email: {
+                        msg: 'Las credenciales son incorrectas'
+                    }
+                }
+            });
+        }
+        return res.render('users/login', {
+            errors: {
+                email: {
+                    msg: 'No se encuentra este usuario en nuestra base de datos'
+                }
+            }
+        });
+    },
+    profile: (req,res) => {
+        return res.render('users/profile');
+    },
+}   
 
-module.exports = controller;
+module.exports = controller
 
-
-/*let userController = {
-    login: function(req,res){
-
-
-}*/

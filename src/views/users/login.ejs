@@ -17,7 +17,7 @@
         <figure id="figure-copitas"><img id="imagen-copitas" src="/img/logos/copitas.png" alt="copitas brindando"></figure>
         <h1 id='titulo-ingresar'>INGRESAR</h1>
         <p id="texto-ingresa">Ingresa tu email y contraseña</p>
-        <form action="#" method="POST">
+        <form action="/usuarios/login" method="POST">
           <fieldset id="login-fildset">
             <input
               type="text"
@@ -26,6 +26,11 @@
               required
               placeholder="Nombre de Usuari@"
             />
+            <% if (locals.errors && errors.email) { %>
+              <div class="text-danger">
+                <%= errors.email.msg %> 
+              </div>
+            <% } %>
             <input
               type="password"
               name="Contraseña"

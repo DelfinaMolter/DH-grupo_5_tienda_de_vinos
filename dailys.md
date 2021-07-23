@@ -63,7 +63,13 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Coordinamos proxima reunión.
 
 **20/07/21**
-- chequeamos que hicimos hasta ahora.
+- Chequeamos que hicimos hasta ahora.
 - Compartimos conocimientos nuevos.
 - Asignamos nuevas tareas.
 - Coordinamos proxima reunión.
+
+**23/07/21**
+- Chequeamos las tareas realizadas.
+- Revisamos en que tareas estamos trabados.
+- Asignasmo nuevas tareas.
+- Coordinamos nueva reunión.

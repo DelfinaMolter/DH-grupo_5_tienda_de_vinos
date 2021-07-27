@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const grapesModel = require('./grapes');
+const grapeModel = require('./grape');
 const styleWineModel= require('./styleWine');
 const wineryModel = require('./winery');
 
@@ -16,7 +16,7 @@ const model = {
     allWithExtra: function() {
         allProducts = this.all();
         allProducts.map(element => {
-            element.grapes = grapesModel.one(element.grapes);
+            element.grapes = grapeModel.one(element.grapes);
             return element;
             }).map(element =>{
                 element.styleWine = styleWineModel.one(element.styleWine);

@@ -1,4 +1,4 @@
-const productModels = require('../models/products')
+const productModels = require('../models/product')
 
 const controller = {
     home: (req,res) => {res.render('home', {list: productModels.allWithExtra() })},

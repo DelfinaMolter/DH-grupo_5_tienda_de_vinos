@@ -1,5 +1,5 @@
-const productModels = require('../models/products');
-const grapesModel = require('../models/grapes');
+const productModels = require('../models/product');
+const grapeModel = require('../models/grape');
 const styleWineModel= require('../models/styleWine');
 const wineryModel = require('../models/winery');
 
@@ -12,7 +12,7 @@ const controller = {
 
     create: (req,res) => {
         res.render('./products/create', {
-            winery:wineryModel.all(),styleWine: styleWineModel.all(),grapes:grapesModel.all()})},
+            winery:wineryModel.all(),styleWine: styleWineModel.all(),grape:grapeModel.all()})},
 
     save: (req, res) => {
         let result = productModels.new(req.body, req.file);
@@ -20,7 +20,7 @@ const controller = {
     },
 
     edit: (req, res) => {
-        res.render('./products/edit', {winery:wineryModel.all(),styleWine: styleWineModel.all(),grapes:grapesModel.all()})
+        res.render('./products/edit', {winery:wineryModel.all(),styleWine: styleWineModel.all(),grape:grapeModel.all()})
     },
 
     update: (req,res) =>{

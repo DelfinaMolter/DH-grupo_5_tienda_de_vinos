@@ -1,7 +1,7 @@
 const { validationResult } = require('express-validator');
 const User = require('../models/User');
 const bcryptjs = require('bcryptjs');
-const userLoginValidations = require('../middlewares/userLoginValidations');
+//const userLoginValidations = require('../middlewares/userLoginValidations');
 
 
 
@@ -43,17 +43,30 @@ const controller = {
             // avatar:req.file.filename
         }
         let userCreated = User.create(userToCreate);
-        return res.redirect('/users/login')
+        return res.redirect('/usuarios/login')
     },
+
+// Formulario de Login
+
     login: (req,res) => {
         return res.render('users/login');
     },
+
     loginProcess: (req,res) => {
+        //return res.send(req.body);
         let userToLogin = User.findByField('email', req.body.email);
+        //return res.send(userToLogin);
+
         if (userToLogin){
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (isOkThePassword) {
-                return res.redirect('users/profile')
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+
+                if(req.body.Nombre_de_Usuario) {
+                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })
+                }
+                return res.redirect('/usuarios/perfil')
             }
             return res.render('users/login', {
                 errors: {
@@ -71,10 +84,24 @@ const controller = {
             }
         });
     },
+    
+
     profile: (req,res) => {
-        return res.render('users/profile');
+        console.log(req.cookies.userEmail);
+        return res.render('users/profile',{
+            user: req.session.userLogged
+
+        });
     },
 }   
+
+//Cuando el usuario se desloguea del sitio 
+
+    /*logout: (req, res) => {
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/');
+    }*/
 
 module.exports = controller
 

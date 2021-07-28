@@ -25,12 +25,13 @@
               class="input"
               required
               placeholder="Nombre de Usuari@"
-            />
-            <% if (locals.errors && errors.email) { %>
-              <div class="text-danger">
-                <%= errors.email.msg %> 
-              </div>
-            <% } %>
+              />
+              <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                  <%= errors.email.msg %> 
+                </div>
+              <% } %>
+            
             <input
               type="password"
               name="Contraseña"

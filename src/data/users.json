@@ -5,7 +5,7 @@
         "lastName": "Molter",
         "userName": "DelfiMol",
         "email": "delfi.molter@gmail.com",
-        "password": "fifo",
+        "password": "fifo123",
         "typeUser": "admin",
         "img": "img/users/foto-perfil-delfi.jpeg",
         "dni": "35972449",
@@ -50,6 +50,50 @@
         "email": "emanuelmen@gmail.com",
         "user": "Emamendi",
         "password": "$2a$10$5nYS15mY5hnBRDdlD1NMu.iQk7iETzNFkQw1N7879l0Zb6QL2xi9q",
+        "condiciones": "on"
+    },
+    {
+        "id": 5,
+        "first_name": "Javier",
+        "last_name": "Perez",
+        "dni": "12345678",
+        "birthDate": "1993-12-12",
+        "email": "javierperez@gmail.com",
+        "user": "javier@gmail.com",
+        "password": "$2a$10$V9QqFAkL6//8BdK2e.UyJ.DRkKhYt6QG7M78AelAVH4fJ7ckwUFZ6",
+        "condiciones": "on"
+    },
+    {
+        "id": 6,
+        "first_name": "Ale",
+        "last_name": "Perez",
+        "dni": "12312312",
+        "birthDate": "1992-12-12",
+        "email": "aleperez@gmail.com",
+        "user": "AlePerez",
+        "password": "$2a$10$7IVGTEMFNWKurVc7FY7c7uASvVDWYHYnUtvisOc.vHXH9VrOCXgxW",
+        "condiciones": "on"
+    },
+    {
+        "id": 7,
+        "first_name": "Luca",
+        "last_name": "Perez",
+        "dni": "12312312",
+        "birthDate": "1992-12-12",
+        "email": "lucaperez@gmail.com",
+        "user": "LucaPerez",
+        "password": "$2a$10$cDplUv2oE6dqDxQbxffLM.UEQ7Qg2SuIY8lReWQi.pIqdX7QPAqCe",
+        "condiciones": "on"
+    },
+    {
+        "id": 8,
+        "first_name": "Manuel ",
+        "last_name": "Diaz",
+        "dni": "12312312",
+        "birthDate": "1991-01-12",
+        "email": "manuel@gmail.com",
+        "user": "ManuelD",
+        "password": "$2a$10$Y4LxmhoIJRJtvy1iBwGIte/Ck/MBR8NhgI3tjPRPmg4e1Nnwws/su",
         "condiciones": "on"
     }
 ]

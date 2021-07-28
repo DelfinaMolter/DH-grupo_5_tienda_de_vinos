@@ -7,6 +7,9 @@ const method = require ('method-override');
 const app = express(); 
 
 
+const userLoggedMiddlewares = require('./middlewares/userLoggedMiddlewares');
+
+
 //Server Start
 app.set("port", process.env.PORT || 3000);
 app.listen(app.get("port"), () => console.log('Servidor esta corriendo en http://localhost:'+app.get("port")));
@@ -18,8 +21,12 @@ app.set("views",path.resolve(__dirname,"./views"));
 //----Middlewares App-----
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+app.use(session({
+    resave: false,
+    saveUninitialized:false,
+    secret: "digital"})) // req.session
 app.use(cookie()); // req.cookie
-app.use(session({resave: false, saveUninitialized:false, secret: "digital"})) // req.session
+app.use(userLoggedMiddlewares);
 
 // Custom Middleware
 app.use(require("./middlewares/userSession"))

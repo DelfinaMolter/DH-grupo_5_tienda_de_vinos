@@ -15,7 +15,7 @@
         <h1 clase="registro__titulo">Datos de Registro</h1>
         <p class="registro__nota">Si todavía no tenes una cuenta completa el formulario.</p>
 
-        <form action="/usuarios/registro" method="POST" class="form">
+        <form action="/usuarios/registro" method="POST" class="form" enctype="multipart/form-data">
 
           <fieldset class="form__registro__datos">
 
@@ -105,6 +105,16 @@
             <input type="radio" name="condiciones" class="form__registro__condiciones__Check" required>
             <label class="form__registro__condiciones__Text">Acepto los <a class="form__registro__condiciones__Text__Link" href="#">Términos y Condiciones</a>.</label>
           </fieldset>
+
+        <fieldset class="form__registro__datos__with-label">
+            <label for= "Imagen">Imagen</label>
+            <input type="file" name="img" id="image" class="spacing">
+        </fieldset>
+        <% if (locals.errors && errors.img) { %>
+          <div class="text-danger">
+            <%= errors.img.msg %> 
+          </div>
+        <% } %>
 
           <fieldset class="form__registro__botones">
             <button type="reset" class="form__registro__botones__borrar">Borrar</button>

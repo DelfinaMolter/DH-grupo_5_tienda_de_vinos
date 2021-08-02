@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 const model = {
-    directory: path.resolve(__dirname, '../data', 'styleWine.json'),
+    directory: path.resolve(__dirname, '../data', 'styleWines.json'),
 
     all: function() {
         let file = fs.readFileSync(this.directory, 'utf-8');

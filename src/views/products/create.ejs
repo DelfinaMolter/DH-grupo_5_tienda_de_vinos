@@ -49,7 +49,7 @@
             <label for="grapes">Varietal</label>
             <select name="grapes" class="spacing">
                 <option hidden selected>Selecciona una opción</option>
-                <% grapes.forEach(element => { %> 
+                <% grape.forEach(element => { %> 
                     <option value="<%= element.id %>"><%= element.name %> </option>
                     <% }) %> 
             </select>

@@ -73,3 +73,11 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Revisamos en que tareas estamos trabados.
 - Asignasmo nuevas tareas.
 - Coordinamos nueva reunión.
+
+**03/08/21**
+- Chequeamos las tareas realizadas.
+- Revisamos las tareas que quedaron pendientes de ultimo sprint.
+- Priorizamos las tareas.
+- Trabajamos en conjunto para resolver problemas.
+- Asignamos nuevas tareas.
+- Coordinar proxima reunión.

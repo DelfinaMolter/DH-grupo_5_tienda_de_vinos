@@ -1,45 +1,45 @@
 [
     {
         "id": 1,
-        "firstName": "Delfina",
-        "lastName": "Molter",
-        "userName": "DelfiMol",
+        "first_name": "Delfina",
+        "last_name": "Molter",
+        "user": "DelfiMol",
         "email": "delfi.molter@gmail.com",
         "password": "fifo123",
         "typeUser": "admin",
         "img": "img/users/foto-perfil-delfi.jpeg",
         "dni": "35972449",
-        "nameUser": "DelfiMolter",
         "birthDate": "25/04/91",
-        "dateAccount": "26/06/21"
+        "dateAccount": "26/06/21",
+        "condiciones": "on"
     },
     {
         "id": 2,
-        "firstName": "Gonzalo",
-        "lastName": "Lorenzo",
-        "userName": "GonzaLore",
+        "first_name": "Gonzalo",
+        "last_name": "Lorenzo",
+        "user": "gonzalolsk",
         "email": "gonzalolsk@gmail.com",
         "password": "cabure",
         "typeUser": "admin",
         "img": "img/gl-experto.png",
         "dni": "34803767",
-        "nameUser": "gonzalolsk",
         "birthDate": "27/03/90",
-        "dateAccount": "26/06/21"
+        "dateAccount": "26/06/21",
+        "condiciones": "on"
     },
     {
         "id": 3,
-        "firstName": "Emanuel",
-        "lastName": "Mendiolaza",
-        "userName": "EmaMendio",
+        "first_name": "Emanuel",
+        "last_name": "Mendiolaza",
+        "user": "EmaMendio",
         "email": "emanuelmendiolaza@gmail.com",
         "password": "foca123",
         "typeUser": "admin",
         "img": "img/expertos/em-experto.png",
         "dni": "36127471",
-        "nameUser": "EmaMendio",
         "birthDate": "16/09/93",
-        "dateAccount": "26/06/21"
+        "dateAccount": "26/06/21",
+        "condiciones": "on"
     },
     {
         "id": 4,

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController')
-
+const multer = require('multer');
 
 //Middlewares
 const validations = require('../middlewares/validationRegisterMiddlewares');
@@ -10,6 +10,8 @@ const controller = require('../controllers/mainController');
 const admin = require('../middlewares/adminMiddlewares');
 const guestMiddlewares = require('../middlewares/guestMiddlewares');
 const uploadFile = require('../middlewares/multerMiddlewares')
+
+const upload = multer({storage:uploadFile('wines')});
 
 router.get('/', userController.users)
 
@@ -21,7 +23,7 @@ router.get('/perfil', userController.profile)
 //Procesar el Login
 router.post('/login', userController.loginProcess)
 
-router.post('/registro',[uploadFile.single('img'), validations], userController.processRegister);
+router.post('/registro',[upload.single('img'), validations], userController.processRegister);
 
 //Logout
 //router.get('/logout/', userController.logout);

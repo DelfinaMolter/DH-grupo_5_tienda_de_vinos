@@ -81,3 +81,9 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Trabajamos en conjunto para resolver problemas.
 - Asignamos nuevas tareas.
 - Coordinar proxima reunión.
+
+**04/08/2021**
+- Presentamos el digrama de base de datos que realizo cada uno.
+- Se armo el diagrama final entre todos.
+- Se arreglo unos problemas del codigo junto a Edu Vigilio.
+- Coordinamos proxima reunión.

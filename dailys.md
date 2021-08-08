@@ -87,3 +87,6 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Se armo el diagrama final entre todos.
 - Se arreglo unos problemas del codigo junto a Edu Vigilio.
 - Coordinamos proxima reunión.
+
+**05/08/2021**
+- Hicimos la retro del cierre del sprint 5.

@@ -11,7 +11,7 @@ const admin = require('../middlewares/adminMiddlewares');
 const guestMiddlewares = require('../middlewares/guestMiddlewares');
 const uploadFile = require('../middlewares/multerMiddlewares')
 
-const upload = multer({storage:uploadFile('wines')});
+const upload = multer({storage:uploadFile('users')});
 
 router.get('/', userController.users)
 

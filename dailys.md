@@ -95,4 +95,14 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Chequeamos y unificamos la base de datos, de lo que había hecho cada uno en SQL.
 - Presentamos problemas para armar la tabla SQL y mandamos consulta al profe.
 - Trabajamos en otros problemas que presentaba la web.
- 
+- Coordinamos proxima reunion.
+
+**09/08/2021**
+- Corregimos la tabla de SQL con la ayuda de Agustin Pittari.
+- Coordinamos proxima reunion.
+
+**10/08/2021**
+- Cheequeo de funcionamiento de la web.
+- Hacer arreglos de los bugs.
+- Asignamos nuevas tareas. 
+- Coordinamos proxima reunion.

@@ -106,3 +106,8 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Hacer arreglos de los bugs.
 - Asignamos nuevas tareas. 
 - Coordinamos proxima reunion.
+
+**12/08/2021**
+- Probamos la carga de los datos a la base de datos.
+- Estuvimos viendo algunos problemas con workbench y beekeeper.
+

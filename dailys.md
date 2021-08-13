@@ -90,3 +90,24 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 
 **05/08/2021**
 - Hicimos la retro del cierre del sprint 5.
+
+**08/08/2021**
+- Chequeamos y unificamos la base de datos, de lo que había hecho cada uno en SQL.
+- Presentamos problemas para armar la tabla SQL y mandamos consulta al profe.
+- Trabajamos en otros problemas que presentaba la web.
+- Coordinamos proxima reunion.
+
+**09/08/2021**
+- Corregimos la tabla de SQL con la ayuda de Agustin Pittari.
+- Coordinamos proxima reunion.
+
+**10/08/2021**
+- Cheequeo de funcionamiento de la web.
+- Hacer arreglos de los bugs.
+- Asignamos nuevas tareas. 
+- Coordinamos proxima reunion.
+
+**12/08/2021**
+- Probamos la carga de los datos a la base de datos.
+- Estuvimos viendo algunos problemas con workbench y beekeeper.
+

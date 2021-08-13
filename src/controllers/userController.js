@@ -1,8 +1,6 @@
 const { validationResult } = require('express-validator');
 const User = require('../models/User');
 const bcryptjs = require('bcryptjs');
-//const userLoginValidations = require('../middlewares/userLoginValidations');
-
 
 
 const controller = {
@@ -53,9 +51,7 @@ const controller = {
     },
 
     loginProcess: (req,res) => {
-        //return res.send(req.body);
-        let userToLogin = User.findByField('email', req.body.email);
-        //return res.send(userToLogin);
+        let userToLogin = User.findByField('user', req.body.user);
 
         if (userToLogin){
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
@@ -63,8 +59,8 @@ const controller = {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
 
-                if(req.body.Nombre_de_Usuario) {
-                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })
+                if(req.body.user) {
+                    res.cookie('user', req.body.user, { maxAge: (1000 * 60) * 2 })
                 }
                 return res.redirect('/usuarios/perfil')
             }

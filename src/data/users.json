@@ -95,5 +95,17 @@
         "user": "ManuelD",
         "password": "$2a$10$Y4LxmhoIJRJtvy1iBwGIte/Ck/MBR8NhgI3tjPRPmg4e1Nnwws/su",
         "condiciones": "on"
+    },
+    {
+        "id": 9,
+        "first_name": "Gonzalo",
+        "last_name": "Eijo",
+        "dni": "34803767",
+        "birthDate": "2000-03-03",
+        "email": "alolsk@gmail.com",
+        "user": "probando",
+        "password": "$2a$10$Opzy0tIQCoBf28GuThzJ3eudR/u201KF4dYASO22fGpUbS6BBxiHC",
+        "condiciones": "on",
+        "img": "img-1628605711738.png"
     }
 ]

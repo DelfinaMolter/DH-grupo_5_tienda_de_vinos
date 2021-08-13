@@ -5,9 +5,7 @@ const multer = require('multer');
 
 //Middlewares
 const validations = require('../middlewares/validationRegisterMiddlewares');
-//const login = require('../middlewares/userLoginValidations');
 const controller = require('../controllers/mainController');
-const admin = require('../middlewares/adminMiddlewares');
 const guestMiddlewares = require('../middlewares/guestMiddlewares');
 const uploadFile = require('../middlewares/multerMiddlewares')
 

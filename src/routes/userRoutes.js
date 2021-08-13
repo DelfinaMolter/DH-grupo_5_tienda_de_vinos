@@ -28,14 +28,5 @@ router.post('/registro',[upload.single('img'), validations], userController.proc
 //Logout
 //router.get('/logout/', userController.logout);
 
-//router.post('/login', validations, userController.users);
-//router.post("/access",[login,admin], controller.access) 
-//validations, userController.processRegister);
-
-//------------------ROUTER LOGIN-------------------
-/*router.post('/login', validations/*,  [
-    check('Usuari@').isUser().whitMessage('Usuario inválido'),
-    check('Contraseña').isLength({min: 6}).whitMessage('La contraseña debe contener al menos 6 caractéres')
-] ,userController.processLogin);*/
 
 module.exports = router

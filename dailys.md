@@ -110,4 +110,9 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 **12/08/2021**
 - Probamos la carga de los datos a la base de datos.
 - Estuvimos viendo algunos problemas con workbench y beekeeper.
+- Establecimos reunion próxima.
 
+**13/08/2021**
+- Terminamos de resolver algunos conflictos que surgieron ayer luego de una revision individual de los datos.
+- Subdividimos y reasignamos tareas para continuar con el sprint.
+- Coordinamos próxima reunion.

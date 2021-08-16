@@ -1,56 +1,62 @@
-module.exports = (sequelize, dataTypes) => {
-let alias = 'user'; 
-let cols = {
-    id:{
-        type: dataTypes.INTEGER,
-        primaryKey: true,
-        autoIncrement: true
-    },
-    first_name: {
-        type: datatypes.STRING
-    },
-    last_name: {
-        type: datatypes.STRING
-    },
-    user: {
-        type: datatypes.STRING
-    },
-    email:{
-        type: datatypes.STRING
-    },
-    password: {
-        type: datatypes.STRING
-    },
-    admin: {
-        type: datatypes.BOOLEAN
-    },
-    img: {
-        type: datatypes.STRING
-    },
-    dni: {
-        type: datatypes.STRING
-    },
-    birth_date: {
-        type: datatypes.DATE
-    },
-    created_at: {
-        type: datatypes.NOW
-    },
-    updated_at: {
-        type: datatypes.NOW
-    },
-    condiciones: {
-        type: datatypes.BOOLEAN
+module.exports = function (sequelize, dataTypes)  {
+    let alias = 'User'; 
+    let cols = {
+        id:{
+            type: dataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true,
+            notNull: true
+        },
+        first_name: {
+            type: dataTypes.STRING
+        },
+        last_name: {
+            type: dataTypes.STRING
+        },
+        user: {
+            type: dataTypes.STRING
+        },
+        email:{
+            type: dataTypes.STRING
+        },
+        password: {
+            type: dataTypes.STRING
+        },
+        admin: {
+            type: dataTypes.BOOLEAN,
+            defaultValue: 0
+        },
+        img: {
+            type: dataTypes.STRING
+        },
+        dni: {
+            type: dataTypes.INTEGER
+        },
+        birth_date: {
+            type: dataTypes.DATE
+        },
+        created_at: {
+            type: dataTypes.DATE,
+            defaultValue: dataTypes.NOW
+        },
+        updated_at: {
+            type: dataTypes.DATE,
+            defaultValue: dataTypes.NOW
+        },
+        condiciones: {
+            type: dataTypes.BOOLEAN
+        }
     }
-}
-
-let config = {
-    tableName:'users'
-}
-
-let User = sequelize.define(alias, cols, config);
-
-return User;
-
-}
+    
+    let config = {
+        tableName:'users',
+        timestamps: true,
+        underscored:true
+    }
+    
+    let User = sequelize.define(alias, cols, config);
+    
+    return User;
+    
+    }
 

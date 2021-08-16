@@ -1,103 +1,105 @@
-const { validationResult } = require('express-validator');
-const User = require('../models/User');
-const bcryptjs = require('bcryptjs');
+// const { validationResult } = require('express-validator');
+// //const User = require('../models/User');
+// const bcryptjs = require('bcryptjs');
 
 
-const controller = {
-    login: (req,res) => {res.render('users/login')},
+// const controller = {
+//     login: (req,res) => {res.render('users/login')},
 
-    users: (req, res) => {res.render('users/users')},
+//     users: (req, res) => {res.render('users/users')},
 
-    profile: (req, res) => {res.render('users/profile')},
+//     profile: (req, res) => {res.render('users/profile')},
 
-    register: (req,res)=> {res.render('users/registro')},
+//     register: (req,res)=> {res.render('users/registro')},
 
     
 
-    processRegister: (req, res) => {
-        const resultValidations = validationResult(req);
-//Acá si hay errores los enviamos a la vista
-        if (resultValidations.errors.length > 0 ) {
-            return res.render('users/registro', {
-                errors: resultValidations.mapped(),
-                oldData: req.body
-            })
-        }
-// Esto es por si el email ya está registrado:
-        let userInDB = User.findByField('email', req.body.email); 
-        if(userInDB){
-            return res.render('users/registro',{
-                errors:{
-                    email: {
-                        msg:'Este email ya esta registrado'
-                    }
-                },
-                oldData: req.body
-        });
-        }
-        let userToCreate = {
-            ...req.body,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            img: req.file.filename
-        }
-        let userCreated = User.create(userToCreate);
-        return res.redirect('/usuarios/login')
-    },
+//     processRegister: (req, res) => {
+//         const resultValidations = validationResult(req);
+// //Acá si hay errores los enviamos a la vista
+//         if (resultValidations.errors.length > 0 ) {
+//             return res.render('users/registro', {
+//                 errors: resultValidations.mapped(),
+//                 oldData: req.body
+//             })
+//         }
+// // Esto es por si el email ya está registrado:
+//         let userInDB = User.findByField('email', req.body.email); 
+//         if(userInDB){
+//             return res.render('users/registro',{
+//                 errors:{
+//                     email: {
+//                         msg:'Este email ya esta registrado'
+//                     }
+//                 },
+//                 oldData: req.body
+//         });
+//         }
+//         let userToCreate = {
+//             ...req.body,
+//             password: bcryptjs.hashSync(req.body.password, 10),
+//             img: req.file.filename
+//         }
+//         let userCreated = User.create(userToCreate);
+//         return res.redirect('/usuarios/login')
+//     },
 
-// Formulario de Login
+// // Formulario de Login
 
-    login: (req,res) => {
-        return res.render('users/login');
-    },
+//     login: (req,res) => {
+//         return res.render('users/login');
+//     },
 
-    loginProcess: (req,res) => {
-        let userToLogin = User.findByField('user', req.body.user);
+//     loginProcess: (req,res) => {
+//         let userToLogin = User.findByField('user', req.body.user);
 
-        if (userToLogin){
-            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-            if (isOkThePassword) {
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin;
+//         if (userToLogin){
+//             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+//             if (isOkThePassword) {
+//                 delete userToLogin.password;
+//                 req.session.userLogged = userToLogin;
 
-                if(req.body.user) {
-                    res.cookie('user', req.body.user, { maxAge: (1000 * 60) * 2 })
-                }
-                return res.redirect('/usuarios/perfil')
-            }
-            return res.render('users/login', {
-                errors: {
-                    email: {
-                        msg: 'Las credenciales son incorrectas'
-                    }
-                }
-            });
-        }
-        return res.render('users/login', {
-            errors: {
-                email: {
-                    msg: 'No se encuentra este usuario en nuestra base de datos'
-                }
-            }
-        });
-    },
+//                 if(req.body.user) {
+//                     res.cookie('user', req.body.user, { maxAge: (1000 * 60) * 2 })
+//                 }
+//                 return res.redirect('/usuarios/perfil')
+//             }
+//             return res.render('users/login', {
+//                 errors: {
+//                     email: {
+//                         msg: 'Las credenciales son incorrectas'
+//                     }
+//                 }
+//             });
+//         }
+//         return res.render('users/login', {
+//             errors: {
+//                 email: {
+//                     msg: 'No se encuentra este usuario en nuestra base de datos'
+//                 }
+//             }
+//         });
+//     },
     
 
-    profile: (req,res) => {
-        console.log(req.cookies.userEmail);
-        return res.render('users/profile',{
-            user: req.session.userLogged
+//     profile: (req,res) => {
+//         console.log(req.cookies.userEmail);
+//         return res.render('users/profile',{
+//             user: req.session.userLogged
 
-        });
-    },
-}   
+//         });
+//     },
+// }   
 
-//Cuando el usuario se desloguea del sitio 
+// //Cuando el usuario se desloguea del sitio 
 
-    /*logout: (req, res) => {
-        res.clearCookie('userEmail');
-        req.session.destroy();
-        return res.redirect('/');
-    }*/
+//     /*logout: (req, res) => {
+//         res.clearCookie('userEmail');
+//         req.session.destroy();
+//         return res.redirect('/');
+//     }*/
 
-module.exports = controller
+// module.exports = controller
+
+
 

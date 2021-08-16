@@ -1,4 +1,4 @@
-const { validationResult } = require('express-validator');
+/*const { validationResult } = require('express-validator');
 const User = require('../models/User');
 const bcryptjs = require('bcryptjs');
 
@@ -99,5 +99,18 @@ const controller = {
         return res.redirect('/');
     }*/
 
-module.exports = controller
+
+
+// Crear un usuario
+const db = require  ("../database/models");
+const userController = {
+    create: function (req, res) {
+        db.User.findAll()
+        .then(function(User){
+            return res.render ("users", {User:User});
+        })
+    }
+}
+
+module.exports = userController
 

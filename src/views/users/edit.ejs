@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%-include ("../includes/head"); %>
+    <title>Registro</title>
+    <link rel="shortcut icon" href="../../img/logos/logo-sin-texto.png" type="image/x-icon">
+    <link href="/css/registro.css" rel="stylesheet">
+  </head>
+  <body>
+<!-------------------- ENCABZADO ------------------------->
+<%-include ("../includes/header"); %>
+<!-------------------- FORMULARIO ---------------------->
+    <main> 
+      <section class="registro">
+        <h1 clase="registro__titulo">Datos de Registro</h1>
+        <p class="registro__nota">Si todavía no tenes una cuenta completa el formulario.</p>
+
+        <form action="/usuarios/edit" method="PUT" class="form" enctype="multipart/form-data">
+
+          <fieldset class="form__registro__datos">
+
+            <input type="text" 
+                    name="first_name" 
+                    class="form__registro__datos__nombre <%= locals.errors && errors.first_name ? 'is-invalid' : null %> " 
+                    placeholder="Nombre" 
+                    value="<%= locals.oldData ? oldData.first_name : null %>">
+            <% if (locals.errors && errors.first_name) { %>
+              <div class="text-danger">
+                <%= errors.first_name.msg %> 
+              </div>
+            <% } %>
+
+            <input type="text"
+                name="last_name" 
+                class="form__registro__datos__apellido <%= locals.errors && errors.last_name ? 'is-invalid' : null %> " 
+                placeholder="Apellido" 
+                value="<%= locals.oldData ? oldData.last_name : null %>">
+            <% if (locals.errors && errors.last_name) { %>
+              <div class="text-danger">
+                <%= errors.last_name.msg %> 
+              </div>
+            <% } %>
+
+            <input type="tel"
+                    name="dni" 
+                    maxlength="9" 
+                    minlength="8" 
+                    class="form__registro__datos__dni <%= locals.errors && errors.dni ? 'is-invalid' : null %> " 
+                    placeholder="DNI - sin puntos, ni espacios" 
+                    value="<%= locals.oldData ? oldData.dni : null %>">
+            <% if (locals.errors && errors.dni) { %>
+              <div class="text-danger">
+                <%= errors.dni.msg %> 
+              </div>
+            <% } %>
+        
+            <label id="fechaNac">Fecha de Nacimiento</label>
+            <input type="date" 
+                    id="fechaNac" 
+                    name="birthDate" 
+                    class="form__registro__datos__fechaNac <%= locals.errors && errors.birthDate ? 'is-invalid' : null %>" 
+                    max="2003-06-30" 
+                    placeholder="Fecha de Nacimiento">
+            <% if (locals.errors && errors.birthDate) { %>
+              <div class="text-danger">
+                <%= errors.birthDate.msg %> 
+              </div>
+            <% } %>
+
+            <input type="email" 
+                    name="email" 
+                    class="form__registro__datos__email <%= locals.errors && errors.email ? 'is-invalid' : null %>" 
+                    placeholder="E-mail" 
+                    value="<%= locals.oldData ? oldData.email : null %>">
+            <% if (locals.errors && errors.email) { %>
+              <div class="text-danger">
+                <%= errors.email.msg %> 
+              </div>
+            <% } %>
+
+            <input type="username" 
+                    name="user" 
+                    class="form__registro__datos__usuario <%= locals.errors && errors.user ? 'is-invalid' : null %>" 
+                    placeholder="Usuario" 
+                    value="<%= locals.oldData ? oldData.user : null %>">
+              <% if (locals.errors && errors.user) { %>
+                <div class="text-danger">
+                  <%= errors.user.msg %> 
+                </div>
+              <% } %>
+
+            <input type="password" 
+                    name="password" 
+                    class="form__registro__datos__pass <%= locals.errors && errors.password ? 'is-invalid' : null %>" 
+                    placeholder="Contraseña" 
+                    >
+            <% if (locals.errors && errors.password) { %>
+              <div class="text-danger">
+                <%= errors.password.msg %> 
+              </div>
+            <% } %>
+            
+          </fieldset>
+          <fieldset class="form__registro__datos__with-label">
+              <label for= "Imagen">Imagen</label>
+              <input type="file" name="img" id="image" class="spacing">
+          </fieldset>
+          <% if (locals.errors && errors.img) { %>
+            <div class="text-danger">
+              <%= errors.img.msg %> 
+            </div>
+          <% } %>
+          <fieldset class="form__registro__condiciones">
+            <input type="radio" name="condiciones" class="form__registro__condiciones__Check" required>
+            <label class="form__registro__condiciones__Text">Acepto los <a class="form__registro__condiciones__Text__Link" href="#">Términos y Condiciones</a>.</label>
+          </fieldset>
+
+
+          <fieldset class="form__registro__botones">
+            <button type="reset" class="form__registro__botones__borrar">Borrar</button>
+            <button type="submit" class="form__registro__botones__enviar">Enviar</button>
+          </fieldset>
+
+        </form>
+        
+      </section>
+    </main>
+<!------------------- PIE DE PAGINA ----------->
+<%-include ("../includes/footer"); %>
+  </body>
+</html>

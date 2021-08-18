@@ -1,5 +1,9 @@
 module.exports = function (sequelize, dataTypes)  {
+<<<<<<< HEAD
     let alias = 'user'; 
+=======
+    let alias = 'User'; 
+>>>>>>> 5da63419584838fa596df92eb73b3e59f03294fc
     let cols = {
         id:{
             type: dataTypes.INTEGER,
@@ -46,6 +50,7 @@ module.exports = function (sequelize, dataTypes)  {
         condiciones: {
             type: dataTypes.BOOLEAN
         }
+<<<<<<< HEAD
     }
     
     let config = {
@@ -59,3 +64,19 @@ module.exports = function (sequelize, dataTypes)  {
     return User;
     
     }
+=======
+    }
+    
+    let config = {
+        tableName:'users',
+        timestamps: true,
+        underscored:true
+    }
+    
+    let User = sequelize.define(alias, cols, config);
+    
+    return User;
+    
+    }
+
+>>>>>>> 5da63419584838fa596df92eb73b3e59f03294fc

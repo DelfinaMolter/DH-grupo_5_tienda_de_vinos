@@ -13,21 +13,28 @@ const uploadFile = require('../middlewares/multerMiddlewares')
 
 const upload = multer({storage:uploadFile('users')});
 
+
 // router.get('/', userController.users)
-
-// // //Formulario de Login
-// router.get('/login', guestMiddlewares, userController.login)
-// router.get('/registro', guestMiddlewares, userController.register)
+router.get('/', userControllerDB.list);
 // router.get('/perfil', userController.profile)
+router.get('/detalle/:id', userControllerDB.detail);
 
-// //Procesar el Login
-// router.post('/login', userController.loginProcess)
-
+// router.get('/registro', guestMiddlewares, userController.register)
+router.get("/nuevo", guestMiddlewares, userControllerDB.register);
 // router.post('/registro',[upload.single('img'), validations], userController.processRegister);
+router.post("/crear",[upload.single('img'), validations], userControllerDB.create);
 
-// //Logout
-// //router.get('/logout/', userController.logout);
-router.get('/perfil', userControllerDB.list)
-router.get("/crear", userControllerDB.create);
+// router.get('/login', guestMiddlewares, userController.login)
+router.get('/login', guestMiddlewares, userControllerDB.login)
+// router.post('/login', userController.loginProcess)
+router.post('/login', userControllerDB.loginProcess)
+
+router.get('/logout', userControllerDB.logout);
+router.put('/logout', userControllerDB.logoutProcess);
+
+router.get('/edit/:id', userControllerDB.edit);
+router.put('/update/:id', userControllerDB.update);
+
+
 
 module.exports = router

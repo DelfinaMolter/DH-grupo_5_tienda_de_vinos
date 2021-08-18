@@ -25,8 +25,8 @@ module.exports = (sequelize, dataTypes) => {
         stock: {
             type: dataTypes.INTEGER
         },
-        inSale: {
-            type: dataTypes.BOOLEAN,
+        in_sale: {
+            type: dataTypes.BOOLEAN
         },
         wineries_id:{
             type: dataTypes.INTEGER
@@ -45,6 +45,9 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.DATE,
             defaultValue: dataTypes.NOW
         },
+        baja: {
+            type: dataTypes.BOOLEAN
+        }
     }
     
     let config = {

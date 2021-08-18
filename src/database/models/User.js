@@ -45,6 +45,9 @@ module.exports = function (sequelize, dataTypes)  {
         },
         condiciones: {
             type: dataTypes.BOOLEAN
+        },
+        baja: {
+            type: dataTypes.BOOLEAN
         }
     }
     

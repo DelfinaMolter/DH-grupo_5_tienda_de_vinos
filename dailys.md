@@ -124,3 +124,11 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Trabajamos en conjunto 3 horas.
 - Dividimos las tareas falstantes.
 - Coordinamos próxima reunión.
+
+**18/08/2021**
+- Chequeamos lo que había hecho cada uno.
+- Resolvimos temas y errores.
+- Avanzamos juntos con algunas cosas.
+- Vimos que temas quedan pendientes para entregar el sprint 6.
+- Coordinamos proxima reunión.
+

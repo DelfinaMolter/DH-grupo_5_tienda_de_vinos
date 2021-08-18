@@ -27,7 +27,7 @@ const upload = multer({storage:uploadFile('users')});
 
 // //Logout
 // //router.get('/logout/', userController.logout);
-router.get('/users/perfil', userControllerDB.list)
+router.get('/perfil', userControllerDB.list)
 router.get("/crear", userControllerDB.create);
 
 module.exports = router

@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 // const productController = require('../controllers/productController');
 
+
+
 //Middlewares
 const multer = require('multer');
 const uploadFile = require('../middlewares/multerMiddlewares')
@@ -22,5 +24,10 @@ const upload = multer({storage:uploadFile('products')});
 const productControllerDB = require('../controllers/productControllerDB');
 
 router.get('/', productControllerDB.list);
+router.get('/crear',productControllerDB.create);
+router.post('/guardar',productControllerDB.update);
+
+//Actualizacion de productos
+router.get('/editar/id' ,productControllerDB.edit);
 
 module.exports = router

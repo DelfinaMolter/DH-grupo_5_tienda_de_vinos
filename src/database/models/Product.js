@@ -25,7 +25,7 @@ module.exports = (sequelize, dataTypes) => {
         stock: {
             type: dataTypes.INTEGER
         },
-        inSale: {
+        in_sale: {
             type: dataTypes.BOOLEAN,
         },
         wineries_id:{

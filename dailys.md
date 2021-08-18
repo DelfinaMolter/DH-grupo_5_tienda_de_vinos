@@ -116,3 +116,11 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Terminamos de resolver algunos conflictos que surgieron ayer luego de una revision individual de los datos.
 - Subdividimos y reasignamos tareas para continuar con el sprint.
 - Coordinamos próxima reunion.
+
+**16/08/2021**
+- Chequeamos lo que había hecho cada uno.
+- Resolvimos conflictos y problemas en el codigo.
+- Avanzamos en conjunto.
+- Trabajamos en conjunto 3 horas.
+- Dividimos las tareas falstantes.
+- Coordinamos próxima reunión.

@@ -75,15 +75,12 @@ const usersController={
             }
         });
     },
-    logout: function (req, res) {
+    logoutProcess: function (req, res) {
         res.clearCookie('user'); 
         req.session.destroy();
         return res.redirect('/');
-        }
     },
-    logoutProcess: function (req, res) {
-
-    },
+    
     edit: async (req, res)=>res.render('edit.ejs',{
         user: await Users.findByPk(req.params.id)
     }),

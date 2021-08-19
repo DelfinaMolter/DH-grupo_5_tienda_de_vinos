@@ -27,7 +27,10 @@ router.get('/', productControllerDB.list);
 router.get('/crear',productControllerDB.create);
 router.post('/guardar',productControllerDB.update);
 
+
 //Actualizacion de productos
 router.get('/editar/id' ,productControllerDB.edit);
+router.put('/guardar' ,productControllerDB.update);
+
 
 module.exports = router

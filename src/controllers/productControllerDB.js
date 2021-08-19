@@ -19,6 +19,7 @@ let productControllerDB = {
     },
     
     // Crear un Producto
+    
     create: function (req, res) {
         db.Product.findAll()
         .then(function(Product){
@@ -27,21 +28,20 @@ let productControllerDB = {
     },
     update:function (req, res) {
         db.Product.create({
-            id: req.body.identificador,
-            name: req.body.nombre,
-            bottles: req.body.botellas,
-            description: req.body.descripcion,
-            price: req.body.precio,
+            name: req.body.name,
+            bottles: req.body.bottles,
+            description: req.body.description,
+            price: req.body.price,
             stock: req.body.stock,
-            inSale: req.body.enOferta,
-            wineries_id: req.body.identificadorVinos,
-            style_wines_id: req.body.identificador_vinos,
-            grapes_id: req.body.indentificador_uva
+            in_sale: req.body.in_sale,
+            wineries_id: req.body.wineries_id,
+            style_wines_id: req.body.style_wines_id,
+            grapes_id: req.body.grapes_id
             });
             res.redirect('/product');
     },
     edit: function (req, res) {
-        let pedidoProduct = db.Product.findByPk(requ.params.id);
+        let pedidoProduct = db.Product.findByPk(req.params.id);
 
         Promise.all([pedidoProduct])
         .then(function([Product]){

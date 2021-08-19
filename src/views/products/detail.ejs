@@ -17,14 +17,14 @@
  
     <article class="titulos-y-fav">
       <h1 class="vino-y-bodega"> <%= product.name %>  </h1>
-      <p class="vino-y-bodega"><%=product.wineries.name%> </p>
+      <p class="vino-y-bodega"><%=product.wineries%> </p>
       <a href="#"><i class="fas fa-heart"></i></a>
     </article>  
     <div id="main-block">
     <section class="box-superior">
     <article class="columna-izq"> 
     <% if(product.img){ %> 
-    <figure class="figure-producto"><img class="img-producto" src="/img/products/wines/<%= product.img %> " alt=""></figure>
+    <figure class="figure-producto"><img class="img-producto" src="/img/products/<%= product.img %> " alt=""></figure>
     <% } else{ %> 
       <figure class="figure-producto"><img class="img-producto" src="/img/products/producto-sin-imagen.jpg " alt=""></figure>
     <% } %> 
@@ -71,7 +71,7 @@
 
   <a href="/productos/editar/<%=product.id %>" class="button admin-button" id="edit">EDITAR(admin)</a>
 
-	<form action="/productos/delete/<%= product.id %>?_method=DELETE" method="POST">
+	<form action="/productos/destroy/<%= product.id %>?_method=DELETE" method="POST">
 	<button type="submit" class="button admin-button" id="delete">ELIMINAR(admin)</button>
   </form>
   

@@ -23,4 +23,8 @@ const productControllerDB = require('../controllers/productControllerDB');
 
 router.get('/', productControllerDB.list);
 
+router.get('/detalle/:id', productControllerDB.detalle);
+
+router.delete('/destroy/:id', productControllerDB.destroy);
+
 module.exports = router

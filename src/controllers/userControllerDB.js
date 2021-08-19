@@ -16,7 +16,10 @@ const usersController={
                 res.render('users/profile.ejs', {user});
             });
     },
-    register: (req,res)=> {res.render('registro')},
+
+    register: (req,res)=> {res.render('users/registro')
+    },
+
     create: async (req, res)=>{
         let user = Users.create({
                 firsts_name: req.body.first_name,
@@ -36,14 +39,41 @@ const usersController={
                 res.redirect('/detalle/'+ user.id , {users})
             })
             .catch(err=>{
-                res.send(consol.log(err))
+                res.send(console.log(err))
             })
     },
     login: function (req, res) {
-
+        return res.render('users/login');
     },
     loginProcess: function (req, res) {
+        let userToLogin = User.findByField('user', req.body.user);
 
+        if (userToLogin){
+            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            if (isOkThePassword) {
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+
+                if(req.body.user) {
+                    res.cookie('user', req.body.user, { maxAge: (1000 * 60) * 2 })
+                }
+                return res.redirect('/usuarios/perfil')
+            }
+            return res.render('users/login', {
+                errors: {
+                    email: {
+                        msg: 'Las credenciales son incorrectas'
+                    }
+                }
+            });
+        }
+        return res.render('users/login', {
+            errors: {
+                email: {
+                    msg: 'No se encuentra este usuario en nuestra base de datos'
+                }
+            }
+        });
     },
     logout: function (req, res) {
 

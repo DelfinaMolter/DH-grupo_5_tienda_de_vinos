@@ -27,10 +27,9 @@ router.post("/crear",[upload.single('img'), validations], userControllerDB.creat
 // router.get('/login', guestMiddlewares, userController.login)
 router.get('/login', guestMiddlewares, userControllerDB.login)
 // router.post('/login', userController.loginProcess)
-router.post('/login', userControllerDB.loginProcess)
+router.post('/login', userControllerDB.loginProcess);
 
-router.get('/logout', userControllerDB.logout);
-router.put('/logout', userControllerDB.logoutProcess);
+router.get('/logout', userControllerDB.logoutProcess);
 
 router.get('/edit/:id', userControllerDB.edit);
 router.put('/update/:id', userControllerDB.update);

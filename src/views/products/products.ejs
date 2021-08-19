@@ -16,19 +16,20 @@
 
         
         <section>
-            <%list.forEach(element => {%> 
+            <% for( let i = 0; i < list.length; i++ ) { %>
 
         <article id="art1" class="articulos">
-            <a href="./productos/detalle/<%=element.id%>"> <img class="imagenArticulo" src="img/products/wines/<%=element.img%> " alt="product image"> </a>
-            <div class="detalleArticulos">   
-            <p class="precio"><%=element.price%> </p>
-            <p class="descuentos">30% OFF</p>
-            <h4 class="name"><%=element.name%></h4>
+            <a href="/productos/detalle/<%=list[i].id%> ">
+                <h4 class="name"><%=list[i].name%></h4>
+                <img class="imagenArticulo" src="img/products/<%=list[i].img%> " alt="product image">
+                <div class="detalleArticulos">   
+                <p class="precio"><%=list[i].price%> </p>      
+            </a> 
         </article>    
         </section>
-
-    <%})%>     
+        <% } %>
         </div>
+        
     </div>
     </main>
     <%-include ("../includes/footer");%>

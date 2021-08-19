@@ -33,4 +33,8 @@ router.get('/editar/id' ,productControllerDB.edit);
 router.put('/guardar' ,productControllerDB.update);
 
 
+router.get('/detalle/:id', productControllerDB.detalle);
+
+router.delete('/destroy/:id', productControllerDB.destroy);
+
 module.exports = router

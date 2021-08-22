@@ -20,9 +20,9 @@ const usersController={
     register: (req,res)=> {res.render('users/registro')
     },
 
-    create: async (req, res)=>{
+    create: (req, res)=>{
         let user = Users.create({
-                firsts_name: req.body.first_name,
+                first_name: req.body.first_name,
                 last_name: req.body.last_name,
                 user: req.body.user,
                 email: req.body.email,

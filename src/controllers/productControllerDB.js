@@ -24,7 +24,9 @@ let productControllerDB = {
     },
 
     search: (req, res) => {
-        db.Product.findAll({})
+        db.Product.findAll({
+            where:{}
+        })
     },
 
 

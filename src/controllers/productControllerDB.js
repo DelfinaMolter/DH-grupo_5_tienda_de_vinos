@@ -1,12 +1,57 @@
 let db = require('../database/models');
+const sequelize = require("sequelize")
+const {Product, Winery} = db;
+const {Op} = sequelize;
+const {like,between} = Op;
 
 let productControllerDB = {
     list: async (req, res) => {
-        res.render('./products/products', {list: await db.Product.findAll()})
+            try{
+        const products = await db.Product.findAll({include:["wineries"]});
+        //res.send(products)
+        res.render('./products/products', {products})
+            }
+        catch(error){res.send(error)}
     },
 
-    detalle: async (req, res) => {
-        res.render('./products/detail', {product: await db.Product.findByPk(req.params.id)})
+    detail: async (req, res) => {
+        try{
+        const product = await db.Product.findByPk(req.params.id);
+        const winery = await product.getWineries();
+        
+        //res.send({products, wineries})
+        res.render('./products/detail', {product, winery})
+        } catch(error){res.send(error)}
+
+        //res.render('./products/detail', {product: await db.Product.findByPk()})
+    },
+
+    create: async (req, res) => {
+        const winery = await db.Winery.findAll();
+        const grape = await db.Grape.findAll();
+        const styleWine = await db.StyleWine.findAll();
+        res.render('./products/create', {winery, grape, styleWine})
+    },
+
+    save: async function(req, res) {
+        try{
+            const newProduct =  await db.Product.create({                
+                    name: data.name,
+                    winery: parseInt(data.winery),
+                    styleWine: parseInt(data.styleWine),
+                    grapes:parseInt(data.grapes),
+                    bottles: parseInt(data.bottles),
+                    description: data.description,
+                    img: file.filename,
+                    price: data.price
+            });
+            const created = await db.Product.findByPk(newProduct.id);
+            res.send(created);
+            return res.redirect('/')
+
+        } catch (err) {return res.send(err)};
+
+            
     },
 
     destroy: (req, res) => {
@@ -28,17 +73,10 @@ let productControllerDB = {
             where:{}
         })
     },
+        
     
-    // Crear un Producto
-    
-    create: function (req, res) {
-        db.Product.findAll()
-        .then(function(Product){
-            return res.render ("./products/create", {Product:Product});
-        })
-    },
     update:function (req, res) {
-        db.Product.create({
+        db.Product.update({
             name: req.body.name,
             bottles: req.body.bottles,
             description: req.body.description,

@@ -16,14 +16,13 @@
     <p class="registro__nota">Ingrese los datos del producto que quiere subir</p>
     <form action="/productos/crear" method="POST" class="form" enctype="multipart/form-data">
         <fieldset class="form__registro__datos">
-        <input type="text" name="name" class="form__registro__datos__input spacing" placeholder="Nombre del producto" required>
-        <input type="text" name="description" class="form__registro__datos__input spacing" placeholder="Descripción" required>
+        <input type="text" name="name" class="form__registro__datos__input spacing" placeholder="Nombre del producto" >
+        <input type="text" name="description" class="form__registro__datos__input spacing" placeholder="Descripción" >
         
         <fieldset class="form__registro__datos__with-label">
             <label for= "Imagen">Imagen</label>
-            <input type="file" name="product-img" id="image" class="spacing">
+            <input type="file" name="img" id="image" class="spacing">
         </fieldset>
-        <!-- <input type="category" name="category" class="form__registro__datos__input spacing" placeholder="Categoría" required> -->
         
         <fieldset class="form__registro__datos__with-label">
         <label for="winery">Bodega</label>
@@ -37,7 +36,7 @@
 
         <fieldset class="form__registro__datos__with-label">
             <label for="styleWine">Tipo</label>
-            <select name="styleWine" class="spacing">
+            <select name="style_wines" class="spacing">
                 <option hidden selected>Selecciona una opción</option>
                 <% styleWine.forEach(element => { %> 
                 <option value="<%= element.id %>"><%= element.name %> </option>
@@ -68,7 +67,7 @@
 
         <fieldset class="form__registro__datos__with-label">
         <label for="price">Precio</label>
-        <input type="price" name="precio" class="form__registro__datos__precio" placeholder="Precio en $" required>
+        <input type="price" name="precio" class="form__registro__datos__precio" placeholder="Precio en $">
         </fieldset >
         
         <fieldset class="form__registro__botones">

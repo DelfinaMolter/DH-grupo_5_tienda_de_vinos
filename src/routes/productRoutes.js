@@ -25,15 +25,16 @@ const productControllerDB = require('../controllers/productControllerDB');
 
 router.get('/', productControllerDB.list);
 router.get('/crear',productControllerDB.create);
-router.post('/guardar',productControllerDB.update);
+router.post('/crear', upload.single('img'), productControllerDB.save)
+router.post('/actualizar',productControllerDB.update);
 
 
 //Actualizacion de productos
 router.get('/editar/id' ,productControllerDB.edit);
-router.put('/guardar' ,productControllerDB.update);
+router.put('/actualizar' ,productControllerDB.update);
 
 
-router.get('/detalle/:id', productControllerDB.detalle);
+router.get('/detalle/:id', productControllerDB.detail);
 
 router.delete('/destroy/:id', productControllerDB.destroy);
 

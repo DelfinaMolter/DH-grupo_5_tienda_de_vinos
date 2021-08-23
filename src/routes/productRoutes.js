@@ -27,7 +27,6 @@ router.get('/', productControllerDB.list);
 router.get('/detalle/:id', productControllerDB.detail);
 router.get('/crear',productControllerDB.create);
 router.post('/crear',  productControllerDB.store);
-router.post('/actualizar',productControllerDB.update);
 
 
 //Actualizacion de productos

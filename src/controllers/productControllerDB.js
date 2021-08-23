@@ -31,26 +31,32 @@ let productControllerDB = {
         res.render('./products/create', {winery, grape, styleWine})
     },
 
-    store: async (req, res) => {
-        try{
-            let newProduct =  await db.Product.create({                
-                    name: req.body.name,
-                    wineries_id: parseInt(req.body.winery),
-                    style_wines_id: parseInt(req.body.style_wines),
-                    grapes_id:parseInt(req.body.grapes),
-                    bottles: parseInt(req.body.bottles),
-                    description: req.body.description,
-                    img: img.filename,
-                    price: req.body.price,
-                    stock: 4,
-
-            });
-            const created = await db.Product.findByPk(newProduct.id);
-            res.send(created);
-            return res.redirect('/')
-
-        } catch (err){res.send(err)};     
+    store:  async (req, res) => {
+        let datos = await req.body
+        return  res.send(datos)
     },
+
+
+    // store: async (req, res) => {
+    //     try{
+    //         let newProduct =  await db.Product.create({                
+    //                 name: req.body.name,
+    //                 bottles: parseInt(req.body.bottles),
+    //                 description: req.body.description,
+    //                 img: img.filename,
+    //                 price: req.body.price,
+    //                 stock: 4,
+    //         });
+    //         const addWinery = await newProduct.setWinery(req.body.winery)
+    //         const addStyleWines = await newProduct.setStyle_wines(req.body.style_wines)
+    //         const addGrape = await newProduct.setGrape(req.body.grapes)
+
+    //         const created = await db.Product.findByPk(newProduct.id);
+    //         res.send(created);
+    //         return res.redirect('/')
+
+    //     } catch (err){res.send(err)};     
+    // },
 
     destroy: (req, res) => {
         try{
@@ -73,19 +79,26 @@ let productControllerDB = {
     },
         
     
-    update:function (req, res) {
-        db.Product.update({
+    update: async function (req, res) {
+    try{
+        const product = await db.Product.findByPk(req.params.id);
+        const updated = await db.Product.update({
             name: req.body.name,
             bottles: req.body.bottles,
             description: req.body.description,
             price: req.body.price,
-            //stock: req.body.stock,
-            //in_sale: req.body.in_sale,
-            //wineries_id: req.body.wineries_id,
-            //style_wines_id: req.body.style_wines_id,
-            //grapes_id: req.body.grapes_id
-            });
+            stock: req.body.stock,
+            in_sale: req.body.in_sale,
+            wineries_id: req.body.wineries_id,
+            style_wines_id: req.body.style_wines_id,
+            grapes_id: req.body.grapes_id
+        });
+            const updateWinery = await product.setWinery(req.params.wineries);
+            const updateStyle_wines = await product.setStyle_wines(req.params.style_wines);
+            const updateGrapes = await product.setGrapes(req.params.grapes);
             res.redirect('./products');
+    }
+    catch(error){return res.send(error);}
     },
     edit: function (req, res) {
         let pedidoProduct = db.Product.findByPk(req.params.id);

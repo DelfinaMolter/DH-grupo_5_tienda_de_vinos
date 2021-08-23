@@ -1,5 +1,7 @@
 let db = require('../database/models');
-const sequelize = require("sequelize")
+const sequelize = require("sequelize");
+const {Op} = sequelize;
+const {like,between} = Op;
 
 
 let productControllerDB = {
@@ -31,32 +33,28 @@ let productControllerDB = {
         res.render('./products/create', {winery, grape, styleWine})
     },
 
-    store:  async (req, res) => {
-        let datos = await req.body
-        return  res.send(datos)
+    store: async (req, res) => {
+        try{
+            let newProduct =  await db.Product.create({                
+                    name: req.body.name,
+                    bottles: parseInt(req.body.bottles),
+                    description: req.body.description,
+                    img: req.file.filename,
+                    price: req.body.price,
+                    stock: 4,
+                    grapes_id: parseInt(req.body.grapes),
+                    wineries_id: parseInt(req.body.winery),
+                    style_wines_id: parseInt(req.body.style_wines)
+            });
+            // const addWinery = await newProduct.setWineries_id(parseInt(req.body.winery))
+            // const addStyleWines = await newProduct.setStyle_wines(parseInt(req.body.style_wines))
+            // const addGrape = await newProduct.setGrape(parseInt(req.body.grapes))
+
+            const created = await db.Product.findByPk(newProduct.id);
+            res.send(created);
+
+        } catch (err){res.send(err)};     
     },
-
-
-    // store: async (req, res) => {
-    //     try{
-    //         let newProduct =  await db.Product.create({                
-    //                 name: req.body.name,
-    //                 bottles: parseInt(req.body.bottles),
-    //                 description: req.body.description,
-    //                 img: img.filename,
-    //                 price: req.body.price,
-    //                 stock: 4,
-    //         });
-    //         const addWinery = await newProduct.setWinery(req.body.winery)
-    //         const addStyleWines = await newProduct.setStyle_wines(req.body.style_wines)
-    //         const addGrape = await newProduct.setGrape(req.body.grapes)
-
-    //         const created = await db.Product.findByPk(newProduct.id);
-    //         res.send(created);
-    //         return res.redirect('/')
-
-    //     } catch (err){res.send(err)};     
-    // },
 
     destroy: (req, res) => {
         try{
@@ -72,10 +70,16 @@ let productControllerDB = {
     }
     },
 
-    search: (req, res) => {
-        db.Product.findAll({
-            where:{}
-        })
+    search: async (req, res) => {
+       let busqueda = await db.Product.findAll({
+            where: {
+                title: {
+                  [Op.like]: '%' + req.query.search + '%'
+                }
+             },
+             offset: 10,
+             limit: 2
+          })
     },
         
     

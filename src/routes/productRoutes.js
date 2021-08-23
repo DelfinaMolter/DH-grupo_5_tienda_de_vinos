@@ -17,15 +17,16 @@ const upload = multer({storage:uploadFile('products')});
 // router.get('/editar/:id', productController.edit);
 
 
-// router.post('/crear', upload.single('product-img'), productController.save)
+// router.post('/crear', upload.single('img'), productController.save)
 // router.delete('/delete/:id', productController.delete)
 // router.put("/edit/:id", productController.update)
 
 const productControllerDB = require('../controllers/productControllerDB');
 
 router.get('/', productControllerDB.list);
+router.get('/detalle/:id', productControllerDB.detail);
 router.get('/crear',productControllerDB.create);
-router.post('/crear', upload.single('img'), productControllerDB.save)
+router.post('/crear',  productControllerDB.store);
 router.post('/actualizar',productControllerDB.update);
 
 
@@ -34,7 +35,6 @@ router.get('/editar/id' ,productControllerDB.edit);
 router.put('/actualizar' ,productControllerDB.update);
 
 
-router.get('/detalle/:id', productControllerDB.detail);
 
 router.delete('/destroy/:id', productControllerDB.destroy);
 

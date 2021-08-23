@@ -1,8 +1,6 @@
 let db = require('../database/models');
 const sequelize = require("sequelize")
-const {Product, Winery} = db;
-const {Op} = sequelize;
-const {like,between} = Op;
+
 
 let productControllerDB = {
     list: async (req, res) => {
@@ -33,25 +31,25 @@ let productControllerDB = {
         res.render('./products/create', {winery, grape, styleWine})
     },
 
-    save: async function(req, res) {
+    store: async (req, res) => {
         try{
-            const newProduct =  await db.Product.create({                
-                    name: data.name,
-                    winery: parseInt(data.winery),
-                    styleWine: parseInt(data.styleWine),
-                    grapes:parseInt(data.grapes),
-                    bottles: parseInt(data.bottles),
-                    description: data.description,
-                    img: file.filename,
-                    price: data.price
+            let newProduct =  await db.Product.create({                
+                    name: req.body.name,
+                    wineries_id: parseInt(req.body.winery),
+                    style_wines_id: parseInt(req.body.style_wines),
+                    grapes_id:parseInt(req.body.grapes),
+                    bottles: parseInt(req.body.bottles),
+                    description: req.body.description,
+                    img: img.filename,
+                    price: req.body.price,
+                    stock: 4,
+
             });
             const created = await db.Product.findByPk(newProduct.id);
             res.send(created);
             return res.redirect('/')
 
-        } catch (err) {return res.send(err)};
-
-            
+        } catch (err){res.send(err)};     
     },
 
     destroy: (req, res) => {

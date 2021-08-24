@@ -30,7 +30,7 @@ router.post('/crear', upload.single('img'),  productControllerDB.store);
 
 
 //Actualizacion de productos
-router.get('/editar/id' ,productControllerDB.edit);
+router.get('/editar/:id' ,productControllerDB.edit);
 router.put('/actualizar' ,productControllerDB.update);
 
 

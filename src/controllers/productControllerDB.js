@@ -90,11 +90,11 @@ let productControllerDB = {
         const product = await db.Product.findByPk(req.params.id);
         const updated = await db.Product.update({
             name: req.body.name,
-            bottles: req.body.bottles,
+            // bottles: req.body.bottles,
             description: req.body.description,
             price: req.body.price,
-            stock: req.body.stock,
-            in_sale: req.body.in_sale,
+            // stock: req.body.stock,
+            // in_sale: req.body.in_sale,
             wineries_id: req.body.wineries_id,
             style_wines_id: req.body.style_wines_id,
             grapes_id: req.body.grapes_id
@@ -106,13 +106,11 @@ let productControllerDB = {
     }
     catch(error){return res.send(error);}
     },
-    edit: function (req, res) {
-        let pedidoProduct = db.Product.findByPk(req.params.id);
-
-        Promise.all([pedidoProduct])
-        .then(function([Product]){
-            res.render('products/edit', {Product:Product})
-        })
+    edit: async (req, res) => {
+        const winery = await db.Winery.findAll();
+        const grapes = await db.Grape.findAll();
+        const styleWine = await db.StyleWine.findAll();
+        res.render('./products/edit', {winery, grapes, styleWine})
     }
 }
 

@@ -99,6 +99,8 @@ let productControllerDB = {
             style_wines_id: req.body.style_wines_id,
             grapes_id: req.body.grapes_id
         });
+
+        
             // const updateWinery = await product.setWinery(req.body.wineries_id);
             // const updateStyle_wines = await product.setStyle_wines(req.body.style_wines_id);
             // const updateGrapes = await product.setGrapes(req.body.grapes_id);
@@ -106,14 +108,23 @@ let productControllerDB = {
     }
     catch(error){return res.send(error);}
     },
+
+    /*edit: async (req, res) => {
+        const winery = await db.Winery.findAll();
+        const grape = await db.Grape.findAll();
+        const styleWine = await db.StyleWine.findAll();
+        res.render('./products/edit', {winery, grape, styleWine})
+    }*/
     edit: function (req, res) {
         let pedidoProduct = db.Product.findByPk(req.params.id);
 
-        Promise.all([pedidoProduct])
+    Promise.all([pedidoProduct])
         .then(function([Product]){
             res.render('products/edit', {Product:Product})
         })
-    }
+
+        
+}
 }
 
 module.exports = productControllerDB

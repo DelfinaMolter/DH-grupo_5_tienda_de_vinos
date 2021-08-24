@@ -70,17 +70,17 @@ let productControllerDB = {
     }
     },
 
-    search: async (req, res) => {
-       let busqueda = await db.Product.findAll({
-            where: {
-                title: {
-                  [Op.like]: '%' + req.query.search + '%'
-                }
-             },
-             offset: 10,
-             limit: 2
-          })
-    },
+search: async (req, res) => {
+    let busqueda = await db.Product.findAll({
+        where: {
+            title: {
+                [Op.like]: '%' + req.query.search + '%'
+            }
+            },
+            offset: 10,
+            limit: 2
+        })
+},
         
     
     update: async function (req, res) {

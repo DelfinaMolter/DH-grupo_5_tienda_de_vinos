@@ -72,30 +72,17 @@ let productControllerDB = {
     }
     },
 
-<<<<<<< HEAD
     search: async (req, res) => {
         let busqueda = await db.Product.findAll({
             where: {
                 title: {
                     [Op.like]: '%' + req.query.search + '%'
                 }
-=======
-search: async (req, res) => {
-    let busqueda = await db.Product.findAll({
-        where: {
-            title: {
-                [Op.like]: '%' + req.query.search + '%'
-            }
->>>>>>> 6c682d4f7c76c3b480527d6eead6715535b84af6
             },
             offset: 10,
             limit: 2
         })
-<<<<<<< HEAD
     },
-=======
-},
->>>>>>> 6c682d4f7c76c3b480527d6eead6715535b84af6
         
     
     update: async function (req, res) {

@@ -20,9 +20,9 @@ router.get('/', userControllerDB.list);
 router.get('/detalle/:id', userControllerDB.detail);
 
 // router.get('/registro', guestMiddlewares, userController.register)
-router.get("/nuevo", guestMiddlewares, userControllerDB.register);
+router.get("/registro", guestMiddlewares, userControllerDB.register);
 // router.post('/registro',[upload.single('img'), validations], userController.processRegister);
-router.post("/crear",[upload.single('img'), validations], userControllerDB.create);
+router.post("/registro",[upload.single('img'), validations], userControllerDB.create);
 
 // router.get('/login', guestMiddlewares, userController.login)
 router.get('/login', guestMiddlewares, userControllerDB.login)

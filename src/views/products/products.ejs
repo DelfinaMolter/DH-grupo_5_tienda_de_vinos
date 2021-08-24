@@ -16,14 +16,16 @@
 
         
         <section>
-            <% for( let i = 0; i < list.length; i++ ) { %>
+            <% for( let i = 0; i < products.length; i++ ) { %>
 
         <article id="art1" class="articulos">
-            <a href="/productos/detalle/<%=list[i].id%> ">
-                <h4 class="name"><%=list[i].name%></h4>
-                <img class="imagenArticulo" src="img/products/<%=list[i].img%> " alt="product image">
-                <div class="detalleArticulos">   
-                <p class="precio"><%=list[i].price%> </p>      
+            <a href="/productos/detalle/<%=products[i].id%> ">     
+                <img class="imagenArticulo" src="img/products/<%=products[i].img%> " alt="product image">
+                <h4 class="name"><%=products[i].name%></h4>
+                <h5><%= products[i].wineries.name %> </h5>   
+                <p class="precio">Precio: $<%=products[i].price%> </p>  
+                <div class="detalleArticulos">
+    
             </a> 
         </article>    
         </section>

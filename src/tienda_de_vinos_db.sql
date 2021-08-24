@@ -73,7 +73,7 @@ CREATE TABLE `shopping_cart` (
   	`products_id`	INT UNSIGNED NOT NULL,
   	`created_at`	TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   	`updated_at`	TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  	`date_shopp`	DATE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  	`date_shop`	DATE NOT NULL DEFAULT CURRENT_TIMESTAMP,
   	`actual_price`	FLOAT(8,2) NOT NULL,
   	`active`		TINYINT (1) NOT NULL,
   	`quantity`		SMALLINT NOT NULL,

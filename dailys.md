@@ -132,3 +132,9 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Vimos que temas quedan pendientes para entregar el sprint 6.
 - Coordinamos proxima reunión.
 
+**24/08/2021**
+- Chequeamos lo que quedaba pediente.
+- Mostramos logros.
+- Hicimos la retro del sprint 6.
+- Pusimos las nuevas tareas del sprint 7 en trello.
+- Coordinamos nueva reunión.

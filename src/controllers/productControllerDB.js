@@ -18,6 +18,7 @@ let productControllerDB = {
         try{
         const product = await db.Product.findByPk(req.params.id);
         const winery = await product.getWineries();
+        const grape = await product.getGrapes();
         
         //res.send({products, wineries})
         res.render('./products/detail', {product, winery})
@@ -62,6 +63,7 @@ let productControllerDB = {
             where: {
                 id: req.params.id
             }
+            //filesistem unlink
         });
         res.redirect('/productos')
     }
@@ -71,15 +73,15 @@ let productControllerDB = {
     },
 
     search: async (req, res) => {
-       let busqueda = await db.Product.findAll({
+        let busqueda = await db.Product.findAll({
             where: {
                 title: {
-                  [Op.like]: '%' + req.query.search + '%'
+                    [Op.like]: '%' + req.query.search + '%'
                 }
-             },
-             offset: 10,
-             limit: 2
-          })
+            },
+            offset: 10,
+            limit: 2
+        })
     },
         
     
@@ -97,9 +99,9 @@ let productControllerDB = {
             style_wines_id: req.body.style_wines_id,
             grapes_id: req.body.grapes_id
         });
-            const updateWinery = await product.setWinery(req.params.wineries);
-            const updateStyle_wines = await product.setStyle_wines(req.params.style_wines);
-            const updateGrapes = await product.setGrapes(req.params.grapes);
+            // const updateWinery = await product.setWinery(req.body.wineries_id);
+            // const updateStyle_wines = await product.setStyle_wines(req.body.style_wines_id);
+            // const updateGrapes = await product.setGrapes(req.body.grapes_id);
             res.redirect('./products');
     }
     catch(error){return res.send(error);}

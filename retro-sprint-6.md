@@ -1,10 +1,10 @@
-# Sprint 4: RETRO
+# Sprint 6: RETRO
 
 * Duración estimada: 40min
 
 * Utilizando el método estrella reflexionamos acerca del transcurso y dinámica del Sprint 4, con el foco puesto en la optimización constante de nuestro trabajo.
 Utilizamos la plataforma de www.miro.com para diagramar y visualizar lo compartido. En la siguiente URL se encuentra la captura de pantalla del diagrama que utilizamos para esta retro: 
-https://drive.google.com/drive/u/1/search?q=retro.
+https://drive.google.com/drive/u/1/search?q=retro
 
  | Comenzar a hacer | Hacer más | Continuar haciendo | Hacer menos|
 | --------- | --------- |--------|--------|

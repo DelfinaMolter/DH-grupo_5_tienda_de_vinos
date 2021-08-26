@@ -31,7 +31,7 @@ router.post('/crear', upload.single('img'),  productControllerDB.store);
 
 //Actualizacion de productos
 router.get('/editar/:id' ,productControllerDB.edit);
-router.put('/actualizar' ,productControllerDB.update);
+router.put('/edit/:id', upload.single('img') ,productControllerDB.update);
 
 
 

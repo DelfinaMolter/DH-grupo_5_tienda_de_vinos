@@ -88,23 +88,21 @@ let productControllerDB = {
     update: async function (req, res) {
     try{
         const product = await db.Product.findByPk(req.params.id);
-        const updated = await db.Product.update({
+        const updated = await product.update({
             name: req.body.name,
-            // bottles: req.body.bottles,
             description: req.body.description,
+            img: req.file.filename,
             price: req.body.price,
-            // stock: req.body.stock,
-            // in_sale: req.body.in_sale,
-            wineries_id: req.body.wineries_id,
-            style_wines_id: req.body.style_wines_id,
-            grapes_id: req.body.grapes_id
+            grapes_id: parseInt(req.body.grapes),
+            wineries_id: parseInt(req.body.winery),
+            style_wines_id: parseInt(req.body.style_wines)
         });
 
         
             // const updateWinery = await product.setWinery(req.body.wineries_id);
             // const updateStyle_wines = await product.setStyle_wines(req.body.style_wines_id);
-            // const updateGrapes = await product.setGrapes(req.body.grapes_id);
-            res.redirect('./products');
+            // const updateGrapes = await product.setGrapes(req.body.grapes_id);    
+            return res.redirect('./products');
     }
     catch(error){return res.send(error);}
     },
@@ -112,7 +110,8 @@ let productControllerDB = {
         const winery = await db.Winery.findAll();
         const grapes = await db.Grape.findAll();
         const styleWine = await db.StyleWine.findAll();
-        res.render('./products/edit', {winery, grapes, styleWine})
+        const product = await db.Product.findByPk(req.params.id)
+        res.render('./products/edit', {winery, grapes, styleWine, product})
     }
 }
 

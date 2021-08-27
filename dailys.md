@@ -138,3 +138,11 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Hicimos la retro del sprint 6.
 - Pusimos las nuevas tareas del sprint 7 en trello.
 - Coordinamos nueva reunión.
+
+**26/08/2021**
+- Chequeamos lo que se hizo.
+- Intentamos resolver problemas de la web.
+- Consultamos dudas a los profes, quedando a la espera de respuesta.
+- Subdividimos las tareas en trello.
+- Asignamos las tareas a realizar para la proxima reunión.
+- Coordinamos próxima reunión.

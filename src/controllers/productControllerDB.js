@@ -93,12 +93,21 @@ let productControllerDB = {
             description: req.body.description,
             img: req.file.filename,
             price: req.body.price,
+<<<<<<< HEAD
             grapes_id: parseInt(req.body.grapes_id),
             wineries_id: parseInt(req.body.wineries_id),
             style_wines_id: parseInt(req.body.style_wines_id)
         }
         );
 
+=======
+            grapes_id: parseInt(req.body.grapes),
+            wineries_id: parseInt(req.body.winery),
+            style_wines_id: parseInt(req.body.style_wines)
+        });
+
+        
+>>>>>>> 6504c6598230726b5568e68ddd2ac524c2d900fe
             // const updateWinery = await product.setWinery(req.body.wineries_id);
             // const updateStyle_wines = await product.setStyle_wines(req.body.style_wines_id);
             // const updateGrapes = await product.setGrapes(req.body.grapes_id);    

@@ -93,14 +93,16 @@ let productControllerDB = {
             description: req.body.description,
             img: req.file.filename,
             price: req.body.price,
-            grapes_id: parseInt(req.body.grapes),
-            wineries_id: parseInt(req.body.winery),
-            style_wines_id: parseInt(req.body.style_wines)
-        });
+            grapes_id: parseInt(req.body.grapes_id),
+            wineries_id: parseInt(req.body.wineries_id),
+            style_wines_id: parseInt(req.body.style_wines_id)
+        }
+        );
+
             // const updateWinery = await product.setWinery(req.body.wineries_id);
             // const updateStyle_wines = await product.setStyle_wines(req.body.style_wines_id);
             // const updateGrapes = await product.setGrapes(req.body.grapes_id);    
-            return res.redirect('./products');
+            return res.redirect('/productos/detalle'+ req.params.id);
     }
     catch(error){return res.send(error);}
     },

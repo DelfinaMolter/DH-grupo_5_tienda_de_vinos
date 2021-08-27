@@ -14,7 +14,7 @@
     <section class="registro">
     <h1 clase="registro__titulo">Editá tu Producto</h1>
     <!-- <p class="registro__nota"></p> -->
-    <form action="/edit/<%=product.id%>?_method=PUT" method="POST" class="form" enctype="multipart/form-data" >
+    <form action="/productos/edit/<%=product.id%>?_method=PUT" method="POST" class="form" enctype="multipart/form-data" >
         <fieldset class="form__registro__datos">
         <input type="text" name="name" class="form__registro__datos__input spacing" placeholder="Nombre del producto">
         <input type="text" name="description" class="form__registro__datos__input spacing" placeholder="Descripción">

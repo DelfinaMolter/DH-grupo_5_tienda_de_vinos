@@ -19,6 +19,47 @@ const usersController={
 
     register: (req,res)=> {res.render('users/registro')
     },
+    processRegister: async (req, res) => {
+            try {const resultValidations = validationResult(req);
+        //Acá si hay errores los enviamos a la vista
+                if (resultValidations.errors.length > 0 ) {
+                    return res.render('users/registro', {
+                        errors: resultValidations.mapped(),
+                        oldData: req.body
+                    })
+                }
+        // Esto es por si el email ya está registrado:
+                let userInDB = await Users.findAll({where: {'email': req.body.email}}); 
+                if(userInDB){
+                    return res.render('users/registro',{
+                        errors:{
+                            email: {
+                                msg:'Este email ya esta registrado'
+                            }
+                        },
+                        oldData: req.body
+                });
+                }
+                let userToCreate = {
+                    first_name: req.body.first_name,
+                    last_name: req.body.last_name,
+                    user: req.body.user,
+                    email: req.body.email, 
+                    admin: req.body.admin,
+                    dni: req.body.dni,
+                    birth_date: req.body.birth_date,
+                    created_at: req.body.created_at,
+                    updated_at: req.body.update_at,
+                    condiciones: req.body.condiciones,
+                    password: bcryptjs.hashSync(req.body.password, 10),
+                    img: req.file.filename
+                }
+                let userCreated = await Users.create(userToCreate);
+                return res.redirect('/detalle/'+ user.id , {users})}
+            catch (err){
+                    res.send(console.log(err))
+                }
+            },
 
     create: (req, res)=>{
         let user = Users.create({

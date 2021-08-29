@@ -146,3 +146,9 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Subdividimos las tareas en trello.
 - Asignamos las tareas a realizar para la proxima reunión.
 - Coordinamos próxima reunión.
+
+**29/08/2021**
+- Chequeamos lo que se hizo.
+- Planteamos dificultades y las resolvimos en conjunto.
+- Asignamos las proximas tareas a realizar.
+- Coordinamos proxima reunion.

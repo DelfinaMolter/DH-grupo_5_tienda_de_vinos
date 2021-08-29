@@ -1,14 +1,20 @@
 const express = require('express');
 const router = express.Router();
-// const productController = require('../controllers/productController');
+const productController = require('../controllers/productController');
 
 
 
 //Middlewares
 const multer = require('multer');
 const uploadFile = require('../middlewares/multerMiddlewares')
-
+const validations= require('../middlewares/validationProductsMiddlewares');
 const upload = multer({storage:uploadFile('products')});
+
+//Middlewares Products
+
+//router.get("/crear", validationProductsMiddlewares, productControllerDB.create);
+
+//router.post("/crear",[upload.single('img'), validations], productControllerDB.create);
 
 
 // router.get('/', productController.products);
@@ -26,7 +32,10 @@ const productControllerDB = require('../controllers/productControllerDB');
 router.get('/', productControllerDB.list);
 router.get('/detalle/:id', productControllerDB.detail);
 router.get('/crear',productControllerDB.create);
-router.post('/crear', upload.single('img'),  productControllerDB.store);
+router.post('/crear',[
+    upload.single('img'),validations],
+    productControllerDB.store);
+
 
 
 //Actualizacion de productos

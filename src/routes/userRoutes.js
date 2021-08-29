@@ -11,6 +11,7 @@ const controller = require('../controllers/mainController');
 const guestMiddlewares = require('../middlewares/guestMiddlewares');
 const uploadFile = require('../middlewares/multerMiddlewares')
 
+
 const upload = multer({storage:uploadFile('users')});
 
 

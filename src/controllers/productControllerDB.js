@@ -2,6 +2,7 @@ let db = require('../database/models');
 const sequelize = require("sequelize");
 const {Op} = sequelize;
 const {like,between} = Op;
+const { validationResult } = require('express-validator');
 
 
 let productControllerDB = {
@@ -36,6 +37,18 @@ let productControllerDB = {
 
     store: async (req, res) => {
         try{
+            //Acá si hay errores los enviamos a la vista
+            const resultValidations = validationResult(req);
+            if (resultValidations.errors.length > 0 ) {
+                const winery = await db.Winery.findAll();
+                const grape = await db.Grape.findAll();
+                const styleWine = await db.StyleWine.findAll();
+                return res.render('products/create', {
+                    errors: resultValidations.mapped(),
+                    oldData: req.body,
+                    winery, styleWine, grape
+                })
+            }
             let newProduct =  await db.Product.create({                
                     name: req.body.name,
                     bottles: parseInt(req.body.bottles),

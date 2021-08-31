@@ -1,5 +1,7 @@
 const db = require('../database/models');
 const sequelize = db.sequelize;
+const { validationResult } = require('express-validator');
+const bcryptjs = require('bcryptjs');
 
 const Users = db.User;
 
@@ -20,8 +22,9 @@ const usersController={
     register: (req,res)=> {res.render('users/registro')
     },
     processRegister: async (req, res) => {
-            try {const resultValidations = validationResult(req);
-        //Acá si hay errores los enviamos a la vista
+            try {
+                 //Acá si hay errores los enviamos a la vista
+                const resultValidations = validationResult(req);
                 if (resultValidations.errors.length > 0 ) {
                     return res.render('users/registro', {
                         errors: resultValidations.mapped(),
@@ -80,13 +83,14 @@ const usersController={
                 res.redirect('/detalle/'+ user.id , {users})
             })
             .catch(err=>{
-                res.send(console.log(err))
+                res.send({error: err})
             })
     },
     login: function (req, res) {
         return res.render('users/login');
     },
-    loginProcess: function (req, res) {
+    loginProcess: async function (req, res) {
+        try {
         let userToLogin = db.User.findAll({where: {
             'user': req.body.user
         }});
@@ -117,6 +121,10 @@ const usersController={
                 }
             }
         });
+    }
+    catch(err){
+        res.send({error: err})
+    }
     },
     logoutProcess: function (req, res) {
         res.clearCookie('user'); 

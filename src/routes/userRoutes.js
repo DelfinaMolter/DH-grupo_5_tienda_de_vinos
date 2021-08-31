@@ -23,7 +23,7 @@ router.get('/detalle/:id', userControllerDB.detail);
 // router.get('/registro', guestMiddlewares, userController.register)
 router.get("/registro", guestMiddlewares, userControllerDB.register);
 // router.post('/registro',[upload.single('img'), validations], userController.processRegister);
-router.post("/registro",[upload.single('img'), validations], userControllerDB.processRegister);
+router.post("/registro",[validations, upload.single('img')], userControllerDB.processRegister);
 
 // router.get('/login', guestMiddlewares, userController.login)
 router.get('/login', guestMiddlewares, userControllerDB.login)

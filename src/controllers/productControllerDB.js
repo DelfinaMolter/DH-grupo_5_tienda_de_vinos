@@ -35,7 +35,7 @@ let productControllerDB = {
         res.render('./products/create', {winery, grape, styleWine})
     },
 
-    store: async (req, res) => {
+    store: async (req, res) => { 
         try{
             //Acá si hay errores los enviamos a la vista
             const resultValidations = validationResult(req);
@@ -43,7 +43,7 @@ let productControllerDB = {
                 const winery = await db.Winery.findAll();
                 const grape = await db.Grape.findAll();
                 const styleWine = await db.StyleWine.findAll();
-                return res.render('products/create', {
+                return res.render('products/create',{
                     errors: resultValidations.mapped(),
                     oldData: req.body,
                     winery, styleWine, grape

@@ -70,34 +70,6 @@ let productControllerDB = {
         } catch (err){res.send(err)};     
     },
 
-    destroy: (req, res) => {
-        try{
-        db.Product.destroy({
-            where: {
-                id: req.params.id
-            }
-            //filesistem unlink
-        });
-        res.redirect('/productos')
-    }
-    catch(error){
-        res.send(error)
-    }
-    },
-
-    search: async (req, res) => {
-        let busqueda = await db.Product.findAll({
-            where: {
-                title: {
-                    [Op.like]: '%' + req.query.search + '%'
-                }
-            },
-            offset: 10,
-            limit: 2
-        })
-    },
-        
-    
     update: async function (req, res) {
     try{
         const product = await db.Product.findByPk(req.params.id);
@@ -119,12 +91,44 @@ let productControllerDB = {
     }
     catch(error){return res.send(error);}
     },
+
     edit: async (req, res) => {
         const winery = await db.Winery.findAll();
         const grapes = await db.Grape.findAll();
         const styleWine = await db.StyleWine.findAll();
         const product = await db.Product.findByPk(req.params.id)
         res.render('./products/edit', {winery, grapes, styleWine, product})
+    },
+
+        // search: async (req, res) => {
+    //     try{
+    //         let busqueda = await db.Product.findAll({
+    //         where: {
+    //             name: {
+    //                 [Op.like]: '%' + req.query.search + '%'
+    //             }
+    //         },
+    //         offset: 10,
+    //         limit: 2
+    //     })
+    //     res.render('/products/search', {busqueda})
+    // }
+    //     catch(err) {res.send(err)}
+    // },
+
+    destroy: (req, res) => {
+        try{
+        db.Product.destroy({
+            where: {
+                id: req.params.id
+            }
+            //filesistem unlink
+        });
+        res.redirect('/productos')
+    }
+    catch(error){
+        res.send(error)
+    }
     }
 }
 

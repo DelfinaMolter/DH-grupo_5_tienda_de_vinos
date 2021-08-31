@@ -14,7 +14,9 @@
     <section class="registro">
     <h1 clase="registro__titulo">Regristro de Productos</h1>
     <p class="registro__nota">Ingrese los datos del producto que quiere subir</p>
+    
     <form action="/productos/crear" method="POST" class="form" enctype="multipart/form-data">
+        
         <fieldset class="form__registro__datos">
         <input type="text" name="name" class="form__registro__datos__input spacing" placeholder="Nombre del producto">
         <% if (locals.errors && errors.name) { %>

@@ -19,15 +19,19 @@
         
         <fieldset class="form__registro__datos">
         <input type="text" name="name" class="form__registro__datos__input spacing" placeholder="Nombre del producto">
-    <% if (locals.errors && errors.name) { %>
-        <div class="text-danger">
-            <%= errors.name.msg %> 
-        </div>
-        <% } %>
+        <% if (locals.errors && errors.name) { %>
+            <div class="text-danger">
+                <%= errors.name.msg %> 
+            </div>
+            <% } %>
         </fieldset>
 
         <input type="text" name="description" class="form__registro__datos__input spacing" placeholder="Descripción" >
-        
+        <% if (locals.errors && errors.description) { %>
+            <div class="text-danger">
+                <%= errors.description.msg %> 
+            </div>
+            <% } %>
         <fieldset class="form__registro__datos__with-label">
             <label for= "Imagen">Imagen</label>
             <input type="file" name="img" id="image" class="spacing">
@@ -36,6 +40,11 @@
                     <%= errors.img.msg %> 
                 </div>
         </fieldset>
+        <% if (locals.errors && errors.img) { %>
+            <div class="text-danger">
+                <%= errors.img.msg %> 
+            </div>
+            <% } %>
         
         <fieldset class="form__registro__datos__with-label">
         <label for="winery">Bodega</label>
@@ -47,8 +56,14 @@
         </select>
         <% if (locals.errors && errors.winery) { %>
             <div class="text-danger">
+<<<<<<< HEAD
                 <%= errors.winery.msg %> 
             </div>
+=======
+            <%= errors.winery.msg %> 
+            </div>
+        <% } %>
+>>>>>>> 7e65ca5c4714feaae3d2de4ecbff49d6ed873692
         </fieldset>
 
         <fieldset class="form__registro__datos__with-label">
@@ -63,6 +78,11 @@
                         <%= errors.style_wines.msg %> 
                     </div>
             </select>
+            <% if (locals.errors && errors.style_wines) { %>
+                <div class="text-danger">
+                <%= errors.style_wines.msg %> 
+                </div>
+            <% } %>
         </fieldset>
 
         <fieldset class="form__registro__datos__with-label">
@@ -73,6 +93,11 @@
                     <option value="<%= element.id %>"><%= element.name %> </option>
                     <% }) %> 
             </select>
+            <% if (locals.errors && errors.grapes) { %>
+                <div class="text-danger">
+                    <%= errors.grapes.msg %> 
+                </div>
+                <% } %>
         </fieldset>
 
         
@@ -84,14 +109,19 @@
                 <option value="<%=i%>"><%=i%> </option>
             <% } %>
             </select>
+            <% if (locals.errors && errors.bottles) { %>
+                <div class="text-danger">
+                    <%= errors.bottles.msg %> 
+                </div>
+                <% } %>
         </fieldset>
 
         <fieldset class="form__registro__datos__with-label">
         <label for="price">Precio</label>
         <input type="price" name="price" class="form__registro__datos__precio" placeholder="Precio en $">
-        <% if (locals.errors && errors.name) { %>
+        <% if (locals.errors && errors.price) { %>
             <div class="text-danger">
-                <%= errors.name.msg %> 
+                <%= errors.price.msg %> 
             </div>
             <% } %>
         </fieldset >

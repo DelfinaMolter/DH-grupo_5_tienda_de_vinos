@@ -17,14 +17,28 @@
     <form action="/productos/edit/:<%=product.id%>?_method=PUT" method="POST" class="form" enctype="multipart/form-data" >
         <fieldset class="form__registro__datos">
         <input type="text" name="name" class="form__registro__datos__input spacing" placeholder="Nombre del producto">
+        <% if (locals.errors && errors.name) { %>
+            <div class="text-danger">
+                <%= errors.name.msg %> 
+            </div>
+            <% } %>
         <input type="text" name="description" class="form__registro__datos__input spacing" placeholder="Descripción">
+        <% if (locals.errors && errors.description) { %>
+            <div class="text-danger">
+                <%= errors.description.msg %> 
+            </div>
+            <% } %>
         </fieldset>
 
         <fieldset class="form__registro__datos__with-label">
             <label for= "img">Imagen</label>
             <input type="file" name="img" id="image" class="spacing">
         </fieldset>
-                
+        <% if (locals.errors && errors.img) { %>
+            <div class="text-danger">
+                <%= errors.img.msg %> 
+            </div>
+            <% } %       
         <fieldset class="form__registro__datos__with-label">
         <label for="wineries_id">Bodega</label>
         <select name="wineries_id" class="spacing">
@@ -33,7 +47,11 @@
             <option value="<%= element.id %>"><%= element.name %> </option>
                 <% }) %> 
         </select>
-        
+        <% if (locals.errors && errors.wineries_id) { %>
+            <div class="text-danger">
+            <%= errors.wineries_id.msg %> 
+            </div>
+        <% } %>
         </fieldset>
 
         <fieldset class="form__registro__datos__with-label">
@@ -44,6 +62,11 @@
                 <option value="<%= element.id %>"><%= element.name %> </option>
                 <% }) %> 
             </select>
+        <% if (locals.errors && errors.style_wines_id) { %>
+            <div class="text-danger">
+            <%= errors.style_wines_id.msg %> 
+            </div>
+        <% } %>
         </fieldset>
 
         <fieldset class="form__registro__datos__with-label">
@@ -54,11 +77,21 @@
                     <option value="<%= element.id %>"><%= element.name %> </option>
                     <% }) %> 
             </select>
+            <% if (locals.errors && errors.grapes_id) { %>
+                <div class="text-danger">
+                    <%= errors.grapes_id.msg %> 
+                </div>
+                <% } %>
         </fieldset>
 
         <fieldset class="form__registro__datos__with-label">
         <label for="precio">Precio</label>
         <input type="precio" name="price" class="form__registro__datos__precio" placeholder="Precio en $" >
+        <% if (locals.errors && errors.price) { %>
+            <div class="text-danger">
+                <%= errors.price.msg %> 
+            </div>
+            <% } %>
         </fieldset >
         
         <fieldset class="form__registro__botones">

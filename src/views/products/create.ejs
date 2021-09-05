@@ -31,6 +31,10 @@
         <fieldset class="form__registro__datos__with-label">
             <label for= "Imagen">Imagen</label>
             <input type="file" name="img" id="image" class="spacing">
+            <% if (locals.errors && errors.img) { %>
+                <div class="text-danger">
+                    <%= errors.img.msg %> 
+                </div>
         </fieldset>
         
         <fieldset class="form__registro__datos__with-label">
@@ -41,6 +45,10 @@
         <option value="<%= element.id %>"><%= element.name %> </option>
             <% }) %> 
         </select>
+        <% if (locals.errors && errors.winery) { %>
+            <div class="text-danger">
+                <%= errors.winery.msg %> 
+            </div>
         </fieldset>
 
         <fieldset class="form__registro__datos__with-label">
@@ -50,6 +58,10 @@
                 <% styleWine.forEach(element => { %> 
                 <option value="<%= element.id %>"><%= element.name %> </option>
                 <% }) %> 
+                <% if (locals.errors && errors.style_wines) { %>
+                    <div class="text-danger">
+                        <%= errors.style_wines.msg %> 
+                    </div>
             </select>
         </fieldset>
 

@@ -35,12 +35,13 @@
         <fieldset class="form__registro__datos__with-label">
             <label for= "Imagen">Imagen</label>
             <input type="file" name="img" id="image" class="spacing">
-        </fieldset>
         <% if (locals.errors && errors.img) { %>
             <div class="text-danger">
                 <%= errors.img.msg %> 
             </div>
             <% } %>
+        </fieldset>
+        
         
         <fieldset class="form__registro__datos__with-label">
         <label for="winery">Bodega</label>

@@ -39,4 +39,6 @@ if (!isEmpty(password) && shortPass(password)){
 if(!isEmpty(password) && !shortPass(password)){
     removeError(password)
 }
+
+//agregar funcionamiento del botón
 })

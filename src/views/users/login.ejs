@@ -17,13 +17,12 @@
         <figure id="figure-copitas"><img id="imagen-copitas" src="/img/logos/copitas.png" alt="copitas brindando"></figure>
         <h1 id='titulo-ingresar'>INGRESAR</h1>
         <p id="texto-ingresa">Ingresa tu email y contraseña</p>
-        <form action="/usuarios/login" method="POST">
+        <form action="/usuarios/login" method="POST" class= login-form>
           <fieldset id="login-fildset">
             <input
               type="text"
               name="user"
               class="input"
-              required
               placeholder="Nombre de Usuari@"
               />
               <% if (locals.errors && errors.email) { %>
@@ -31,15 +30,15 @@
                   <%= errors.email.msg %> 
                 </div>
               <% } %>
+              <span class="text-danger"></span>
             
             <input
               type="password"
               name="password"
               class="input"
-              required
               placeholder="Contraseña"
-              minlength="6"
             />
+            <span class="text-danger"></span>
             <button id="button" type="submit">Ingresar</button>
           </fieldset>
         </form>
@@ -47,5 +46,7 @@
       </div>
     </main>
     <%-include ("../includes/footer"); %>
+
+<script src='/js/loginValidations.js'></script>
   </body>
 </html>

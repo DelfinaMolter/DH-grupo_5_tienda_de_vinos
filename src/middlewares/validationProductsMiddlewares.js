@@ -12,7 +12,7 @@ module.exports = [
     body('style_wines').notEmpty().withMessage('Debes seleccionar el tipo de vino'),
     body('style_wines_id').notEmpty().withMessage('Debes seleccionar el tipo de vino'),
     body('price').notEmpty().withMessage('Por favor, ingresar un importe'),
-    body('img').custom((value, { req }) => {e
+    body('img').custom((value, { req }) => {
     let file = req.file;
     let acceptedExtensions = ['.jpg', '.gif', '.png'];
 

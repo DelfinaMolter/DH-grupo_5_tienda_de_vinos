@@ -22,23 +22,23 @@ const removeError = (field) => {
 form.addEventListener('submit', function(event){
 event.preventDefault();
 
-if (isEmpty(user)) {
-    generateError(user, 'Debes completar tu <b>Usuario</b>')
-}
+    if (isEmpty(user)) {
+        generateError(user, 'Debes completar tu <b>Usuario</b>')
+    }
 
-if (!isEmpty(user)){removeError(user)}
+    if (!isEmpty(user)){removeError(user)}
 
-if (isEmpty(password)) {
-    generateError(password, 'Debes completar tu <b>Contraseña</b>')
-}
+    if (isEmpty(password)) {
+        generateError(password, 'Debes completar tu <b>Contraseña</b>')
+    }
 
-if (!isEmpty(password) && shortPass(password)){
-    generateError(password, 'Tu <b>Contraseña</b> debe tener un mínimo de 6 caracteres')
-}
+    if (!isEmpty(password) && shortPass(password)){
+        generateError(password, 'Tu <b>Contraseña</b> debe tener un mínimo de 6 caracteres')
+    }
 
-if(!isEmpty(password) && !shortPass(password)){
-    removeError(password)
-}
+    if(!isEmpty(password) && !shortPass(password)){
+        removeError(password)
+    }
 
 //agregar funcionamiento del botón
 })

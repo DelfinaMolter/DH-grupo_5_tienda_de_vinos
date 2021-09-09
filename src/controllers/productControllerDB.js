@@ -29,10 +29,12 @@ let productControllerDB = {
     },
 
     create: async (req, res) => {
+        try{
         const winery = await db.Winery.findAll();
         const grape = await db.Grape.findAll();
         const styleWine = await db.StyleWine.findAll();
         res.render('./products/create', {winery, grape, styleWine})
+    }catch (err){res.send(err)};
     },
 
     store: async (req, res) => { 
@@ -87,7 +89,7 @@ let productControllerDB = {
             // const updateWinery = await product.setWinery(req.body.wineries_id);
             // const updateStyle_wines = await product.setStyle_wines(req.body.style_wines_id);
             // const updateGrapes = await product.setGrapes(req.body.grapes_id);    
-            return res.redirect('/productos/detalle'+ req.params.id);
+            return res.redirect('/productos/detalle/'+ req.params.id);
     }
     catch(error){return res.send(error);}
     },

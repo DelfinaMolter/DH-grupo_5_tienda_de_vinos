@@ -73,3 +73,12 @@ body{
 label {
     margin-right: 15px;
 }
+
+.is-invalid {
+border: red solid 2px
+}
+.text-danger{
+color:red;
+font-size: 0.7em;
+
+} 

@@ -6,6 +6,7 @@ const bcryptjs = require('bcryptjs');
 const Users = db.User;
 
 const usersController={
+
     list: (req, res) => {
         Users.findAll()
             .then(users => {

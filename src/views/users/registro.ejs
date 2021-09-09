@@ -15,7 +15,7 @@
         <h1 clase="registro__titulo">Datos de Registro</h1>
         <p class="registro__nota">Si todavía no tenes una cuenta completa el formulario.</p>
 
-        <form action="/usuarios/registro" method="POST" class="form" enctype="multipart/form-data">
+        <form action="/usuarios/registro" method="POST" class="form registroForm" enctype="multipart/form-data">
 
           <fieldset class="form__registro__datos">
 
@@ -29,6 +29,7 @@
                 <%= errors.first_name.msg %> 
               </div>
             <% } %>
+            <span class="text-danger"></span>
 
             <input type="text"
                 name="last_name" 
@@ -40,6 +41,7 @@
                 <%= errors.last_name.msg %> 
               </div>
             <% } %>
+            <span class="text-danger"></span>
 
             <input type="tel"
                     name="dni" 
@@ -77,6 +79,7 @@
                 <%= errors.email.msg %> 
               </div>
             <% } %>
+            <span class="text-danger"></span>
 
             <input type="username" 
                     name="user" 
@@ -99,6 +102,7 @@
                 <%= errors.password.msg %> 
               </div>
             <% } %>
+            <span class="text-danger"></span>
             
           </fieldset>
           <fieldset class="form__registro__datos__with-label">
@@ -110,6 +114,8 @@
               <%= errors.img.msg %> 
             </div>
           <% } %>
+          <span class="text-danger"></span>
+          
           <fieldset class="form__registro__condiciones">
             <input type="radio" name="condiciones" class="form__registro__condiciones__Check">
             <label class="form__registro__condiciones__Text">Acepto los <a class="form__registro__condiciones__Text__Link" href="#">Términos y Condiciones</a>.</label>
@@ -127,5 +133,6 @@
     </main>
 <!------------------- PIE DE PAGINA ----------->
 <%-include ("../includes/footer"); %>
+<script src='/js/registroValidations.js'></script>
   </body>
 </html>

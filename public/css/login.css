@@ -58,6 +58,16 @@ body{
   font-size: 0.7em;
   color: gray;
 }
+
+.is-invalid {
+  border: red solid 2px
+}
+.text-danger{
+  color:red;
+  font-size: 0.7em;
+
+} 
+
 #button {
   background-color: #240c31;
   width: 40vw;
@@ -72,6 +82,8 @@ body{
   margin-top: 20px;
   text-align: center;
 }
+
+
 
 /* ===========================================MEDIA QUERIES=========================================== */
 /* ------------------------------Tablet */

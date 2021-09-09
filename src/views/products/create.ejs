@@ -24,12 +24,14 @@
                 <%= errors.name.msg %> 
             </div>
             <% } %>
+            <span class="text-danger"></span>
         <input type="text" name="description" class="form__registro__datos__input spacing" placeholder="Descripción" >
         <% if (locals.errors && errors.description) { %>
             <div class="text-danger">
                 <%= errors.description.msg %> 
             </div>
             <% } %>
+            <span class="text-danger"></span>
         </fieldset>
                 
         
@@ -40,6 +42,8 @@
                 <div class="text-danger">
                     <%= errors.img.msg %> 
                 </div>
+                <% } %>
+            <span class="text-danger"></span>
         </fieldset>
         
         
@@ -56,6 +60,7 @@
             <%= errors.winery.msg %> 
             </div>
         <% } %>
+        <span class="text-danger"></span>
         </fieldset>
 
         <fieldset class="form__registro__datos__with-label">
@@ -65,12 +70,18 @@
                 <% styleWine.forEach(element => { %> 
                 <option value="<%= element.id %>"><%= element.name %> </option>
                 <% }) %> 
-                </select>
+                <% if (locals.errors && errors.style_wines) { %>
+                    <div class="text-danger">
+                        <%= errors.style_wines.msg %> 
+                    </div>
+                    <% } %>
+            </select>
             <% if (locals.errors && errors.style_wines) { %>
                 <div class="text-danger">
                 <%= errors.style_wines.msg %> 
                 </div>
             <% } %>
+            <span class="text-danger"></span>
         </fieldset>
 
         <fieldset class="form__registro__datos__with-label">
@@ -86,6 +97,7 @@
                     <%= errors.grapes.msg %> 
                 </div>
                 <% } %>
+            <span class="text-danger"></span>
         </fieldset>
 
         
@@ -102,6 +114,7 @@
                     <%= errors.bottles.msg %> 
                 </div>
                 <% } %>
+            <span class="text-danger"></span>
         </fieldset>
 
         <fieldset class="form__registro__datos__with-label">
@@ -112,6 +125,7 @@
                 <%= errors.price.msg %> 
             </div>
             <% } %>
+        <span class="text-danger"></span>
         </fieldset >
         
         <fieldset class="form__registro__botones">

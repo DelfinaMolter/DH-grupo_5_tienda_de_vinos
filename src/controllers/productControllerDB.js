@@ -100,6 +100,9 @@ let productControllerDB = {
         res.render('./products/edit', {winery, grapes, styleWine, product})
     },
 
+
+//-----------------------------------------------------
+
         // search: async (req, res) => {
     //     try{
     //         let busqueda = await db.Product.findAll({

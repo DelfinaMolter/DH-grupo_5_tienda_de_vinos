@@ -5,12 +5,12 @@ module.exports = [
     body('name').notEmpty().withMessage('Por favor, tienes que escribir el nombre del producto'),
     body('description').notEmpty().withMessage('Por favor, escribe una breve descripcion del producto'),
     body('winery').notEmpty().withMessage('Debes seleccionar una bodega'),
-    body('grapes_id').notEmpty().withMessage('Debes seleccionar el tipo de uva'),
-    body('wineries_id').notEmpty().withMessage('Debes seleccionar una bodega'),
+   //body('grapes_id').notEmpty().withMessage('Debes seleccionar el tipo de uva'),
+   // body('wineries_id').notEmpty().withMessage('Debes seleccionar una bodega'),
     body('grapes').notEmpty().withMessage('Debes seleccionar el tipo de uva'),
     body('bottles').notEmpty().withMessage('Debes seleccionar la cantidad de botellas'),
     body('style_wines').notEmpty().withMessage('Debes seleccionar el tipo de vino'),
-    body('style_wines_id').notEmpty().withMessage('Debes seleccionar el tipo de vino'),
+    //body('style_wines_id').notEmpty().withMessage('Debes seleccionar el tipo de vino'),
     body('price').notEmpty().withMessage('Por favor, ingresar un importe'),
     body('img').custom((value, { req }) => {
     let file = req.file;
@@ -27,4 +27,3 @@ module.exports = [
     return true
 })
 ]
-

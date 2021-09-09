@@ -40,8 +40,8 @@ router.post('/crear',[
 
 //Actualizacion de productos
 router.get('/editar/:id' ,productControllerDB.edit);
-router.put('/editar/:id', [upload.single('img'), validations],productControllerDB.update);
-//-REVISAR RUTA  SI ESTA OK
+router.put('/editar/:id', [upload.single('img'), validations], productControllerDB.update);
+
 
 
 

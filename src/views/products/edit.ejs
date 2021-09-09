@@ -14,7 +14,8 @@
     <section class="registro">
     <h1 clase="registro__titulo">Editá tu Producto</h1>
     <!-- <p class="registro__nota"></p> -->
-    <form action="/productos/editar/<%=product.id%>?_method=PUT" method="POST" class="form" enctype="multipart/form-data" >
+    <form action="/productos/editar/<%=product.id%>?_method=PUT" method="POST" class="form form_edit" enctype="multipart/form-data" >
+        
         <fieldset class="form__registro__datos">
         <input type="text" name="name" class="form__registro__datos__input spacing" placeholder="Nombre del producto">
         <% if (locals.errors && errors.name) { %>
@@ -22,26 +23,33 @@
                 <%= errors.name.msg %> 
             </div>
             <% } %>
+            <span class="text-danger"></span>
+        </fieldset>
+
+        <fieldset class="form__registro__datos">
         <input type="text" name="description" class="form__registro__datos__input spacing" placeholder="Descripción">
         <% if (locals.errors && errors.description) { %>
             <div class="text-danger">
                 <%= errors.description.msg %> 
             </div>
             <% } %>
+            <span class="text-danger"></span>
         </fieldset>
 
         <fieldset class="form__registro__datos__with-label">
             <label for= "img">Imagen</label>
             <input type="file" name="img" id="image" class="spacing">
-        </fieldset>
         <% if (locals.errors && errors.img) { %>
             <div class="text-danger">
                 <%= errors.img.msg %> 
             </div>
-            <% } %>       
+            <% } %>
+            <span class="text-danger"></span>
+        </fieldset>
+            
         <fieldset class="form__registro__datos__with-label">
-        <label for="wineries_id">Bodega</label>
-        <select name="wineries_id" class="spacing">
+        <label for="winery">Bodega</label>
+        <select name="winery" class="spacing">
             <option value="" selected disabled>Elige una bodega</option>
             <% winery.forEach(element => { %> 
             <option value="<%= element.id %>"><%= element.name %> </option>
@@ -49,29 +57,31 @@
         </select>
         <% if (locals.errors && errors.wineries_id) { %>
             <div class="text-danger">
-            <%= errors.wineries_id.msg %> 
+            <%= errors.winery.msg %> 
             </div>
         <% } %>
+        <span class="text-danger"></span>
         </fieldset>
 
         <fieldset class="form__registro__datos__with-label">
-            <label for="style_wines_id">Tipo</label>
-            <select name="style_wines_id" class="spacing">
+            <label for="style_wines">Tipo</label>
+            <select name="style_wines" class="spacing">
             <option hidden selected>Selecciona una opción</option>
                 <% styleWine.forEach(element => { %> 
                 <option value="<%= element.id %>"><%= element.name %> </option>
                 <% }) %> 
             </select>
-        <% if (locals.errors && errors.style_wines_id) { %>
+        <% if (locals.errors && errors.style_wines) { %>
             <div class="text-danger">
-            <%= errors.style_wines_id.msg %> 
+            <%= errors.style_wines.msg %> 
             </div>
         <% } %>
+        <span class="text-danger"></span>
         </fieldset>
 
         <fieldset class="form__registro__datos__with-label">
-            <label for="grapes_id">Varietal</label>
-            <select name="grapes_id" class="spacing">
+            <label for="grapes">Varietal</label>
+            <select name="grapes" class="spacing">
                 <option hidden selected>Selecciona una opción</option>
                 <% grapes.forEach(element => { %> 
                     <option value="<%= element.id %>"><%= element.name %> </option>
@@ -79,9 +89,10 @@
             </select>
             <% if (locals.errors && errors.grapes_id) { %>
                 <div class="text-danger">
-                    <%= errors.grapes_id.msg %> 
+                    <%= errors.grapes.msg %> 
                 </div>
                 <% } %>
+                <span class="text-danger"></span>
         </fieldset>
 
         <fieldset class="form__registro__datos__with-label">
@@ -92,6 +103,7 @@
                 <%= errors.price.msg %> 
             </div>
             <% } %>
+            <span class="text-danger"></span>
         </fieldset >
         
         <fieldset class="form__registro__botones">
@@ -103,6 +115,7 @@
 </main>
 <!------------------- PIE DE PAGINA ----------->
 <%-include ("../includes/footer"); %>
+<script src='/js/productValidations.js'></script>
 </body>
 </html>
 

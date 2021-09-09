@@ -169,3 +169,10 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Cheamos que se hizo.
 - Trabajamos en conjunto para resolver problemas y trabas.
 - Coordinamos proxima reunion.
+
+**09/09/2021**
+- Chequeamos que se hizo.
+- Resolvimos problemas que se presentaron.
+- Consultamos a los profes (esperando respuesta).
+- Asignamos la siguientes tareas a realizar.
+- Coordinamos proxima reunion.

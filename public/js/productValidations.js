@@ -1,15 +1,15 @@
 // VALIDACIONES DEL FRONT
-    
-    const form = document.querySelector ('form');
+console.log ("esto es una prueba");
+    const form = document.querySelector ('form_edit');
     const nameField = form.name;
-    const description = form.description;
+    const description = form.description;S
     const winery = form.winery;
-    const grapes_id = form.grapes_id;
-    const wineries_id = form.wineries_id
+    //const grapes_id = form.grapes_id;
+    //const wineries_id = form.wineries_id
     const grapes = form.grapes;
     const bottles = form.bottles;
     const style_wines = form.style_wines;
-    const style_wines_id = form.style_wines_id;
+    //const style_wines_id = form.style_wines_id;
     const price = form.price;
     const img = form.img;
     
@@ -45,7 +45,7 @@
     
             isEmpty(style_wines) != '' /
     
-            isEmpty(style_wines_id) != '' /
+           // isEmpty(style_wines_id) != '' /
             
             isEmpty(price) != '' /
             
@@ -65,4 +65,7 @@
         if (!isEmpty(bottles)){removeError(bottles)}
         if (!isEmpty(price)){removeError(price)}
         if (!isEmpty(img)){removeError(img)}
+
+        
     })
+    

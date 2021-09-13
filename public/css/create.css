@@ -55,7 +55,6 @@ body{
 
 .form__registro__botones{
     display: flex;
-  
     margin: 10px;
     padding: 5px;
     border-radius: 7px;
@@ -80,5 +79,6 @@ border: red solid 2px
 .text-danger{
 color:red;
 font-size: 0.7em;
+margin-left: 10px;
 
 } 

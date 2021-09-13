@@ -66,7 +66,7 @@
         <fieldset class="form__registro__datos__with-label">
             <label for="style_wines">Tipo</label>
             <select name="style_wines" class="spacing">
-            <option hidden selected>Selecciona una opción</option>
+            <option value = '' hidden selected>Selecciona una opción</option>
                 <% styleWine.forEach(element => { %> 
                 <option value="<%= element.id %>"><%= element.name %> </option>
                 <% }) %> 
@@ -82,7 +82,7 @@
         <fieldset class="form__registro__datos__with-label">
             <label for="grapes">Varietal</label>
             <select name="grapes" class="spacing">
-                <option hidden selected>Selecciona una opción</option>
+                <option value = '' hidden selected>Selecciona una opción</option>
                 <% grapes.forEach(element => { %> 
                     <option value="<%= element.id %>"><%= element.name %> </option>
                     <% }) %> 
@@ -98,7 +98,7 @@
         <fieldset class="form__registro__datos__with-label">
             <label for="bottles">Cantidad de Botellas</label>
             <select name="bottles" class="spacing">
-                <option hidden selected>Selecciona una opción</option>
+                <option value = '' hidden selected>Selecciona una opción</option>
             <% for( let i = 1; i <= 120; i++ ) { %>
                 <option value="<%=i%>"><%=i%> </option>
             <% } %>

@@ -15,7 +15,7 @@
     <h1 clase="registro__titulo">Regristro de Productos</h1>
     <p class="registro__nota">Ingrese los datos del producto que quiere subir</p>
     
-    <form action="/productos/crear" method="POST" class="form" enctype="multipart/form-data">
+    <form action="/productos/crear" method="POST" class="form form_edit" enctype="multipart/form-data">
         
         <fieldset class="form__registro__datos">
         <input type="text" name="name" class="form__registro__datos__input spacing" placeholder="Nombre del producto">
@@ -66,7 +66,7 @@
         <fieldset class="form__registro__datos__with-label">
             <label for="styleWine">Tipo</label>
             <select name="style_wines" class="spacing">
-                <option hidden selected>Selecciona una opción</option>
+                <option value='' hidden selected>Selecciona una opción</option>
                 <% styleWine.forEach(element => { %> 
                 <option value="<%= element.id %>"><%= element.name %> </option>
                 <% }) %> 
@@ -87,7 +87,7 @@
         <fieldset class="form__registro__datos__with-label">
             <label for="grapes">Varietal</label>
             <select name="grapes" class="spacing">
-                <option hidden selected>Selecciona una opción</option>
+                <option value='' hidden selected>Selecciona una opción</option>
                 <% grape.forEach(element => { %> 
                     <option value="<%= element.id %>"><%= element.name %> </option>
                     <% }) %> 
@@ -104,7 +104,7 @@
         <fieldset class="form__registro__datos__with-label">
             <label for="bottles">Cantidad de Botellas</label>
             <select name="bottles" class="spacing">
-                <option hidden selected>Selecciona una opción</option>
+                <option value='' hidden selected>Selecciona una opción</option>
             <% for( let i = 1; i <= 120; i++ ) { %>
                 <option value="<%=i%>"><%=i%> </option>
             <% } %>

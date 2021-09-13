@@ -56,7 +56,7 @@ password.addEventListener('blur', (event) => {
 
 
         // VALIDATION ON SUBMIT
-form.addEventListener('submit', function(event){
+frmo.addEventListener('submit', function(event){
 event.preventDefault();
 
     if (isEmpty(user)) {

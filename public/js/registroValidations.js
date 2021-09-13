@@ -5,7 +5,6 @@ const email = form.email;
 const password = form.password;
 const img = form.img;
 
-
 const isEmpty = (field) => {
     return field.value.trim().length === 0;
 }
@@ -63,7 +62,6 @@ form.addEventListener('submit', function(e){
         if(!isEmpty(last_name) && !shortName(last_name)){
             removeError(last_name)
         }
-
 
         if (!isEmpty(password) && shortPass(password)){
             generateError(password, 'Tu <b>Contraseña</b> debe tener un mínimo de 6 caracteres')

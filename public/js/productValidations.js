@@ -1,8 +1,8 @@
 // VALIDACIONES DEL FRONT
 console.log ("esto es una prueba");
-    const form = document.querySelector ('form_edit');
+    const form = document.querySelector ('.form_edit');
     const nameField = form.name;
-    const description = form.description;S
+    const description = form.description;
     const winery = form.winery;
     //const grapes_id = form.grapes_id;
     //const wineries_id = form.wineries_id

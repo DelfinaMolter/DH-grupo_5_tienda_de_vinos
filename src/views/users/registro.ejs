@@ -108,13 +108,13 @@
           <fieldset class="form__registro__datos__with-label">
               <label for= "Imagen">Imagen</label>
               <input type="file" name="img" id="image" class="spacing">
-          <% if (locals.errors && errors.img) { %>
-            <div class="text-danger">
-              <%= errors.img.msg %> 
-            </div>
-          <% } %>
-          <span class="text-danger"></span>
-        </fieldset>
+              <% if (locals.errors && errors.img) { %>
+                <div class="text-danger">
+                  <%= errors.img.msg %> 
+                </div>
+                <% } %>
+                <span class="text-danger"></span>
+          </fieldset>
           
           <fieldset class="form__registro__condiciones">
             <input type="radio" name="condiciones" class="form__registro__condiciones__Check">

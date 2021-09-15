@@ -186,3 +186,8 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 **14/09/2021**
 - Hicimos la retro del sprint 7.
 - Coordinamos proxima reunion.
+
+**15/09/2021**
+- Dividimos la tareas del nuevo sprint.
+- Asignamos las tareas para revisar la proxima reunion.
+- Coordinamos proxima reunion.

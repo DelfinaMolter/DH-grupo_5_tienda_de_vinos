@@ -23,7 +23,7 @@ const removeError = (field) => {
 }
 
 
-password.addEventListener('blur', (event) => {
+password.addEventListener('input', (event) => {
     if(isEmpty(password)){
         event.target.style.background = 'pink';
         generateError(password, 'Debes escribir una <b>Contraseña</b>')
@@ -38,7 +38,7 @@ password.addEventListener('blur', (event) => {
     }
     ;})
 
-    user.addEventListener('blur', (event) => {
+    user.addEventListener('input', (event) => {
         if(isEmpty(user)){
             event.target.style.background = 'pink';
             generateError(user, 'Debes escribir un <b>Usuario</b>')

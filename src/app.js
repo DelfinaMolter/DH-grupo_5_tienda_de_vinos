@@ -45,11 +45,12 @@ app.use(express.static(path.resolve(__dirname,'../public')));
 const mainRouter = require('./routes/mainRoutes');
 const userRouter = require('./routes/userRoutes');
 const productRouter = require('./routes/productRoutes');
+const productApiRouter = require('./routes/api/productApiRoutes')
 app.use('/', mainRouter);
 app.use('/usuarios', userRouter);
 app.use('/productos', productRouter);
-app.use('/user', require('./routes/userRoutes'));
-
+app.use('/user', userRouter);
+app.use('/api', productApiRouter);
 
 
 

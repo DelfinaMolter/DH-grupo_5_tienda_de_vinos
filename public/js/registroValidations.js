@@ -44,23 +44,36 @@ form.addEventListener('submit', function(e){
             generateError(img, 'Debes subir una <b>Imagen</b>')
         }
 
-        if (!isEmpty(first_name)){removeError(first_name)}
-        if (!isEmpty(last_name)){removeError(last_name)}
-        if (!isEmpty(email)){removeError(email)}
-        if (!isEmpty(password)){removeError(password)}
-        if (!isEmpty(img)){removeError(img)}
+            let sePuedeEnviar = 0
+            if (!isEmpty(first_name)){removeError(first_name)
+                sePuedeEnviar++
+            }
+            if (!isEmpty(last_name)){removeError(last_name)
+                sePuedeEnviar++
+            }
+            if (!isEmpty(email)){removeError(email)
+                sePuedeEnviar++
+            }
+            if (!isEmpty(password)){removeError(password)
+            sePuedeEnviar++
+            }
+            if (!isEmpty(img)){removeError(img)
+            sePuedeEnviar++
+            }
 
         if (!isEmpty(first_name) && shortName(first_name)){
             generateError(first_name, 'Tu <b>Nombre</b> debe tener tener un mínimo de 2 caracteres')
         }
         if(!isEmpty(first_name) && !shortName(first_name)){
             removeError(first_name)
+        sePuedeEnviar++
         }
         if (!isEmpty(last_name) && shortName(last_name)){
             generateError(last_name, 'Tu <b>Apellido</b> debe tener tener un mínimo de 2 caracteres')
         }
         if(!isEmpty(last_name) && !shortName(last_name)){
             removeError(last_name)
+        sePuedeEnviar++
         }
 
         if (!isEmpty(password) && shortPass(password)){
@@ -68,6 +81,7 @@ form.addEventListener('submit', function(e){
         }
         if(!isEmpty(password) && !shortPass(password)){
             removeError(password)
+        sePuedeEnviar++
         }
-    
+    sePuedeEnviar === 8 ? e.target.submit() : "";
 })

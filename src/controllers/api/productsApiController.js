@@ -6,7 +6,7 @@ module.exports = {
     show: (req, res) => {
         db.Product
         .findByPk(req.params.id)
-        .then(product => {
+        .then (async product => {
             return res.status(200).json({
                 id:product.id,
                 name:product.name,
@@ -15,7 +15,7 @@ module.exports = {
                 stock:product.stock,
                 in_sale:product.in_sale,
                 wineriesId:product.wineries_id,
-                wineries: product.getWineries(), /*no funciona, trae un objeto vacio*/
+                wineries: await product.getWineries(), /*no funciona, trae un objeto vacio*/
                 status: 200,
             })
         })

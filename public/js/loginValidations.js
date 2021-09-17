@@ -56,7 +56,7 @@ password.addEventListener('input', (event) => {
 
 
         // VALIDATION ON SUBMIT
-frmo.addEventListener('submit', function(event){
+form.addEventListener('submit', function(event){
 event.preventDefault();
 
     if (isEmpty(user)) {
@@ -81,6 +81,9 @@ event.preventDefault();
     if(!isEmpty(password) && !shortPass(password)){
         removeError(password)
     }
-    if(!isEmpty(password) && !shortPass(password) && !isEmpty(password) && !shortPass(password))
-    {event.currentTarget.submit()};
+    if(!isEmpty(user) && !shortUser(user) && !isEmpty(password) && !shortPass(password)){
+
+        event.target.submit();
+
+    }
 })

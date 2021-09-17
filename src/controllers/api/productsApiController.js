@@ -15,9 +15,29 @@ module.exports = {
                 stock:product.stock,
                 in_sale:product.in_sale,
                 wineriesId:product.wineries_id,
-                wineries: await product.getWineries(), /*no funciona, trae un objeto vacio*/
+                wineries: await product.getWineries(), 
                 status: 200,
             })
         })
+    },
+    list: (req,res) => {
+        db.Product
+        .findAll( {include: ['wineries', 'style_wines', 'grapes', ]})
+        .then (async products => {
+            //res.products.length
+            return res.status(200).json( await products.map(e=>{
+                return {id:e.id,
+                    name:e.name,
+                    description:e.description,
+                    img:e.image,
+                    stock:e.stock,
+                    in_sale:e.in_sale,
+                    wineries: e.wineries.name,
+                    style_wines: e.style_wines.name,
+                    grapes: e.grapes.name,
+                    status: 200
+                }
+                }))
+            })
     }
 }

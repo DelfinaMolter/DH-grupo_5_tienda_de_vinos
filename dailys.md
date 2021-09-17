@@ -191,3 +191,10 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Dividimos la tareas del nuevo sprint.
 - Asignamos las tareas para revisar la proxima reunion.
 - Coordinamos proxima reunion.
+
+**17/09/2021**
+- Chequeamos que hicimos.
+- Contamos un poco cuales fueron las trabas y como lo resolvimos.
+- Resolvimos conflictos que habían en la web.
+- Codeamos en conjunto cosas que nos parecian que tenian complejidad.
+- Coordinamos proxima reunión.

@@ -23,7 +23,7 @@ const removeError = (field) => {
 }
 
 
-password.addEventListener('blur', (event) => {
+password.addEventListener('input', (event) => {
     if(isEmpty(password)){
         event.target.style.background = 'pink';
         generateError(password, 'Debes escribir una <b>Contraseña</b>')
@@ -38,7 +38,7 @@ password.addEventListener('blur', (event) => {
     }
     ;})
 
-    user.addEventListener('blur', (event) => {
+    user.addEventListener('input', (event) => {
         if(isEmpty(user)){
             event.target.style.background = 'pink';
             generateError(user, 'Debes escribir un <b>Usuario</b>')
@@ -56,7 +56,7 @@ password.addEventListener('blur', (event) => {
 
 
         // VALIDATION ON SUBMIT
-frmo.addEventListener('submit', function(event){
+form.addEventListener('submit', function(event){
 event.preventDefault();
 
     if (isEmpty(user)) {
@@ -81,6 +81,9 @@ event.preventDefault();
     if(!isEmpty(password) && !shortPass(password)){
         removeError(password)
     }
-    if(!isEmpty(password) && !shortPass(password) && !isEmpty(password) && !shortPass(password))
-    {event.currentTarget.submit()};
+    if(!isEmpty(user) && !shortUser(user) && !isEmpty(password) && !shortPass(password)){
+
+        event.target.submit();
+
+    }
 })

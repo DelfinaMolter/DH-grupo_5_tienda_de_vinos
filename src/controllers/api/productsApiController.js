@@ -1,6 +1,9 @@
 const db = require ('../../database/models');
 //const sequelize = require("sequelize");
 //const Op = db.Sequelize.Op;
+const express = require ('express');
+const app = express(); 
+app.set("port", process.env.PORT || 3000);
 
 module.exports = {
     show: (req, res) => {
@@ -24,8 +27,7 @@ module.exports = {
         db.Product
         .findAll( {include: ['wineries', 'style_wines', 'grapes', ]})
         .then (async products => {
-            //res.products.length
-            return res.status(200).json( await products.map(e=>{
+            let allProducts= await products.map(e=>{
                 return {id:e.id,
                     name:e.name,
                     description:e.description,
@@ -35,9 +37,40 @@ module.exports = {
                     wineries: e.wineries.name,
                     style_wines: e.style_wines.name,
                     grapes: e.grapes.name,
-                    status: 200
+                    url: `http://localhost:${app.get("port")}/api/detail/${e.id}`
+                }})
+            let find_style_winesTinto= allProducts.filter(e=>{
+                return e.style_wines== 'Vino Tinto'
+            })
+            let find_style_winesBlanco= allProducts.filter(e=>{
+                return e.style_wines== 'Vino Blanco'
+            })
+            let find_style_winesEspumante= allProducts.filter(e=>{
+                return e.style_wines== 'Espumantes'
+            })
+            // let grape= await db.Grape.findAll()
+            // let coundAndFind = (lista, valor)=> allProducts.filter(e=>{
+            //     return e.lista== valor
+            // })
+            return res.status(200).json( await
+                {   
+                    status:200,
+                    contador: {
+                        productosTotales:allProducts.length,
+                        contadorDeStyle_wines:{
+                            VinoTinto: find_style_winesTinto.length,
+                            VinoBlanco: find_style_winesBlanco.length,
+                            VinoEspumante: find_style_winesEspumante.length
+                        },
+                        contadorWineries:[],
+                        contadorGrapes:{
+                            SauvignonBlanc:[],
+                            Malbec:[]
+                        }
+                    },
+                    detalleProductos: allProducts
                 }
-                }))
+                )
             })
     }
 }

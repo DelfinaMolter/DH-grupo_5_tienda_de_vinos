@@ -198,3 +198,10 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Resolvimos conflictos que habían en la web.
 - Codeamos en conjunto cosas que nos parecian que tenian complejidad.
 - Coordinamos proxima reunión.
+- Duracion 3 horas.
+
+**18/09/2021**
+- Codeamos en conjuntos para resolver temas mas rapido.
+- Anotamos dudas para ver con los profes.
+- Definimos que pasos vamos a seguir.
+- Coordinamos proxima reunion.

@@ -39,6 +39,7 @@ module.exports = {
                     grapes: e.grapes.name,
                     url: `http://localhost:${app.get("port")}/api/detail/${e.id}`
                 }})
+                //Filtro de STYLE WINES
             let find_style_winesTinto= allProducts.filter(e=>{
                 return e.style_wines== 'Vino Tinto'
             })
@@ -48,10 +49,48 @@ module.exports = {
             let find_style_winesEspumante= allProducts.filter(e=>{
                 return e.style_wines== 'Espumantes'
             })
+                // filtro de WINERIES
+            let find_wineries_Trapiche= allProducts.filter(e=>{
+                return e.wineries== 'Trapiche'
+            })
+            let find_wineries_NavarroCorreas= allProducts.filter(e=>{
+                return e.wineries== 'Navarro Correas'
+            })
+            let find_wineries_FincaLasMoras= allProducts.filter(e=>{
+                return e.wineries== 'Finca las Moras'
+            })
+            let find_wineries_ElEsteco= allProducts.filter(e=>{
+                return e.wineries== 'El Esteco'
+            })
+            let find_wineries_CostaYPampa= allProducts.filter(e=>{
+                return e.wineries== 'Costa & Pampa'
+            })
+                // filtro de GRAPES
             // let grape= await db.Grape.findAll()
             // let coundAndFind = (lista, valor)=> allProducts.filter(e=>{
             //     return e.lista== valor
             // })
+            let find_grapes_SauvignonBlanc= allProducts.filter(e=>{
+                return e.grapes== 'Sauvignon Blanc'
+            })
+            let find_grapes_Malbec= allProducts.filter(e=>{
+                return e.style_wines== 'Malbec'
+            })
+            let find_grapes_Malbec_CabernetSauvignon= allProducts.filter(e=>{
+                return e.grapes== 'Malbec - Cabernet Sauvignon'
+            })
+            let find_grapes_Chardonnay= allProducts.filter(e=>{
+                return e.grapes== 'Chardonnay'
+            })
+            let find_grapes_CabernetSauvignon= allProducts.filter(e=>{
+                return e.grapes== 'Cabernet Sauvignon'
+            })
+            let find_grapes_BrutNature= allProducts.filter(e=>{
+                return e.grapes== 'Brut Nature'
+            })
+            let find_grapes_ExtraBrut= allProducts.filter(e=>{
+                return e.grapes== 'Extra Brut'
+            })
             return res.status(200).json( await
                 {   
                     status:200,
@@ -62,10 +101,21 @@ module.exports = {
                             VinoBlanco: find_style_winesBlanco.length,
                             VinoEspumante: find_style_winesEspumante.length
                         },
-                        contadorWineries:[],
+                        contadorWineries:{
+                            Trapiche:find_wineries_Trapiche.length,
+                            NavarroCorreas:find_wineries_NavarroCorreas.length,
+                            FincaLasMoras:find_wineries_FincaLasMoras.length,
+                            ElEsteco:find_wineries_ElEsteco.length,
+                            CostaYPampa:find_wineries_CostaYPampa.length
+                        },
                         contadorGrapes:{
-                            SauvignonBlanc:[],
-                            Malbec:[]
+                            SauvignonBlanc:find_grapes_SauvignonBlanc.length,
+                            Malbec:find_grapes_Malbec.length,
+                            Malbec_CabernetSauvignon:find_grapes_Malbec_CabernetSauvignon.length,
+                            Chardonnay:find_grapes_Chardonnay.length,
+                            CabernetSauvignon:find_grapes_CabernetSauvignon.length,
+                            BrutNature:find_grapes_BrutNature.length,
+                            ExtraBrut:find_grapes_ExtraBrut.length
                         }
                     },
                     detalleProductos: allProducts

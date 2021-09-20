@@ -35,7 +35,7 @@ router.get('/logout', userControllerDB.logoutProcess);
 router.get('/edit/:id', userControllerDB.edit);
 router.put('/update/:id', userControllerDB.update);
 
-//Usuario API
+
 
 
 

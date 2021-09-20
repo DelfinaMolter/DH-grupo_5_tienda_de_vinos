@@ -7,6 +7,7 @@ const multer = require('multer');
 
 // Middlewares
 const validations = require('../middlewares/validationRegisterMiddlewares');
+const controller = require('../controllers/mainController');
 const guestMiddlewares = require('../middlewares/guestMiddlewares');
 const uploadFile = require('../middlewares/multerMiddlewares')
 
@@ -22,7 +23,7 @@ router.get('/detalle/:id', userControllerDB.detail);
 // router.get('/registro', guestMiddlewares, userController.register)
 router.get("/registro", guestMiddlewares, userControllerDB.register);
 // router.post('/registro',[upload.single('img'), validations], userController.processRegister);
-router.post("/registro",[upload.single('img'), validations], userControllerDB.processRegister);
+router.post("/registro",[validations, upload.single('img')], userControllerDB.processRegister);
 
 // router.get('/login', guestMiddlewares, userController.login)
 router.get('/login', guestMiddlewares, userControllerDB.login)
@@ -33,6 +34,8 @@ router.get('/logout', userControllerDB.logoutProcess);
 
 router.get('/edit/:id', userControllerDB.edit);
 router.put('/update/:id', userControllerDB.update);
+
+//Usuario API
 
 
 

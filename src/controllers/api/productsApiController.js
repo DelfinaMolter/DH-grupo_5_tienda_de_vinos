@@ -74,7 +74,7 @@ module.exports = {
                 return e.grapes== 'Sauvignon Blanc'
             })
             let find_grapes_Malbec= allProducts.filter(e=>{
-                return e.style_wines== 'Malbec'
+                return e.grapes== 'Malbec'
             })
             let find_grapes_Malbec_CabernetSauvignon= allProducts.filter(e=>{
                 return e.grapes== 'Malbec - Cabernet Sauvignon'

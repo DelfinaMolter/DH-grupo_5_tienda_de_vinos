@@ -186,3 +186,22 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 **14/09/2021**
 - Hicimos la retro del sprint 7.
 - Coordinamos proxima reunion.
+
+**15/09/2021**
+- Dividimos la tareas del nuevo sprint.
+- Asignamos las tareas para revisar la proxima reunion.
+- Coordinamos proxima reunion.
+
+**17/09/2021**
+- Chequeamos que hicimos.
+- Contamos un poco cuales fueron las trabas y como lo resolvimos.
+- Resolvimos conflictos que habían en la web.
+- Codeamos en conjunto cosas que nos parecian que tenian complejidad.
+- Coordinamos proxima reunión.
+- Duracion 3 horas.
+
+**18/09/2021**
+- Codeamos en conjuntos para resolver temas mas rapido.
+- Anotamos dudas para ver con los profes.
+- Definimos que pasos vamos a seguir.
+- Coordinamos proxima reunion.

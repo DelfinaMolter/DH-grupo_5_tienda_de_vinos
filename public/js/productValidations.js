@@ -33,23 +33,6 @@ console.log ("esto es una prueba");
     form.addEventListener('submit', function(e){
         e.preventDefault();
 
-        if(
-            isEmpty(nameField) != '' ||
-            
-            isEmpty(description) != '' ||
-            
-            isEmpty(winery) != '' ||
-    
-            isEmpty(grapes) != '' ||
-    
-            isEmpty(bottles) != '' ||
-    
-            isEmpty(style_wines) != '' ||
-    
-            isEmpty(price) != '' ||
-            
-            isEmpty(img) != ''
-        ) {
             generateError(nameField, 'El producto debe contener al menos un <b>nombre</b>.');
             generateError(description, 'Por favor, introduzca un breve comentario.');
             generateError(img, 'Debes subir una <b>Imagen</b>.');
@@ -59,25 +42,41 @@ console.log ("esto es una prueba");
             generateError(bottles, 'Por favor, selecciona la cantidad de <b>botellas</b>.');
             generateError(price, 'Por favor, ingrese un <b>importe</b>.');
             
+        let sePuedeEnviar = false
             
+        if (!isEmpty(nameField)){
+            removeError(nameField)
+            sePuedeEnviar++
+        }
+        if (!isEmpty(description)){removeError(description)
+            sePuedeEnviar++
+        }
+        if (!isEmpty(winery)){removeError(winery)
+            sePuedeEnviar++
+        }
+        if (!isEmpty(grapes)){removeError(grapes)
+            sePuedeEnviar++
+        }
+        if (!isEmpty(bottles)){removeError(bottles)
+            sePuedeEnviar++
+        }
+        if (!isEmpty(price)){removeError(price)
+            sePuedeEnviar++
+        }
+        if (!isEmpty(img)){removeError(img)
+            sePuedeEnviar++
+        }
+        if (!isEmpty(style_wines)){removeError(style_wines)
+            sePuedeEnviar++
         }
 
-        if (!isEmpty(nameField)){removeError(nameField)}
-        if (!isEmpty(description)){removeError(description)}
-        if (!isEmpty(winery)){removeError(winery)}
-        if (!isEmpty(grapes)){removeError(grapes)}
-        if (!isEmpty(bottles)){removeError(bottles)}
-        if (!isEmpty(price)){removeError(price)}
-        if (!isEmpty(img)){removeError(img)}
-        if (!isEmpty(style_wines)){removeError(style_wines)}
-
-
+        sePuedeEnviar === 8 ? e.target.submit():""
         
     })
 
     //////////////////////////////////////////////////////////////////////////7777
 
-    nameField.addEventListener('blur', (event) => {
+    nameField.addEventListener('input', (event) => {
         if(isEmpty(nameField)){
             event.target.style.background = 'pink';
             generateError(nameField, 'El producto debe contener al menos un <b>nombre</b>.')
@@ -88,7 +87,7 @@ console.log ("esto es una prueba");
         }
         ;})
 
-    description.addEventListener('blur', (event) => {
+    description.addEventListener('input', (event) => {
         if(isEmpty(description)){
             event.target.style.background = 'pink';
             generateError(description, 'Por favor, introduzca un breve comentario.')
@@ -99,7 +98,7 @@ console.log ("esto es una prueba");
         }
         ;})
 
-        img.addEventListener('blur', (event) => {
+        img.addEventListener('input', (event) => {
             if(isEmpty(img)){
                 event.target.style.background = 'pink';
                 generateError(img, 'Debes subir una <b>Imagen</b>.')
@@ -110,7 +109,7 @@ console.log ("esto es una prueba");
             }
             ;})
 
-        winery.addEventListener('blur', (event) => {
+        winery.addEventListener('input', (event) => {
         if(isEmpty(winery)){
             event.target.style.background = 'pink';
             generateError(winery, 'El campo Winery debe contener al menos una <b>bodega</b>.')
@@ -121,7 +120,7 @@ console.log ("esto es una prueba");
         }
         ;})
 
-        style_wines.addEventListener('blur', (event) => {
+        style_wines.addEventListener('input', (event) => {
             if(isEmpty(style_wines)){
                 event.target.style.background = 'pink';
                 generateError(style_wines, 'El campo Winery debe contener al menos un <b>tipo de vino</b>.')
@@ -132,7 +131,7 @@ console.log ("esto es una prueba");
             }
             ;})
 
-        grapes.addEventListener('blur', (event) => {
+        grapes.addEventListener('input', (event) => {
             if(isEmpty(grapes)){
                 event.target.style.background = 'pink';
                 generateError(grapes, 'Por favor, selecciona el <b>tipo de uva</b>.')
@@ -143,7 +142,7 @@ console.log ("esto es una prueba");
             }
             ;})
 
-        bottles.addEventListener('blur', (event) => {
+        bottles.addEventListener('input', (event) => {
         if(isEmpty(bottles)){
             event.target.style.background = 'pink';
             generateError(bottles, 'Por favor, selecciona la cantidad de <b>botellas</b>.')
@@ -154,7 +153,7 @@ console.log ("esto es una prueba");
         }
         ;})
 
-        price.addEventListener('blur', (event) => {
+        price.addEventListener('input', (event) => {
             if(isEmpty(price)){
                 event.target.style.background = 'pink';
                 generateError(price, 'Por favor, ingrese un <b>importe</b>.')

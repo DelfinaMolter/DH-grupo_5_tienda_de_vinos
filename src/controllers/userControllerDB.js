@@ -33,17 +33,17 @@ const usersController={
                     })
                 }
         // Esto es por si el email ya está registrado:
-                let userInDB = await Users.findAll({where: {'email': req.body.email}}); 
-                if(userInDB){
-                    return res.render('users/registro',{
-                        errors:{
-                            email: {
-                                msg:'Este email ya esta registrado'
-                            }
-                        },
-                        oldData: req.body
-                });
-                }
+                // let userInDB = await Users.findAll({where: {'email': req.body.email}}); 
+                // if(userInDB){
+                //     return res.render('users/registro',{
+                //         errors:{
+                //             email: {
+                //                 msg:'Este email ya esta registrado'
+                //             }
+                //         },
+                //         oldData: req.body
+                // });
+                // }
                 let userToCreate = {
                     first_name: req.body.first_name,
                     last_name: req.body.last_name,
@@ -59,7 +59,7 @@ const usersController={
                     img: req.file.filename
                 }
                 let userCreated = await Users.create(userToCreate);
-                return res.redirect('/detalle/'+ user.id , {users})}
+                return res.redirect('/')}
             catch (err){
                     res.send(console.log(err))
                 }

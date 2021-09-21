@@ -12,11 +12,11 @@ module.exports = {
         .then (user => {
             return res.status(200).json({
                 id:user.id,
-                first_name:user.first_name,
-                last_name:user.last_name,
+                Nombre:user.first_name,
+                Apellido:user.last_name,
                 email:user.email,
                 img:user.image,
-                dni:user.dni,
+                DNI:user.dni,
                 status: 200,
             })
         })
@@ -27,12 +27,12 @@ module.exports = {
         .then (async user => {
             let allUsers= await user.map(e=>{
                 return {id:e.id,
-                    first_name:e.first_name,
-                    last_name:e.last_name,
+                    Nombre:e.first_name,
+                    Apellido:e.last_name,
                     email:e.email,
-                    img:e.image,
+                    Img:e.image,
                     birthDate:e.birthDate,
-                    dni:e.dni,
+                    DNI:e.dni,
                     url: `http://localhost:${app.get("port")}/api/detail/${e.id}`
                 }})
                 return res.status(200).json( await

@@ -205,3 +205,9 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Anotamos dudas para ver con los profes.
 - Definimos que pasos vamos a seguir.
 - Coordinamos proxima reunion.
+
+**20/09/2021**
+- Chequeamos que se hizo.
+- Solucionadmos conflictos en la web.
+- Asignamos nuevas tareas.
+- Agendamos nueva reunión.

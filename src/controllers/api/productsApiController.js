@@ -25,7 +25,7 @@ module.exports = {
     },
     list: (req, res) => {
         db.Product
-        .findAll( {include: ['wineries', 'style_wines', 'grapes', ]})
+        .findAll( {include: ['wineries', 'style_wines', 'grapes' ]})
         .then (async products => {
             let allProducts= await products.map(e=>{
                 return {id:e.id,

@@ -5,13 +5,14 @@ const cookie = require ('cookie-parser');
 const path = require ('path');
 const method = require ('method-override');
 const app = express(); 
+const cors = require('cors')
 
 
 const userLoggedMiddlewares = require('./middlewares/userLoggedMiddlewares');
 
 
 //Server Start
-app.set("port", process.env.PORT || 3000);
+app.set("port", process.env.PORT || 3001);
 app.listen(app.get("port"), () => console.log('Servidor esta corriendo en http://localhost:'+app.get("port")));
 
 // View Engine
@@ -27,6 +28,7 @@ app.use(session({
     secret: "digital"})) // req.session
 app.use(cookie()); // req.cookie
 app.use(userLoggedMiddlewares);
+app.use(cors())
 
 // Custom Middleware
 app.use(require("./middlewares/userSession"))

@@ -3,7 +3,7 @@ const db = require ('../../database/models');
 //const Op = db.Sequelize.Op;
 const express = require ('express');
 const app = express(); 
-app.set("port", process.env.PORT || 3000);
+app.set("port", process.env.PORT || 3001);
 
 module.exports = {
     show: (req, res) => {

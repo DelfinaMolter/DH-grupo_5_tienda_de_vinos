@@ -216,3 +216,9 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Chequemos los hecho hasta el momento.
 - Repasamos que falta hacer.
 - Agendamos nueva reunión.
+
+**22/09/2021**
+- Chequeamos los que se hizo.
+- planteamos dudas a ver como resolverlas.
+- Chequeamos la web y corregimos bugs.
+- Agendamos nueva reunión.

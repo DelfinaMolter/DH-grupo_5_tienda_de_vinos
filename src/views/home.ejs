@@ -22,15 +22,15 @@
 
         <div  class="main__section__lastvisit">
 
-<% for(product of list) { 
-        if (product.inSale == true){ %> 
+<% for(product of products) { 
+        if (product.in_sale == 1){ %> 
 <article id="art1" class="articulos">
-<a href="./productos/detalle/<%= product.id %> "> <img class="imagenArticulo" src="img/products/wines/<%= product.img %> " alt=""> </a>
+<a href="./productos/detalle/<%= product.id %> "> <img class="imagenArticulo" src="img/products/<%=product.img %> " alt=""> </a>
         <div class="detalleArticulos">   
         <p class="precio">$<%= product.price %> </p>
         <p class="descuentos">30% OFF</p>
         <h4 class="descripciones"><%= product.name %></h4>  
-        <p><%=product.wineries.name%>/p>
+        <p><%=product.wineries.name%></p>
                 
         </div>
 </article>

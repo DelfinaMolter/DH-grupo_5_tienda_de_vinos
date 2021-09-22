@@ -1,7 +1,7 @@
 import React from 'react';
 import ContentRowCenter from './ContentRowCenter';
 import ContentRowProducts from './ContentRowProducts';
-import Chart from './Chart';
+//import Chart from './Chart';
 
 function ContentRowTop(){
     return(
@@ -9,7 +9,7 @@ function ContentRowTop(){
 				{/*<!-- Content Row Top -->*/}
 				<div className="container-fluid">
 					<div className="d-sm-flex aligns-items-center justify-content-between mb-4">
-						<h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
+						<h1 className="h3 mb-0 text-gray-800">Dashboard de Tienda de Vinos </h1>
 					</div>
 				
 					{/*<!-- Content Row Products-->*/}

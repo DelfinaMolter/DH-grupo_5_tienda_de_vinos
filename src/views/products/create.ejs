@@ -18,14 +18,14 @@
     <form action="/productos/crear" method="POST" class="form form_edit" enctype="multipart/form-data">
         
         <fieldset class="form__registro__datos">
-        <input type="text" name="name" class="form__registro__datos__input spacing" placeholder="Nombre del producto">
+        <input type="text" name="name" value="<%= locals.oldData ? oldData.name : null %>" class="form__registro__datos__input spacing" placeholder="Nombre del producto">
         <% if (locals.errors && errors.name) { %>
             <div class="text-danger">
                 <%= errors.name.msg %> 
             </div>
             <% } %>
             <span class="text-danger"></span>
-        <input type="text" name="description" class="form__registro__datos__input spacing" placeholder="Descripción" >
+        <input type="text" name="description" value="<%= locals.oldData ? oldData.description : null %>" class="form__registro__datos__input spacing" placeholder="Descripción" >
         <% if (locals.errors && errors.description) { %>
             <div class="text-danger">
                 <%= errors.description.msg %> 
@@ -119,7 +119,7 @@
 
         <fieldset class="form__registro__datos__with-label">
         <label for="price">Precio</label>
-        <input type="price" name="price" class="form__registro__datos__precio" placeholder="Precio en $">
+        <input type="price" name="price" value="<%= locals.oldData ? oldData.price : null %>" class="form__registro__datos__precio" placeholder="Precio en $">
         <% if (locals.errors && errors.price) { %>
             <div class="text-danger">
                 <%= errors.price.msg %> 

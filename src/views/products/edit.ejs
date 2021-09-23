@@ -13,11 +13,11 @@
 <main> 
     <section class="registro">
     <h1 clase="registro__titulo">Editá tu Producto</h1>
-    <!-- <p class="registro__nota"></p> -->
+
     <form action="/productos/editar/<%=product.id%>?_method=PUT" method="POST" class="form form_edit" enctype="multipart/form-data" >
         
         <fieldset class="form__registro__datos">
-        <input type="text" name="name" class="form__registro__datos__input spacing" placeholder="Nombre del producto">
+        <input type="text" name="name" value="<%= locals.oldData ? oldData.name : null %>" class="form__registro__datos__input spacing" placeholder="Nombre del producto">
         <% if (locals.errors && errors.name) { %>
             <div class="text-danger">
                 <%= errors.name.msg %> 
@@ -27,7 +27,7 @@
         </fieldset>
 
         <fieldset class="form__registro__datos">
-        <input type="text" name="description" class="form__registro__datos__input spacing" placeholder="Descripción">
+        <input type="text" name="description" value="<%= locals.oldData ? oldData.description : null %>" class="form__registro__datos__input spacing" placeholder="Descripción">
         <% if (locals.errors && errors.description) { %>
             <div class="text-danger">
                 <%= errors.description.msg %> 
@@ -50,10 +50,20 @@
         <fieldset class="form__registro__datos__with-label">
         <label for="winery">Bodega</label>
         <select name="winery" class="spacing">
-            <option value="" selected disabled>Elige una bodega</option>
-            <% winery.forEach(element => { %> 
-            <option value="<%= element.id %>"><%= element.name %> </option>
-                <% }) %> 
+            <% if(locals.oldData){%>
+                <option value="oldData.winery" selected>
+                <%=winery.find(element =>{
+                element.id == oldData.winery  
+                })%> </option>
+                <% winery.forEach(element => { %> 
+                    <option value="<%= element.id %>"><%= element.name %> </option>
+                        <% }) %> 
+                <% } else { %> 
+                    <option value="" selected disabled>Elige una bodega</option>
+                    <% winery.forEach(element => { %> 
+                    <option value="<%= element.id %>"><%= element.name %> </option>
+                        <% }) %> 
+                    <% } %> 
         </select>
         <% if (locals.errors && errors.wineries_id) { %>
             <div class="text-danger">
@@ -113,7 +123,7 @@
 
         <fieldset class="form__registro__datos__with-label">
         <label for="precio">Precio</label>
-        <input type="precio" name="price" class="form__registro__datos__precio" placeholder="Precio en $">
+        <input type="precio" name="price" value="<%= locals.oldData ? oldData.price : null %>" class="form__registro__datos__precio" placeholder="Precio en $">
         <% if (locals.errors && errors.price) { %>
             <div class="text-danger">
                 <%= errors.price.msg %> 

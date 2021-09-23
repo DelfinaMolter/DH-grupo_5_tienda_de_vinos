@@ -55,7 +55,10 @@ app.use('/productos', productRouter);
 app.use('/user', userRouter);
 app.use('/api', productApiRouter);
 app.use('/api/usuarios', userApiRouter);
-
+// app.use((req,res,next)=>{
+//     res.status(404).render('404-page');
+//     next();
+// })
 
 
 

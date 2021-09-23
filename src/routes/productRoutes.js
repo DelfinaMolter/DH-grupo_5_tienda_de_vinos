@@ -32,9 +32,7 @@ const productControllerDB = require('../controllers/productControllerDB');
 router.get('/', productControllerDB.list);
 router.get('/detalle/:id', productControllerDB.detail);
 router.get('/crear',productControllerDB.create);
-router.post('/crear',[
-    upload.single('img'),validations],
-    productControllerDB.store);
+router.post('/crear',[upload.single('img'), validations], productControllerDB.store);
 
 
 

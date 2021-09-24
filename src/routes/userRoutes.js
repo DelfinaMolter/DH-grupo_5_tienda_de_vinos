@@ -17,7 +17,7 @@ const upload = multer({storage:uploadFile('users')});
 // router.get('/', userController.users)
 router.get('/', userControllerDB.list);
 // router.get('/perfil', userController.profile)
-router.get('/detalle/:id', userControllerDB.detail);
+router.get('/perfil/:id', userControllerDB.detail);
 
 // router.get('/registro', guestMiddlewares, userController.register)
 router.get("/registro", guestMiddlewares, userControllerDB.register);

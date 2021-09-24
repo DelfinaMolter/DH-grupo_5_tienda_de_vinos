@@ -81,7 +81,7 @@ const usersControllerDB={
                 condiciones: req.body.condiciones
             })
             .then((users)=>{
-                res.redirect('/detalle/'+ user.id , {users})
+                res.redirect('/perfil/'+ user.id , {users})
             })
             .catch(err=>{
                 res.send({error: err})
@@ -158,7 +158,7 @@ const usersControllerDB={
             {
                 where: {id: req.params.id}
             })
-            return res.redirect('/detalle/'+ user.id)
+            return res.redirect('/perfil/'+ user.id)
         }
         catch(err){
             res.send({error: err})

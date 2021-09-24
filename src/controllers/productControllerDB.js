@@ -100,7 +100,7 @@ let productControllerDB = {
             bottles: parseInt(req.body.bottles)
         }
         );
-
+            // Otra forma de hacer lo mismo podria ser:
             // const updateWinery = await product.setWinery(req.body.wineries_id);
             // const updateStyle_wines = await product.setStyle_wines(req.body.style_wines_id);
             // const updateGrapes = await product.setGrapes(req.body.grapes_id);    
@@ -120,7 +120,7 @@ let productControllerDB = {
 
 //-----------------------------------------------------
 
-        // search: async (req, res) => {
+    //     search: async (req, res) => {
     //     try{
     //         let busqueda = await db.Product.findAll({
     //         where: {
@@ -131,7 +131,8 @@ let productControllerDB = {
     //         offset: 10,
     //         limit: 2
     //     })
-    //     res.render('/products/search', {busqueda})
+    //     //res.render('/products/search', {busqueda})
+    //     res.send(busqueda)
     // }
     //     catch(err) {res.send(err)}
     // },

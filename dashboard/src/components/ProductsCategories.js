@@ -1,6 +1,23 @@
 import React from "react";
+import {useState, useEffect} from 'react';
 
 function GenresInDb() {
+
+  // let [totalsP, setTotalsP] = useState([]);
+
+
+  // useEffect(()=>{
+  //     fetch('http://localhost:3001/api/productos')
+  //     .then(response => response.json())
+  //     .then(data => {
+  //         setTotalsP(data)
+  //     })
+  //     .catch(err => console.error(err))
+  // },[]
+  // )
+  //contadores para wineries
+  //let contadorProductos = totalsP.length !== 0 ? totalsP.contador.productosTotales :'cargando...'
+
   return (
     <div className="col-lg-6 mb-4">
       <div className="card shadow mb-4">

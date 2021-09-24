@@ -67,25 +67,40 @@ let productControllerDB = {
             // const addGrape = await newProduct.setGrape(parseInt(req.body.grapes))
 
             const created = await db.Product.findByPk(newProduct.id);
-            res.send(created);
+            res.redirect('/productos')
 
         } catch (err){res.send(err)};     
     },
 
     update: async function (req, res) {
     try{
+          //Acá si hay errores los enviamos a la vista
+          const resultValidations = validationResult(req);
+          if (resultValidations.errors.length > 0 ) {
+              const winery = await db.Winery.findAll();
+              const grapes = await db.Grape.findAll();
+              const styleWine = await db.StyleWine.findAll();
+              const product = await db.Product.findByPk(req.params.id);
+              return res.render('products/edit',{
+                  errors: resultValidations.mapped(),
+                  product:product,
+                  oldData: req.body,
+                  winery, styleWine, grapes
+              })
+          }
         const product = await db.Product.findByPk(req.params.id);
         const updated = await product.update({
             name: req.body.name,
             description: req.body.description,
             img: req.file.filename,
             price: req.body.price,
-            grapes_id: parseInt(req.body.grapes_id),
-            wineries_id: parseInt(req.body.wineries_id),
-            style_wines_id: parseInt(req.body.style_wines_id)
+            grapes_id: parseInt(req.body.grapes),
+            wineries_id: parseInt(req.body.winery),
+            style_wines_id: parseInt(req.body.style_wines),
+            bottles: parseInt(req.body.bottles)
         }
         );
-
+            // Otra forma de hacer lo mismo podria ser:
             // const updateWinery = await product.setWinery(req.body.wineries_id);
             // const updateStyle_wines = await product.setStyle_wines(req.body.style_wines_id);
             // const updateGrapes = await product.setGrapes(req.body.grapes_id);    
@@ -105,7 +120,7 @@ let productControllerDB = {
 
 //-----------------------------------------------------
 
-        // search: async (req, res) => {
+    //     search: async (req, res) => {
     //     try{
     //         let busqueda = await db.Product.findAll({
     //         where: {
@@ -116,7 +131,8 @@ let productControllerDB = {
     //         offset: 10,
     //         limit: 2
     //     })
-    //     res.render('/products/search', {busqueda})
+    //     //res.render('/products/search', {busqueda})
+    //     res.send(busqueda)
     // }
     //     catch(err) {res.send(err)}
     // },

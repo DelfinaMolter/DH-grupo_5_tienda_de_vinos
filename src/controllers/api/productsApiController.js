@@ -31,7 +31,7 @@ module.exports = {
                 return {id:e.id,
                     name:e.name,
                     description:e.description,
-                    img:e.image,
+                    img:'http://localhost:3001/img/products/'+e.img,
                     stock:e.stock,
                     in_sale:e.in_sale,
                     wineries: e.wineries.name,

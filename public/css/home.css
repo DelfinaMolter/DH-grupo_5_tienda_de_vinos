@@ -13,10 +13,12 @@ background-color: #ebebeb;
 padding-bottom: 10px;
 }
 
+
 .main__banner {
 width: 100vw;
 max-width: 100vw;
 }
+
 
 p {
 margin: 1em;
@@ -26,12 +28,15 @@ text-align:center;
 font-style:italic;
 } 
 
+
 h3 {
 font-size: 25px;
 color: #666;
 text-align: center;
 font-weight: 300;
 }
+
+
 
 h3 a {
 font-size: 16px;
@@ -40,28 +45,31 @@ color: rgb(94, 94, 138);
 margin-left: 8px;
 }
 
+
 .titulos-secciones {
 margin: 50px 0;
 }
 
 .articulos {
-margin: 10px;
+margin: 15px;
 background-color: white;
 position: relative;
 transition: all 0, 5s ease;
 }
 
+
 .detalleArticulos {
 border-top: solid 1px #fcd75f;
 padding: 15px;
+position: relative;
 }
 
-
+/*
 .descripciones {
 font-size: 15px;
 display: none;
 color: rgb(65, 65, 77);
-}
+}*/
 
 .imagenArticulo {
 width: 30vw;
@@ -69,11 +77,18 @@ margin: auto;
 position: center;
 display: flex;
 }
+
+
+
+/*---------------------*/
+
+
 .brand-carousel {
 margin-top: 30px;
 margin-bottom: 50px;
 display: flex;
 }
+
 .brand-div-resposive {
 position: relative;
 }
@@ -84,9 +99,9 @@ margin-top: 30px;
 
 .brand-article{
 margin: 20px 0;
-}
+} 
 
-/* NECESITAMOS CENTRAR IMAGEN UNICAMENTE EN MOBILE */
+/* NECESITAMOS CENTRAR IMAGEN UNICAMENTE EN MOBILE*/
 @media (min-width: 700px) {
 
 .imagenArticulo {
@@ -97,7 +112,7 @@ left: 15vw;
 .precio {
 font-size: 16px;
 font-weight: bold;
-}
+} 
 
 .descuentos {
 font-size: 15px;
@@ -110,6 +125,8 @@ display: flex;
 flex-direction: column;
 }
 
+
+
 .brand-carousel {
 margin-top: 30px;
 margin-bottom: 50px;
@@ -121,13 +138,14 @@ flex-direction: column;
 .brand-corousel-article {
 margin: 15px 0;
 }
-#marcas {
+
+marcas {
 margin-top: 50px;
 }
 
 /*-------------------------------------------MEDIA QUERIES--------------------------------------------*/
 
-/* --------------- TABLETS --------------- */
+/* --------------- TABLETS ---------------*/
 
 @media (min-width: 700px) {
 .descripciones {
@@ -135,8 +153,8 @@ display: block;
 }
 
 .detalleArticulos {
-display: none;
-}
+  width: 40vw;
+  }
 
 .imagenArticulo:hover + .detalleArticulos {
 display: block;
@@ -150,7 +168,6 @@ box-shadow: 0 0 16px 0px rgba(20, 20, 20, 0.8);
 width: 45vw;
 }
 
-
 .main__section__lastvisit, .main__section__ofertas{
 display: flex;
 flex-direction: row;
@@ -163,10 +180,10 @@ width: 40vw;
 }
 
 
-/* conoce nuestras marcas */
+/*conoce nuestras marcas */
 .brand-carousel {
-  display: flex;
-  justify-content: space-around;
+display: flex;
+justify-content: space-around;
 }
 }
 
@@ -176,23 +193,38 @@ width: 40vw;
 display: block;
 opacity: 1;
 background-color: white;
-width: 25vw;
+width: 20vw;
 }
+
 
 .imagenArticulo:hover {
 box-shadow: 0 0 16px 0px rgba(20, 20, 20, .8);
-width: 25vw;
+width: 20vw;
+transition: all 300ms;
+
+}
+
+.imagenArticulo:hover {
+transform: scale(1.05);
 }
 
 .articulos *{
 width: 20vw;
+margin-left: auto;
 }
 
 .detalleArticulos {
 width: 20vw;
 }
 
-/* conoce nuestras marcas */
+
+
+/*conoce nuestras marcas */
+.brand-article:hover{
+box-shadow: 0 0 16px 0px rgba(163, 159, 159, 0.8);
+transition: all 500ms;
+transform: scale(1.05);
+}
 .brand-div-resposive {
 display: flex;
 justify-content: space-around;
@@ -200,3 +232,4 @@ align-items: center;
 }
 
 } 
+

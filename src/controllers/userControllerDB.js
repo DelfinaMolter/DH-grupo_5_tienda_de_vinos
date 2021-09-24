@@ -5,7 +5,7 @@ const bcryptjs = require('bcryptjs');
 
 const Users = db.User;
 
-const usersController={
+const usersControllerDB={
 
     list: (req, res) => {
         Users.findAll()
@@ -92,37 +92,41 @@ const usersController={
     },
     loginProcess: async function (req, res) {
         try {
-            let userToLogin = db.User.findAll({where: {
-                'user': req.body.user
-            }});
-
-            if (userToLogin){
-                let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-                if (isOkThePassword) {
-                    delete userToLogin.password;
-                    req.session.userLogged = userToLogin;
-
-                    if(req.body.user) {
-                        res.cookie('user', req.body.user, { maxAge: (1000 * 60) * 2 })
-                    }
-                    return res.redirect('/usuarios/perfil')
+        //Buscamos al usuario a loguearse en nuestra base de datos
+        let userToLogin = await db.User.findAll({where: {
+            'user': req.body.user
+        }});
+        //Comprobamos la contraseña y si está bien guardamos el usuario en session.
+        if (userToLogin){
+            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            if (isOkThePassword) {
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+        //Guardamos el usuario en una cookie.
+                if(req.body.user) {
+                    res.cookie('user', req.body.user, { maxAge: (1000 * 60) * 2 })
                 }
-                return res.render('users/login', {
-                    errors: {
-                        email: {
-                            msg: 'Las credenciales son incorrectas'
-                        }
-                    }
-                });
+        //Redirigimos a su perfil
+                return res.redirect('/')
             }
+        // Si la contraseña no es correcta enviamos error.
             return res.render('users/login', {
                 errors: {
-                    email: {
-                        msg: 'No se encuentra este usuario en nuestra base de datos'
+                    password: {
+                        msg: 'Las credenciales son incorrectas'
                     }
                 }
             });
         }
+        //Si no existe el usuario en la base de datos enviamos el error.
+        return res.render('users/login', {
+            errors: {
+                user: {
+                    msg: 'No se encuentra este usuario en nuestra base de datos'
+                }
+            }
+        });
+    }
     catch(err){
         res.send({error: err})
     }
@@ -161,4 +165,4 @@ const usersController={
     },
 }
 
-module.exports = usersController;
+module.exports = usersControllerDB;

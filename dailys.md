@@ -219,6 +219,18 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 
 **22/09/2021**
 - Chequeamos los que se hizo.
-- planteamos dudas a ver como resolverlas.
+- Planteamos dudas a ver como resolverlas.
 - Chequeamos la web y corregimos bugs.
 - Agendamos nueva reunión.
+
+**23/09/2021**
+- Trabajamos en conjunto en codigo trabajdo.
+- Mandamos consulta a los profes para ver como resolver y avanzar.
+- Chequeamos la web y corregimos bugs.
+- Coordinamos proxima runión.
+
+**24/09/2021**
+- Chequeamos que hicimos.
+- Trabajamos en conjunto para arreglar codigo trabado.
+- Hicimos call con Agus para resolver errores de codigo que no venían saliendo.
+- Hicimos relevamiento de las cosas faltantes/bugs en la web y las asignamos.

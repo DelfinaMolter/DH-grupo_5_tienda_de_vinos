@@ -1,0 +1,36 @@
+.article-card{
+    /* background-color: rgb(168, 180, 240); */
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    width: 75%;
+}
+
+.total{
+    font-size: 1.5rem;
+    margin: 0px 0px 5px 5px ;
+    color: rgb(38, 38, 41)
+}
+
+.soft-black{
+    color: rgb(38, 38, 41)
+}
+
+.contadorStyleWine{
+    background-color: rgb(165, 191, 232);
+}
+.contadorWineries{
+    background-color: rgb(121, 156, 118);
+}
+
+.contadorSection{
+    /* border: 1px solid black; */
+    box-shadow: 10px 13px 20px 1px rgba(0,0,0,0.71);
+-webkit-box-shadow: 10px 13px 20px 1px rgba(0,0,0,0.71);
+-moz-box-shadow: 10px 13px 20px 1px rgba(0,0,0,0.71);
+    border-radius: 5px;
+    padding: 25px;
+    height:100%
+}

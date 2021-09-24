@@ -41,8 +41,7 @@ router.get('/editar/:id' ,productControllerDB.edit);
 router.put('/editar/:id', [upload.single('img'), validations], productControllerDB.update);
 
 
-
-
+//router.post('/buscar?', productControllerDB.search);
 
 router.delete('/destroy/:id', productControllerDB.destroy);
 

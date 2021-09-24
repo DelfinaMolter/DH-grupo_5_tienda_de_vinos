@@ -50,20 +50,12 @@
         <fieldset class="form__registro__datos__with-label">
         <label for="winery">Bodega</label>
         <select name="winery" class="spacing">
-            <% if(locals.oldData){%>
-                <option value="oldData.winery" selected>
-                <%=winery.find(element =>{
-                element.id == oldData.winery  
-                })%> </option>
-                <% winery.forEach(element => { %> 
-                    <option value="<%= element.id %>"><%= element.name %> </option>
-                        <% }) %> 
-                <% } else { %> 
-                    <option value="" selected disabled>Elige una bodega</option>
+
+                    <option value="" disabled>Elige una bodega</option>
                     <% winery.forEach(element => { %> 
-                    <option value="<%= element.id %>"><%= element.name %> </option>
+                    <option value="<%= element.id %>" <%= typeof oldData != "undefined" ? element.id == oldData.winery ? "selected" : "":""%> ><%= element.name %> </option>
                         <% }) %> 
-                    <% } %> 
+                
         </select>
         <% if (locals.errors && errors.wineries_id) { %>
             <div class="text-danger">
@@ -141,7 +133,7 @@
 </main>
 <!------------------- PIE DE PAGINA ----------->
 <%-include ("../includes/footer"); %>
-<script src='/js/productValidations.js'></script>
+
 </body>
 </html>
 

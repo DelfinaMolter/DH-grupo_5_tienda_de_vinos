@@ -92,37 +92,37 @@ const usersController={
     },
     loginProcess: async function (req, res) {
         try {
-        let userToLogin = db.User.findAll({where: {
-            'user': req.body.user
-        }});
+            let userToLogin = db.User.findAll({where: {
+                'user': req.body.user
+            }});
 
-        if (userToLogin){
-            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-            if (isOkThePassword) {
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin;
+            if (userToLogin){
+                let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+                if (isOkThePassword) {
+                    delete userToLogin.password;
+                    req.session.userLogged = userToLogin;
 
-                if(req.body.user) {
-                    res.cookie('user', req.body.user, { maxAge: (1000 * 60) * 2 })
+                    if(req.body.user) {
+                        res.cookie('user', req.body.user, { maxAge: (1000 * 60) * 2 })
+                    }
+                    return res.redirect('/usuarios/perfil')
                 }
-                return res.redirect('/usuarios/perfil')
+                return res.render('users/login', {
+                    errors: {
+                        email: {
+                            msg: 'Las credenciales son incorrectas'
+                        }
+                    }
+                });
             }
             return res.render('users/login', {
                 errors: {
                     email: {
-                        msg: 'Las credenciales son incorrectas'
+                        msg: 'No se encuentra este usuario en nuestra base de datos'
                     }
                 }
             });
         }
-        return res.render('users/login', {
-            errors: {
-                email: {
-                    msg: 'No se encuentra este usuario en nuestra base de datos'
-                }
-            }
-        });
-    }
     catch(err){
         res.send({error: err})
     }

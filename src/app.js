@@ -21,7 +21,7 @@ app.set("views",path.resolve(__dirname,"./views"));
 
 //----Middlewares App-----
 app.use(express.urlencoded({extended: false}));
-app.use(express.json());
+app.use(express.json());// al final este no lo necesitamos si es que tenemos la data en la base de datos?
 app.use(session({
     resave: false,
     saveUninitialized:false,

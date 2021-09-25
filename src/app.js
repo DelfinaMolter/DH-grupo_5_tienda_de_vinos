@@ -52,7 +52,6 @@ const userApiRouter = require('./routes/api/userApiRoutes');
 app.use('/', mainRouter);
 app.use('/usuarios', userRouter);
 app.use('/productos', productRouter);
-app.use('/user', userRouter);
 app.use('/api', productApiRouter);
 app.use('/api/usuarios', userApiRouter);
 // app.use((req,res,next)=>{

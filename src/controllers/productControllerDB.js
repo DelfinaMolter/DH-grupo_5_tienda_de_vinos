@@ -120,22 +120,22 @@ let productControllerDB = {
 
 //-----------------------------------------------------
 
-    //     search: async (req, res) => {
-    //     try{
-    //         let busqueda = await db.Product.findAll({
-    //         where: {
-    //             name: {
-    //                 [Op.like]: '%' + req.query.search + '%'
-    //             }
-    //         },
-    //         offset: 10,
-    //         limit: 2
-    //     })
-    //     //res.render('/products/search', {busqueda})
-    //     res.send(busqueda)
-    // }
-    //     catch(err) {res.send(err)}
-    // },
+        search: async (req, res) => {
+        try{
+            let busqueda = await db.Product.findAll({
+            where: {
+                name: {
+                    [Op.like]: '%' + req.query.search + '%'
+                }
+            },
+            // offset: 10,
+            // limit: 2
+        })
+        //res.render('/products/search', {busqueda})
+        res.send(busqueda)
+    }
+        catch(err) {res.send(err)}
+    },
 
     destroy: (req, res) => {
         try{

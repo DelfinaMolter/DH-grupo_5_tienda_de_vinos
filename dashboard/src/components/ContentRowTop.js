@@ -1,7 +1,7 @@
 import React from 'react';
-import ContentRowCenter from './ContentRowCenter';
 import ContentRowProducts from './ContentRowProducts';
-//import Chart from './Chart';
+import LastProductInDb from './LastProductInDb';
+import ProductsByCategories from './ProductsByCategory';
 
 function ContentRowTop(){
     return(
@@ -12,12 +12,14 @@ function ContentRowTop(){
 						<h1 className="h3 mb-0 text-gray-800">Dashboard de Tienda de Vinos </h1>
 					</div>
 				
-					{/*<!-- Content Row Products-->*/}
-					<ContentRowProducts />
-					<ContentRowCenter />
-					{/* <Chart /> */}
-	
-				</div>
+			{/*<!-- Content Row Products-->*/}
+			<ContentRowProducts />
+            {/*<!--Product By Categories -->*/}
+            <ProductsByCategories />
+			{/*<!-- Last Product in DB -->*/}
+			<LastProductInDb />
+
+					</div>
 				{/*<!--End Content Row Top-->*/}
 
         </React.Fragment>

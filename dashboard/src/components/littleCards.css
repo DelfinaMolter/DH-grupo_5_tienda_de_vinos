@@ -1,0 +1,65 @@
+.productsByCategory-div{
+    display:flex
+}
+
+.article-card{
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 10px;
+}
+
+.total{
+    font-size: 1.5rem;
+    margin-left: 15px;
+    color: rgb(38, 38, 41)
+}
+
+.total-title{
+    color:rgb(237, 238, 245);
+    font-weight: 600;
+}
+
+.soft-black{
+    color: rgb(38, 38, 41)
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom: 30px
+}
+
+.margin{
+    margin:15px
+}
+
+.contadorStyleWine{
+    background-color: rgb(85, 99, 224);
+}
+.contadorWineries{
+    background-color: rgb(121, 156, 118);
+}
+
+.contadorGrapes{
+    background-color: rgb(230, 207, 80)
+}
+
+.contadorSection{
+    /* border: 1px solid black; */
+    box-shadow: 10px 13px 20px 1px rgba(0,0,0,0.71);
+-webkit-box-shadow: 10px 13px 20px 1px rgba(0,0,0,0.71);
+-moz-box-shadow: 10px 13px 20px 1px rgba(0,0,0,0.71);
+    border-radius: 5px;
+    padding: 10px;
+    height: 500px;
+    width: 350px;
+    margin: 20px
+}
+
+@media (max-width: 400px){
+    .contadorSection{
+        height:auto;
+        width:auto
+    }
+}

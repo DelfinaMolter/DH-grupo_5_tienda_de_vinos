@@ -81,7 +81,7 @@ const usersControllerDB={
                 condiciones: req.body.condiciones
             })
             .then((users)=>{
-                res.redirect('/detalle/'+ user.id , {users})
+                res.redirect('/perfil/'+ user.id , {users})
             })
             .catch(err=>{
                 res.send({error: err})
@@ -93,7 +93,7 @@ const usersControllerDB={
     loginProcess: async function (req, res) {
         try {
         //Buscamos al usuario a loguearse en nuestra base de datos
-        let userToLogin = await db.User.findAll({where: {
+        let userToLogin = await db.User.findOne({where: {
             'user': req.body.user
         }});
         //Comprobamos la contraseña y si está bien guardamos el usuario en session.
@@ -128,6 +128,7 @@ const usersControllerDB={
         });
     }
     catch(err){
+        console.log(err);
         res.send({error: err})
     }
     },
@@ -157,7 +158,7 @@ const usersControllerDB={
             {
                 where: {id: req.params.id}
             })
-            return res.redirect('/detalle/'+ user.id)
+            return res.redirect('/perfil/'+ user.id)
         }
         catch(err){
             res.send({error: err})

@@ -1,5 +1,5 @@
 import React from 'react';
-import imagenFondo from '../assets/images/404.png';
+import imagenFondo from '../assets/images/borracho-not-found.jpg';
 
 function NotFound(){
     return(

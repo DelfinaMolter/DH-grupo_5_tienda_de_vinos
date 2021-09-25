@@ -1,7 +1,7 @@
 import React from 'react';
 import image from '../assets/images/logo.png';
 import ContentWrapper from './ContentWrapper';
-import ProductsCategories from './ProductsCategories';
+import ProductsByCategory from './ProductsByCategory';
 import LastProductInDb from './LastProductInDb';
 import ContentRowProducts from './ContentRowProducts';
 import Search from './Search'
@@ -92,7 +92,7 @@ function SideBar(){
                     <ContentWrapper />
                 </Route>
                 <Route path="/ProductsCategories">
-                    <ProductsCategories />
+                    <ProductsByCategory />
                 </Route>
                 <Route path="/LastProductInDb">
                     <LastProductInDb />

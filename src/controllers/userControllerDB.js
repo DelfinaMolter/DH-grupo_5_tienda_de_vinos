@@ -90,10 +90,10 @@ const usersControllerDB={
     login: function (req, res) {
         return res.render('users/login');
     },
-    loginProcess: function (req, res) {
+    loginProcess: async function (req, res) {
         try {
         //Buscamos al usuario a loguearse en nuestra base de datos
-        let userToLogin = db.User.findAll({where: {
+        let userToLogin = await db.User.findOne({where: {
             'user': req.body.user
         }});
         //Comprobamos la contraseña y si está bien guardamos el usuario en session.
@@ -128,6 +128,7 @@ const usersControllerDB={
         });
     }
     catch(err){
+        console.log(err);
         res.send({error: err})
     }
     },

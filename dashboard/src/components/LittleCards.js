@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function LittleCard(props){
     return(
         <article className='article-card'>
-            <h4 className="total-title">{props.title}:</h4>
+            <p className="total-title">{props.title}:</p>
             <p className="total">  {props.total}</p>
         </article>
 

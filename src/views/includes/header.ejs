@@ -19,8 +19,13 @@
                                 <li><a href='/productos/crear'>Crear Productos</a></li>
                         </ul>
                         <ul class="right-navbar">
-                                <li><a href='/usuarios/registro'><i class="far fa-user"></i> Crea tu cuenta</a></li>
-                                <li><a href='/usuarios/login'><i class="fas fa-sign-in-alt"></i> Ingresar</a></li>
+                                <% if (locals.isLogged) { %>
+                                <li><a href='/usuarios/logout'><i class="fas fa-sign-in-alt"></i>Cerrar Sesión</a></li>
+                                <% } else{ %>
+                                        <li><a href='/usuarios/registro'><i class="far fa-user"></i> Crea tu cuenta</a></li>
+                                        <li><a href='/usuarios/login'><i class="fas fa-sign-in-alt"></i> Ingresar</a></li>
+                                        
+                                <% }%>
                                 <li><a href='#'><i class="far fa-bell"></i></a> </li>
                                 <li><a href='/productos/carrito'><i class="fas fa-shopping-cart"></i></a> </li>
                                 <li><a href='#'><i class="far fa-heart"></i></a> </li>

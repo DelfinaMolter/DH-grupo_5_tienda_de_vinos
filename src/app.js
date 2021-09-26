@@ -6,8 +6,6 @@ const path = require ('path');
 const method = require ('method-override');
 const app = express(); 
 const cors = require('cors')
-
-
 const userLoggedMiddlewares = require('./middlewares/userLoggedMiddlewares');
 
 

@@ -49,6 +49,11 @@ header{
   padding-left: 10px;
   border-radius: 5px;
 }
+.icono-busqueda{
+  background-color:transparent; 
+  border-color: transparent; 
+  box-shadow: none
+}
 .icono-busqueda i {
   background-color: #240c31;
   color: #f0c949;
@@ -58,7 +63,17 @@ header{
   text-align: center;
   line-height: 25px;
   border-radius: 50%;
-} /* ---------------------boton hamburguesa */
+}
+.icono-busqueda:hover{
+  cursor: pointer;
+}
+.icono-busqueda i:hover{
+  box-shadow: 0 0 5px 0px rgba(163, 159, 159, 0.8);
+transition: all 100ms;
+transform: scale(1.01);
+}
+
+/* ---------------------boton hamburguesa */
 .boton-hamburguesa {
   padding: 8px 5px;
   max-width: 35px;

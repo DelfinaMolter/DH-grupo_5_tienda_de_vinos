@@ -34,7 +34,8 @@ router.get('/detalle/:id', productControllerDB.detail);
 router.get('/crear',productControllerDB.create);
 router.post('/crear',[upload.single('img'), validations], productControllerDB.store);
 
-
+//carrito
+router.get('/carrito', productControllerDB.carrito)  
 
 //Actualizacion de productos
 router.get('/editar/:id' ,productControllerDB.edit);
@@ -44,5 +45,6 @@ router.put('/editar/:id', [upload.single('img'), validations], productController
 router.get('/buscar', productControllerDB.search);
 
 router.delete('/destroy/:id', productControllerDB.destroy);
+
 
 module.exports = router

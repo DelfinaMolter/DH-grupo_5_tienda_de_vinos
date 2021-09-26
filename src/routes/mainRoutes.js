@@ -5,7 +5,7 @@ const router = express.Router();
 const mainControllerDB = require('../controllers/mainControllerDB');
 
 router.get('/', mainControllerDB.list)
-//router.get('/carrito', main.carrito)  
+
 
 
 

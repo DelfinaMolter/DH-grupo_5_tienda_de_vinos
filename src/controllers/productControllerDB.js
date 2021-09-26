@@ -150,7 +150,8 @@ let productControllerDB = {
     catch(error){
         res.send(error)
     }
-    }
+    },
+    carrito: (req,res) => {res.render('carrito')}
 }
 
 module.exports = productControllerDB

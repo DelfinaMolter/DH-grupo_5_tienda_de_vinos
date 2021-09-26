@@ -119,7 +119,7 @@ main {
   padding: 0px 10px;
 }
 
-button {
+.submit-button {
   margin: 7px;
   padding: 6px;
   width: 25vw;
@@ -160,10 +160,10 @@ button {
     background-color: #5f5566;
     color: #dad7dd;
   }
-  .submit button {
+  .submit-button {
     transition: 400ms;
   }
-  button:hover {
+  .submit-button:hover {
     background-color: #5e257c;
   }
 }

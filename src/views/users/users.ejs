@@ -16,6 +16,7 @@
         <section class="users">
             <% users.forEach(user => {%>
             <section class="section-prodile">
+                <a href='/usuarios/perfil/<%=user.id%>'>
                 <%if(user.img){%>
                     <img src="/img/users/<%=user.img%>" alt="Foto de perfil">
                 <%}else{%>
@@ -30,6 +31,7 @@
                     <p><span>Admin:</span> <%=user.admin%></p>
                     <a href="#"><button>Editar</button></a>
                 </div>
+            </a>
             </section>
             <%});%>
         </section>

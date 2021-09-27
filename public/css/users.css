@@ -60,7 +60,8 @@ body {
     max-width:140px;
     border-radius: 7px;
     background-color:#240C31;
-    color: #F5F5F5;   
+    color: #F5F5F5; 
+
 }
 
 /*-------USUARIOS--------*/
@@ -73,6 +74,7 @@ body {
     flex-direction:column;
     align-items:center;
     justify-content:center;
+    flex-wrap: wrap;
 }
 .users .section-prodile{
     background-color:#ffffff;
@@ -81,6 +83,9 @@ body {
     width:300px;
     height:650px;
     margin:30px 10px;
+}
+.section-prodile a{
+text-decoration:none;
 }
 @media (min-width:760px){
     .users{

@@ -103,7 +103,7 @@ const usersControllerDB={
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
         //Guardamos el usuario en una cookie.
-                if(req.body.user) {
+                if(req.body.saveUser) {
                     res.cookie('user', req.body.user, { maxAge: (1000 * 60) * 2 })
                 }
         //Redirigimos a su perfil
@@ -115,7 +115,8 @@ const usersControllerDB={
                     password: {
                         msg: 'Las credenciales son incorrectas'
                     }
-                }
+                },
+                oldData: req.body.user
             });
         }
         //Si no existe el usuario en la base de datos enviamos el error.
@@ -124,7 +125,8 @@ const usersControllerDB={
                 user: {
                     msg: 'No se encuentra este usuario en nuestra base de datos'
                 }
-            }
+            },
+            oldData: req.body.user
         });
     }
     catch(err){

@@ -23,11 +23,12 @@
               type="text"
               name="user"
               class="input"
+              value="<%= locals.oldData ? oldData : null%>"
               placeholder="Nombre de Usuari@"
               />
-              <% if (locals.errors && errors.email) { %>
+              <% if (locals.errors && errors.user) { %>
                 <div class="text-danger">
-                  <%= errors.email.msg %> 
+                  <%= errors.user.msg %> 
                 </div>
               <% } %>
               <span class="text-danger"></span>
@@ -38,7 +39,18 @@
               class="input"
               placeholder="Contraseña"
             />
+            <% if (locals.errors && errors.password) { %>
+              <div class="text-danger">
+                <%= errors.password.msg %> 
+              </div>
+            <% } %>
             <span class="text-danger"></span>
+            <div id="saveUser">
+              <input type="checkbox" name="saveUser">
+              <label for="saveUser">Recordarme</label>
+              
+            </div>
+            
             <button id="button" type="submit">Ingresar</button>
           </fieldset>
         </form>

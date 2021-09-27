@@ -6,12 +6,12 @@
     <title>Detalle de producto</title>
     <link rel="stylesheet" href="/css/detail.css">
   </head>
-  <body>
-    <!-- ===========================================HEADER===================================================   -->
-
-    <%-include ("../includes/header"); %>
+  <!-- ===========================================HEADER===================================================   -->
+  
+  <%-include ("../includes/header"); %>
   
   <!-- ========================================MAIN======================================================= -->
+<body>
 <main>
 <div class="detalle-producto">
  
@@ -20,14 +20,12 @@
       <p class="vino-y-bodega"><%=winery.name%> </p>
       <a href="#"><i class="fas fa-heart"></i></a>
     </article>  
+
     <div id="main-block">
+
     <section class="box-superior">
     <article class="columna-izq"> 
-    <% if(product.img){ %> 
     <figure class="figure-producto"><img class="img-producto" src="/img/products/<%= product.img %> " alt=""></figure>
-    <% } else{ %> 
-      <figure class="figure-producto"><img class="img-producto" src="/img/products/producto-sin-imagen.jpg " alt=""></figure>
-    <% } %> 
     </article>
   </section>
 
@@ -49,13 +47,12 @@
   </span>
     <span class="span-cuotas">
       <p id="cuotas">3 cuotas de </p>
-      <p id="valor-cuotas"> $<%= product.price / 3 %> </p>
+      <p id="valor-cuotas"> $<%= (product.price / 3).toFixed() %> </p>
     </span>
   </div>
 </article>
 
-  <article class="cantidad">
-    
+<article class="cantidad">    
   <form action="/" method="POST" name="comprar" class="form-comprar">
     <label for="cantidad-de-botellas"><i class="fas fa-shopping-cart"></i>Cantidad: </label>
     <select type="select" name="comprar" class="cantidad" id="cantidad-de-botellas" placeholder="Cantidad">
@@ -63,19 +60,19 @@
     <option value="<%= i %>"><%=i%></option>
     <% } %>
   </select>
+  </form>
 </article>
+
 
 <article class="art-buttons">
-    <button type="submit" name="comprar" class="button">COMPRAR</button>
-  </form>
-
-  <a href="/productos/editar/<%=product.id %>" class="button admin-button" id="edit">EDITAR(admin)</a>
-
-	<form action="/productos/destroy/<%= product.id %>?_method=DELETE" method="POST">
-	<button type="submit" class="button admin-button" id="delete">ELIMINAR(admin)</button>
-  </form>
-  
-</article>
+  <button type="submit" name="comprar" class="button">COMPRAR</button>
+  <% if (locals.isLogged) { %>
+    <a href="/productos/editar/<%=product.id %>" class="button admin-button" id="edit">EDITAR(admin)</a>
+    <form action="/productos/destroy/<%= product.id %>?_method=DELETE" method="POST">
+      <button type="submit" class="button admin-button" id="delete">ELIMINAR(admin)</button>
+    </form>
+  </article>
+  <% } %>
 
 <!-- =============================RRSS -->
 <article class="rrss">

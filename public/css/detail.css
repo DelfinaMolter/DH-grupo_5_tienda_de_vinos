@@ -28,7 +28,7 @@ padding-bottom: 10px;
 }
 .img-producto {
   width: 100%;
-  max-width: 400px;
+  max-height: 400px;
   height: auto;
   cursor: zoom-in;
 }
@@ -38,7 +38,7 @@ padding-bottom: 10px;
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
-  margin-top: 30px;
+  padding-top: 30px;
   align-items: center;
 }
 .vino-y-bodega {
@@ -127,10 +127,9 @@ padding-bottom: 10px;
 }
 
 .admin-button{
-  /* color: rgb(44, 44, 121); */
-  color: rgb(136, 14, 14);
+  color: rgb(214, 214, 214);
   text-decoration: none;
-  background-color: rgb(223, 113, 11);
+  background-color: rgb(161, 59, 59);
 }
 /* ===========================redes sociales */
 .rrss {
@@ -214,34 +213,24 @@ justify-content: space-around;
     align-items: center;
     justify-content: center;
   }
-  .columna-der {
-    position: relative;
-    top: 30px;
-  }
+    .columna-der {
+      position: relative;
+      top: 30px;
+    }
   /* imagen producto */
-  .figure-producto {
-    /* border: black 2px solid; */
+  /* .figure-producto {
     max-width: 100%;
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } */
   .img-producto {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-  }
-  .rrss {
-    justify-content: space-between;
-    padding-right: 800px;
+    height: 400px;
+    width:auto
   }
 
-  #winery-tittle{
-    position:relative;
-    left: 100px;
-  }
 
   #main-block{
     display: flex;
@@ -256,5 +245,11 @@ justify-content: space-around;
   .titulos-y-fav {
     width: 80%;
     margin-bottom: 0;
+  }
+
+  .art-buttons{
+    position: relative;
+    right:50px;
+    top:50px
   }
 }

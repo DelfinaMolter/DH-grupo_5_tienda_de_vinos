@@ -4,35 +4,40 @@
     <%-include ("../includes/head");%>
     <link rel="shortcut icon" href="../../img/logos/logo-sin-texto.png" type="image/x-icon">
     <title>Productos</title>
-    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/productos.css" />
 </head>
 <body>
     <%-include ("../includes/header");%>
     <!-- =============PRODUCTOS==========-->
     <main>
+        <div><img class="main__banner" src="" alt=""></div>
+        <section>
         <h3 id="ofertas" class="titulos-secciones">NUESTROS PRODUCTOS</h3>
 
         <div  class="main__section__lastvisit">
 
         
-        <section>
+        
             <% for( let i = 0; i < products.length; i++ ) { %>
 
         <article id="art1" class="articulos">
             <a href="/productos/detalle/<%=products[i].id%> ">     
                 <img class="imagenArticulo" src="img/products/<%=products[i].img%>" alt="product image">
-                <h4 class="name"><%=products[i].name%></h4>
-                <h5><%= products[i].wineries.name %> </h5>   
-                <p class="precio">Precio: $<%=products[i].price%> </p>  
                 <div class="detalleArticulos">
-    
-            </a> 
+                <p class="precio">$<%=products[i].price%> </p> 
+                <p class="name"><%=products[i].name%> </p>
+                <p><%= products[i].wineries.name %> </p>   
+                
+            
+            </div>
+        </a>
         </article>    
-        </section>
+    
         <% } %>
-        </div>
+        
         
     </div>
+</section>
     </main>
     <%-include ("../includes/footer");%>
 </body>

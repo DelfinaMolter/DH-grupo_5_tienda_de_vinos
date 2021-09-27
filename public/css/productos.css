@@ -1,1 +1,174 @@
-  
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-size: 12px;
+font-family: "KoHo", sans-serif;
+text-decoration: none;
+}
+
+/*----------------------------------------*/
+
+main {
+margin: auto;
+background-color: #ebebeb;
+padding-bottom: 10px;
+}
+.main__banner {
+background-color: #ebebeb;
+}
+
+
+p {
+margin: 1em;
+font-size: 13px;
+color: rgb(94, 94, 95);
+text-align:center;
+font-style:italic;
+} 
+
+h3 {
+font-size: 25px;
+color: #666;
+text-align: center;
+font-weight: 300;
+background-color: #ebebeb;
+}
+
+h3 a {
+font-size: 16px;
+font-weight: 200;
+color: rgb(94, 94, 138);
+margin-left: 8px;
+}
+
+
+.titulos-secciones {
+margin: 50px 0;
+}
+
+
+.articulos {
+margin: 15px;
+background-color: white;
+position: relative;
+transition: all 0, 5s ease;
+}
+
+.detalleArticulos {
+border-top: solid 1px #fcd75f;
+padding: 15px;
+position: center;
+text-decoration: none;
+}
+
+.imagenArticulo {
+width: 30vw;
+margin: auto;
+position: center;
+display: flex;
+}
+
+/* NECESITAMOS CENTRAR IMAGEN UNICAMENTE EN MOBILE*/
+@media (min-width: 700px) {
+
+.imagenArticulo {
+left: 15vw;
+}
+}
+
+.precio {
+font-size: 16px;
+font-weight: bold;
+} 
+
+.descuentos {
+font-size: 15px;
+font-weight: bold;
+color: #fcd75f;
+}
+
+.main__section__lastvisit {
+display: flex;
+flex-direction: column;
+}
+
+/*-------------------------------------------MEDIA QUERIES--------------------------------------------*/
+
+/* --------------- TABLETS ---------------*/
+
+@media (min-width: 700px) {
+.descripciones {
+display: block;
+}
+
+.detalleArticulos {
+width: 40vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.detalleExperto{
+width: 40vw;
+display: flex;
+flex-direction: column;
+align-items:center;
+justify-content: center;
+}
+
+.imagenArticulo:hover + .detalleArticulos {
+display: block;
+opacity: 1;
+background-color: rgba (39, 99, 69, 0.2);
+width: 45vw;
+}
+
+.main__section__lastvisit, .main__section__ofertas{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+}
+.articulos * {
+width: 40vw;
+}
+}
+
+/* --------------------- DESKTOP  --------------------- */
+
+@media (min-width: 769px) {
+.articulos {
+display: block;
+opacity: 1;
+background-color: white;
+width: 20vw;
+}
+
+.articulos{
+box-shadow: 0 0 16px 0px rgba(20, 20, 20, .8);
+width: 20vw;
+transition: all 300ms;
+}  
+
+.articulos:hover{
+transform: scale(1.05); 
+}
+
+.articulos *{
+width: 20vw;
+/*margin-left: auto;*/
+}
+
+.detalleArticulos {
+width: 20vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+position: center;
+}
+
+
+}

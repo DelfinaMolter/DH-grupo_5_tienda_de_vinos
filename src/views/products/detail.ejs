@@ -66,7 +66,7 @@
 
 <article class="art-buttons">
   <button type="submit" name="comprar" class="button">COMPRAR</button>
-  <% if (locals.isLogged) { %>
+  <% if (locals.isLogged.admin) { %>
     <a href="/productos/editar/<%=product.id %>" class="button admin-button" id="edit">EDITAR(admin)</a>
     <form action="/productos/destroy/<%= product.id %>?_method=DELETE" method="POST">
       <button type="submit" class="button admin-button" id="delete">ELIMINAR(admin)</button>

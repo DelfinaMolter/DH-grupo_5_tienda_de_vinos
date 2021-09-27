@@ -89,6 +89,19 @@ transform: scale(1.01);
 .main-navbar {
   display: none;
 }
+#saludo{
+  color: white;
+
+}
+#saludo-span i{
+  color: white;
+  margin-right: -10px;
+}
+#saludo-span{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 
 /*-------------------------------------------Media Queries----------------------------------------------*/
 
@@ -120,6 +133,7 @@ transform: scale(1.01);
   .right-navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   .main-navbar li a {
     color: #f0efee;

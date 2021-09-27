@@ -21,7 +21,9 @@
                         </ul>
                         <ul class="right-navbar">
                                 <% if (locals.isLogged) { %>
+                                <a href="/usuarios/perfil/<%=+locals.isLogged.id%>"><li><span id="saludo-span"><i class="fas fa-hand-sparkles"></i><p id="saludo">¡Hola, <%= locals.isLogged.first_name %>! </p></span></li></a>
                                 <li><a href='/usuarios/logout'><i class="fas fa-sign-in-alt"></i>Cerrar Sesión</a></li>
+                                
                                 <% } else{ %>
                                         <li><a href='/usuarios/registro'><i class="far fa-user"></i> Crea tu cuenta</a></li>
                                         <li><a href='/usuarios/login'><i class="fas fa-sign-in-alt"></i> Ingresar</a></li>

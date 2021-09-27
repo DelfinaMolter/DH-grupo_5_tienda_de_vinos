@@ -1,23 +1,42 @@
 //Se crea este Middleware de acuerdo a la vista del header de un usuario logueado
-const User = require('../models/User');
-function userLoggedMiddlewares(req, res, next) {
-    res.locals.isLogged = false;
+// const User = require('../models/User');
+const db = require('../database/models');
 
-    let emailInCookie = req.cookies.userEmail;
-    let userFromCookie = User.findByField('email', emailInCookie);
+async function userLoggedMiddlewares(req, res, next) {
+
+    res.locals.isLogged = false
     
-    
-    if (userFromCookie) {
-        req.session.userLogged = userFromCookie
+    if (req.cookies.user) {
+        let userInCookie = await db.User.findOne({where: {
+            'user': req.cookies.user
+        }});
+        req.session.userLogged = userInCookie
     }
 
-    if (req.session.userLogged){
-        res.locals.isLogged = true;
-        res.locals.userLogged = req.session.userLogged;
+    if (req.session.userLogged) {
+        res.locals.isLogged = req.session.userLogged
     }
 
-   
+    console.log(req.cookies.user);
     
+    //     res.locals.isLogged = false;
+
+//     let loginInCookie = req.cookies.user;
+//     let userFromCookie = await db.User.findOne({where: {
+//         'user': loginInCookie
+//     }});
+    
+//     if (userFromCookie) {
+//         req.session.userLogged = userFromCookie
+//     }
+
+//     if (req.session.userLogged){
+//         res.locals.isLogged = true;
+//         res.locals.userLogged = req.session.userLogged;
+//     }
+// console.log(emailInCookie,'emailInCookie');
+// console.log(loginInCookie,'userFromCookie');
+// console.log( res.locals.isLogged,' locals.isLogged');
 
     next();
     

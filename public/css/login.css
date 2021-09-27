@@ -83,6 +83,15 @@ body{
   text-align: center;
 }
 
+#saveUser{
+  display: flex;
+  align-items: center;
+}
+#saveUser label {
+  margin-left: 10px;
+  font-size: 0.8rem;
+}
+
 
 
 /* ===========================================MEDIA QUERIES=========================================== */

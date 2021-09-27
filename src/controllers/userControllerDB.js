@@ -54,9 +54,9 @@ const usersControllerDB={
                     birth_date: req.body.birth_date,
                     created_at: req.body.created_at,
                     updated_at: req.body.update_at,
-                    condiciones: req.body.condiciones,
+                    condiciones: req.body.condiciones? 1:0,
                     password: bcryptjs.hashSync(req.body.password, 10),
-                    img: req.file.filename
+                    img: req.file.filename,
                 }
                 let userCreated = await Users.create(userToCreate);
                 return res.redirect('/')}

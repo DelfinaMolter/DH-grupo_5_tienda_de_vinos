@@ -234,3 +234,9 @@ About: Utilizamos este archivo para volcar el registro de nuestras reuniones de 
 - Trabajamos en conjunto para arreglar codigo trabado.
 - Hicimos call con Agus para resolver errores de codigo que no venían saliendo.
 - Hicimos relevamiento de las cosas faltantes/bugs en la web y las asignamos.
+
+**27/09/2021**
+- Chequeamos que hicimos.
+- Chequeamos que es lo que falta.
+- Codeamos juntos algunas cosas.
+- Coordinamos nueva reunión. 

@@ -76,6 +76,7 @@ body{
   color: white;
   margin-left: 6px;
   margin-top: 10px;
+  border-radius: 7px;
 }
 
 #olvido-pass-enlace {

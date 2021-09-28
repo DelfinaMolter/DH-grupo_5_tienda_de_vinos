@@ -110,20 +110,13 @@ align-items: center;
 justify-content: center;
 }
 
-.detalleExperto{
-width: 40vw;
-display: flex;
-flex-direction: column;
-align-items:center;
-justify-content: center;
-}
-
 .imagenArticulo:hover + .detalleArticulos {
 display: block;
 opacity: 1;
 background-color: rgba (39, 99, 69, 0.2);
 width: 45vw;
 }
+
 
 .main__section__lastvisit, .main__section__ofertas{
 display: flex;
@@ -152,14 +145,15 @@ width: 20vw;
 transition: all 300ms;
 }  
 
-.articulos:hover{
+.articulos:hover {
 transform: scale(1.05); 
 }
 
+    
 .articulos *{
 width: 20vw;
 /*margin-left: auto;*/
-}
+} 
 
 .detalleArticulos {
 width: 20vw;

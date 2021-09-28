@@ -1,4 +1,4 @@
-* {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -55,31 +55,33 @@ color: #666;
 .div-icono-y-descripcion {
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   margin-left: 10px;
-}
-.descripcion {
-  max-width: 87%;
+  max-width: 500px;
   margin: 0 10px;
-  
   text-align:justify;
 }
+.uva{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px 0px 10px;
+  font-weight: bold;
+}
+
 #icono-uva {
   width: 40px;
 }
 /* ====================Section compra */
-.sub-bloque-compra {
-  margin-top: 20px;
-  margin-left: 10px;
-  width: 100%;
-}
+
 
 #precio {
   font-size: 26px;
   font-weight: bold;
   color: #000;
-  margin: 10px 2px 10px 2px;
+  margin: 10px 10px 10px 2px;
 }
 #cuotas {
   font-size: 15px;
@@ -93,8 +95,6 @@ color: #666;
   margin: 10px 2px 10px 2px;
 }
 .span-cuotas {
-  display: flex;
-  align-items: center;
   margin: 10px 2px 10px 2px;
 }
 .span-precio {
@@ -125,7 +125,7 @@ color: #666;
   align-items: center;  
 }
 .button {
-  font-size: 1em;
+
   display: block;
   color: #fff;
   margin: 4px 0px 8px 0px;
@@ -144,6 +144,11 @@ color: #666;
   color:  #775e88;
   text-decoration: none;
   background-color: #fcd75f;
+}
+.comprando{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 /* ===========================redes sociales */
 .rrss {

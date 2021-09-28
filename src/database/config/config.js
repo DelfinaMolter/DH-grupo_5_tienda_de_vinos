@@ -5,7 +5,7 @@ module.exports={
     "database": "tienda_de_vinos_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "port":3306
+    "port":3307
   },
   "test": {
     "username": "root",

@@ -16,12 +16,14 @@
                         <ul class="left-navbar">
                                 <li><a href='/productos'>Productos</a></li>
                                 <li><a href='/#nosotros'>Sobre Nosotros</a></li>
-                                <li><a href='/productos/crear'>Crear Productos</a></li>
-                                <li><a href='/usuarios'>Usuarios</a></li>
+                                <% if (locals.isLogged.admin) { %>
+                                        <li class="admin-button"><a  href='/productos/crear'>Crear Productos</a></li>
+                                        <li class="admin-button"><a  href='/usuarios'>Usuarios</a></li>
+                                <% } %>
                         </ul>
                         <ul class="right-navbar">
                                 <% if (locals.isLogged) { %>
-                                <a href="/usuarios/perfil/<%=+locals.isLogged.id%>"><li><span id="saludo-span"><i class="fas fa-hand-sparkles"></i><p id="saludo">¡Hola, <%= locals.isLogged.first_name %>! </p></span></li></a>
+                                <a href="/usuarios/perfil/<%= + locals.isLogged.id %>"><li><span id="saludo-span"><i class="fas fa-hand-sparkles"></i><p id="saludo">¡Hola, <%= locals.isLogged.first_name %>! </p></span></li></a>
                                 <li><a href='/usuarios/logout'><i class="fas fa-sign-in-alt"></i>Cerrar Sesión</a></li>
                                 
                                 <% } else{ %>

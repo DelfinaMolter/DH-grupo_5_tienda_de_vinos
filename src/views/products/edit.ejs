@@ -14,7 +14,7 @@
     <section class="registro">
     <h1 clase="registro__titulo">Editá tu Producto</h1>
 
-    <form action="/productos/editar/<%=product.id%>?_method=PUT" method="POST" class="form form_edit" enctype="multipart/form-data" >
+    <form action="/productos/editar/<%=oldData.id%>?_method=PUT" method="POST" class="form form_edit" enctype="multipart/form-data" >
         
         <fieldset class="form__registro__datos">
         <input type="text" name="name" value="<%= locals.oldData ? oldData.name : null %>" class="form__registro__datos__input spacing" placeholder="Nombre del producto">
@@ -68,9 +68,9 @@
         <fieldset class="form__registro__datos__with-label">
             <label for="style_wines">Tipo</label>
             <select name="style_wines" class="spacing">
-            <option value = '' hidden selected>Selecciona una opción</option>
+            <option value = '' disabled >Selecciona una opción</option>
                 <% styleWine.forEach(element => { %> 
-                <option value="<%= element.id %>"><%= element.name %> </option>
+                <option value="<%= element.id %>" <%= typeof oldData != "undefined" ? element.id == oldData.style_wines ? "selected" : "":""%> ><%= element.name %> </option>
                 <% }) %> 
             </select>
         <% if (locals.errors && errors.style_wines) { %>
@@ -84,9 +84,9 @@
         <fieldset class="form__registro__datos__with-label">
             <label for="grapes">Varietal</label>
             <select name="grapes" class="spacing">
-                <option value = '' hidden selected>Selecciona una opción</option>
+                <option value = '' disabled >Selecciona una opción</option>
                 <% grapes.forEach(element => { %> 
-                    <option value="<%= element.id %>"><%= element.name %> </option>
+                    <option value="<%= element.id %>" <%= typeof oldData != "undefined" ? element.id == oldData.grapes ? "selected" : "":""%> ><%= element.name %> </option>
                     <% }) %> 
             </select>
             <% if (locals.errors && errors.grapes_id) { %>
@@ -100,10 +100,14 @@
         <fieldset class="form__registro__datos__with-label">
             <label for="bottles">Cantidad de Botellas</label>
             <select name="bottles" class="spacing">
-                <option value = '' hidden selected>Selecciona una opción</option>
-            <% for( let i = 1; i <= 120; i++ ) { %>
-                <option value="<%=i%>"><%=i%> </option>
-            <% } %>
+                <% if(oldData.bottles){ %> 
+                    <option selected value="<%=oldData.bottles%> "><%=oldData.bottles%> </option>
+                    <% }else{ %> 
+                    <option value = '' hidden selected>Selecciona una opción</option>
+                    <% } %> 
+                <% for( let i = 1; i <= 120; i++ ) { %>
+                    <option value="<%=i%>"><%=i%> </option>
+                    <% } %>
             </select>
             <% if (locals.errors && errors.bottles) { %>
                 <div class="text-danger">

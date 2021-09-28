@@ -95,13 +95,24 @@ transform: scale(1.01);
 }
 #saludo-span i{
   color: white;
-  margin-right: -10px;
 }
 #saludo-span{
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
+
+/* .admin-button{
+  color:  #775e88;
+  text-decoration: none;
+  background-color: #fcd75f;
+} */
+
+.admin-button a{
+  border-bottom: 1px solid #fcd75f;
+  border-radius: 7px;
+}
+
 
 /*-------------------------------------------Media Queries----------------------------------------------*/
 

@@ -75,19 +75,19 @@ let productControllerDB = {
     update: async function (req, res) {
     try{
           //Acá si hay errores los enviamos a la vista
-          const resultValidations = validationResult(req);
-          if (resultValidations.errors.length > 0 ) {
-              const winery = await db.Winery.findAll();
-              const grapes = await db.Grape.findAll();
-              const styleWine = await db.StyleWine.findAll();
-              const product = await db.Product.findByPk(req.params.id);
-              return res.render('products/edit',{
-                  errors: resultValidations.mapped(),
-                  product:product,
-                  oldData: req.body,
-                  winery, styleWine, grapes
-              })
-          }
+        const resultValidations = validationResult(req);
+        if (resultValidations.errors.length > 0 ) {
+            const winery = await db.Winery.findAll();
+            const grapes = await db.Grape.findAll();
+            const styleWine = await db.StyleWine.findAll();
+            const product = await db.Product.findByPk(req.params.id);
+            return res.render('products/edit',{
+                errors: resultValidations.mapped(),
+                product:product,
+                oldData: req.body,
+                winery, styleWine, grapes
+            })
+        }
         const product = await db.Product.findByPk(req.params.id);
         const updated = await product.update({
             name: req.body.name,
@@ -113,26 +113,28 @@ let productControllerDB = {
         const winery = await db.Winery.findAll();
         const grapes = await db.Grape.findAll();
         const styleWine = await db.StyleWine.findAll();
-        const product = await db.Product.findByPk(req.params.id)
-        res.render('./products/edit', {winery, grapes, styleWine, product})
+        const oldData = await db.Product.findByPk(req.params.id)
+        res.render('./products/edit', {winery, grapes, styleWine, oldData})
     },
 
 
 //-----------------------------------------------------
 
         search: async (req, res) => {
+        let querySearch = req.query.search
+        let page = parseInt(req.params.page ==="r"?0:req.params.page)
+        let offsetPaged = page *2
         try{
-            let busqueda = await db.Product.findAll({
+            let busqueda = await db.Product.findAll({include:["wineries"],
             where: {
                 name: {
                     [Op.like]: '%' + req.query.search + '%'
                 }
             },
-            // offset: 10,
-            // limit: 2
+            offset: offsetPaged ? offsetPaged : 0,
+            limit: 4
         })
-        //res.render('/products/search', {busqueda})
-        res.send(busqueda)
+        res.render('./products/search', {busqueda, querySearch, page})
     }
         catch(err) {res.send(err)}
     },

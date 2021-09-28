@@ -29,7 +29,7 @@ app.use(userLoggedMiddlewares);
 app.use(cors())
 
 // Custom Middleware
-app.use(require("./middlewares/userSession"))
+//app.use(require("./middlewares/userSession"))
 
 //Data Configuration
 app.use(express.urlencoded({ extended: false })); //para el body

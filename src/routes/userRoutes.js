@@ -9,13 +9,13 @@ const multer = require('multer');
 const validations = require('../middlewares/validationRegisterMiddlewares');
 const guestMiddlewares = require('../middlewares/guestMiddlewares');
 const uploadFile = require('../middlewares/multerMiddlewares')
-
+const notAdminMiddleware = require('../middlewares/notAdminMiddleware')
 
 const upload = multer({storage:uploadFile('users')});
 
 
 // router.get('/', userController.users)
-router.get('/', userControllerDB.list);
+router.get('/', notAdminMiddleware, userControllerDB.list);
 // router.get('/perfil', userController.profile)
 router.get('/perfil/:id', userControllerDB.detail);
 

@@ -8,6 +8,7 @@ const productController = require('../controllers/productController');
 const multer = require('multer');
 const uploadFile = require('../middlewares/multerMiddlewares')
 const validations= require('../middlewares/validationProductsMiddlewares');
+const notAdminMiddleware = require('../middlewares/notAdminMiddleware')
 const upload = multer({storage:uploadFile('products')});
 
 //Middlewares Products
@@ -31,20 +32,20 @@ const productControllerDB = require('../controllers/productControllerDB');
 
 router.get('/', productControllerDB.list);
 router.get('/detalle/:id', productControllerDB.detail);
-router.get('/crear',productControllerDB.create);
-router.post('/crear',[upload.single('img'), validations], productControllerDB.store);
+router.get('/crear',notAdminMiddleware, productControllerDB.create);
+router.post('/crear',[upload.single('img'), validations, notAdminMiddleware], productControllerDB.store);
 
 //carrito
 router.get('/carrito', productControllerDB.carrito)  
 
 //Actualizacion de productos
-router.get('/editar/:id' ,productControllerDB.edit);
-router.put('/editar/:id', [upload.single('img'), validations], productControllerDB.update);
+router.get('/editar/:id', notAdminMiddleware, productControllerDB.edit);
+router.put('/editar/:id', [upload.single('img'), validations, notAdminMiddleware], productControllerDB.update);
 
 
 router.get('/buscar', productControllerDB.search);
 
-router.delete('/destroy/:id', productControllerDB.destroy);
+router.delete('/destroy/:id', notAdminMiddleware, productControllerDB.destroy);
 
 
 module.exports = router

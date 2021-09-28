@@ -20,9 +20,10 @@ let productControllerDB = {
         const product = await db.Product.findByPk(req.params.id);
         const winery = await product.getWineries();
         const grape = await product.getGrapes();
+        const style_wines = await product.getStyle_wines();
         
         //res.send({products, wineries})
-        res.render('./products/detail', {product, winery})
+        res.render('./products/detail', {product, winery, grape, style_wines})
         } catch(error){res.send(error)}
 
         //res.render('./products/detail', {product: await db.Product.findByPk()})

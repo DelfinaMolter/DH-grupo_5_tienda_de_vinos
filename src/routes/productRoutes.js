@@ -43,7 +43,7 @@ router.get('/editar/:id', notAdminMiddleware, productControllerDB.edit);
 router.put('/editar/:id', [upload.single('img'), validations, notAdminMiddleware], productControllerDB.update);
 
 
-router.get('/buscar', productControllerDB.search);
+router.get('/buscar?:page', productControllerDB.search);
 
 router.delete('/destroy/:id', notAdminMiddleware, productControllerDB.destroy);
 

@@ -122,18 +122,20 @@ let productControllerDB = {
 //-----------------------------------------------------
 
         search: async (req, res) => {
+        let querySearch = req.query.search
+        let page = parseInt(req.params.page ==="r"?0:req.params.page)
+        let offsetPaged = page *2
         try{
-            let busqueda = await db.Product.findAll({
+            let busqueda = await db.Product.findAll({include:["wineries"],
             where: {
                 name: {
                     [Op.like]: '%' + req.query.search + '%'
                 }
             },
-            // offset: 10,
-            // limit: 2
+            offset: offsetPaged ? offsetPaged : 0,
+            limit: 4
         })
-        //res.render('/products/search', {busqueda})
-        res.send(busqueda)
+        res.render('./products/search', {busqueda, querySearch, page})
     }
         catch(err) {res.send(err)}
     },

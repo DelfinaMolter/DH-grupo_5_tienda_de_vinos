@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%-include ("../includes/head");%>
+    <link rel="shortcut icon" href="../../img/logos/logo-sin-texto.png" type="image/x-icon">
+    <title>Productos</title>
+    <link rel="stylesheet" href="/css/search.css" />
+</head>
+<body>
+    <%-include ("../includes/header");%>
+    <!-- =============PRODUCTOS==========-->
+    <main>
+        <div><img class="main__banner" src="" alt=""></div>
+        <section>
+        <h3 id="ofertas" class="titulos-secciones">Productos relacionados con tu búsqueda: "<%= querySearch %>"  </h3>
+
+        <div  class="main__section__lastvisit">
+        
+            <% for( let i = 0; i < busqueda.length; i++ ) { %>
+
+        <article id="art1" class="articulos">
+            <a href="/productos/detalle/<%=busqueda[i].id%> ">     
+                <img class="imagenArticulo" src="/img/products/<%=busqueda[i].img%>"  alt="product image">
+                <div class="detalleArticulos">
+                <p class="precio">$<%=busqueda[i].price%> </p> 
+                <p class="name"><%=busqueda[i].name%> </p>
+                <p><%= busqueda[i].wineries.name %> </p>   
+                
+            
+            </div>
+        </a>
+        </article>    
+    
+        <% } %>
+        
+        
+    </div>
+</section>
+
+<div id=pagination-div>
+    <h3 id="ofertas" class="titulos-secciones">Pagina: <%= page +1 %>  </h3>
+    <ul id="page-arows">
+        <li id="prev-page"> <a href= "<%="http://localhost:3001/productos/buscar"+ (page==0?0:(parseInt(page) - 1)) +"?search="+querySearch%>"><i class="far fa-arrow-alt-circle-left"></i> Página Anterior</a></li>
+        <li id="next-page"> <a href= "<%="http://localhost:3001/productos/buscar"+ (parseInt(page) + 1) +"?search="+querySearch%>">Siguiete Página <i class="far fa-arrow-alt-circle-right"></i></a></li>
+    </ul>  
+
+    <ul id="page-number">
+        <% for( let i = 0; i < 5; i++ ) { %>
+        <li><a href="<%="http://localhost:3001/productos/buscar"+ i +"?search="+querySearch%>">Página <%= i+1 %> </a></li>
+        <% } %>
+    </ul>
+</div>
+    </main>
+    <%-include ("../includes/footer");%>
+</body>
+</html>

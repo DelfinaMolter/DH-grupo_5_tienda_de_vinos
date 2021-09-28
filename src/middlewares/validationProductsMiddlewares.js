@@ -14,7 +14,7 @@ module.exports = [
     body('price').notEmpty().withMessage('Por favor, ingresar un importe'),
     body('img').custom((value, { req }) => {
     let file = req.file;
-    let acceptedExtensions = ['.jpg', '.gif', '.png'];
+    let acceptedExtensions = ['.jpg', '.gif', '.png', '.jpeg'];
 
     if(!file){
         throw new Error('Tienes que subir una imagen')

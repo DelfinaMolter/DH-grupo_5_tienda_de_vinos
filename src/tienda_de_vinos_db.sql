@@ -47,7 +47,7 @@ create table `products` (
   `id` INT UNSIGNED NOT NULL auto_increment,
   `name` varchar(255) not null,
   `bottles` INT not null,
-  `description` varchar(255) DEFAULT NULL,
+  `description` text DEFAULT NULL,
   `img` varchar(255) DEFAULT NULL,
   `price` INT NOT NULL,
   `stock` INT DEFAULT NULL,

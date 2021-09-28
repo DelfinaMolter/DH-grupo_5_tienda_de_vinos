@@ -2,7 +2,7 @@
                 <!-- top bar  -->
                 <div class="main-header-top-bar">
                         <a id="a-logo" href="/"><img id="logo" src="/img/logos/logo.png" alt=""></a>
-                        <form  class="barra-de-busqueda-form" action="/productos/buscar" method="get" target="_blank">
+                        <form  class="barra-de-busqueda-form" action="/productos/buscar" method="get">
                                 <fieldset class="barra-de-busqueda-fieldset"> 
                                         <input type="text" id="search" placeholder="Buscar vino y bodega" name="search">
                                         <button class="icono-busqueda" type="submit"><i class="fa fa-search"></i></button>
@@ -19,7 +19,7 @@
                                 <% if (locals.isLogged.admin) { %>
                                         <li class="admin-button"><a  href='/productos/crear'>Crear Productos</a></li>
                                         <li class="admin-button"><a  href='/usuarios'>Usuarios</a></li>
-                                        <li class="admin-button"><a  href='/http://localhost:3001/'>Dashboard</a></li>
+                                        <li class="admin-button"><a  href='http://localhost:3000/' target="_blank">Dashboard</a></li>
                                 <% } %>
                         </ul>
                         <ul class="right-navbar">

@@ -85,7 +85,7 @@ console.log ("esto es una prueba");
             event.target.style.background = '';
             removeError(nameField)
         }
-        ;})
+        })
 
     description.addEventListener('input', (event) => {
         if(isEmpty(description)){
@@ -96,7 +96,7 @@ console.log ("esto es una prueba");
             event.target.style.background = '';
             removeError(description)
         }
-        ;})
+        })
 
         img.addEventListener('input', (event) => {
             if(isEmpty(img)){
@@ -107,7 +107,7 @@ console.log ("esto es una prueba");
                 event.target.style.background = '';
                 removeError(img)
             }
-            ;})
+            })
 
         winery.addEventListener('input', (event) => {
         if(isEmpty(winery)){
@@ -118,7 +118,7 @@ console.log ("esto es una prueba");
             event.target.style.background = '';
             removeError(winery)
         }
-        ;})
+        })
 
         style_wines.addEventListener('input', (event) => {
             if(isEmpty(style_wines)){
@@ -129,7 +129,7 @@ console.log ("esto es una prueba");
                 event.target.style.background = '';
                 removeError(style_wines)
             }
-            ;})
+            })
 
         grapes.addEventListener('input', (event) => {
             if(isEmpty(grapes)){
@@ -140,7 +140,7 @@ console.log ("esto es una prueba");
                 event.target.style.background = '';
                 removeError(grapes)
             }
-            ;})
+            })
 
         bottles.addEventListener('input', (event) => {
         if(isEmpty(bottles)){
@@ -151,7 +151,7 @@ console.log ("esto es una prueba");
             event.target.style.background = '';
             removeError(bottles)
         }
-        ;})
+        })
 
         price.addEventListener('input', (event) => {
             if(isEmpty(price)){
@@ -162,6 +162,6 @@ console.log ("esto es una prueba");
                 event.target.style.background = '';
                 removeError(price)
             }
-            ;})
+            })
     
 
